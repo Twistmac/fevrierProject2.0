@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+	<accueil>
+		<sidebar>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</sidebar>
+
+		<placement1>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement1>
+
+		<placement2>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement2>
+	</accueil>
+
+	<immobilier>
+		<sidebar>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</sidebar>
+
+		<placement1>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement1>
+
+		<placement2>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement2>
+	</immobilier>
+
+	<business>
+		<sidebar>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</sidebar>
+
+		<placement1>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement1>
+
+		<placement2>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement2>
+	</business>
+
+	<services>
+		<placement1>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement1>
+
+		<placement2>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement2>
+	</services>
+
+	<blogs>
+		<sidebar>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</sidebar>
+
+		<placement1>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement1>
+
+		<placement2>
+			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<width>604</width>
+			<height>236</height>
+		</placement2>
+	</blogs>
