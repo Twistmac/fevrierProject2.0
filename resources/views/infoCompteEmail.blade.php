@@ -13,7 +13,7 @@
 <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
         <td align="center" valign="top">
-            <img src="{{ $message->embed('images/logo.png') }}" style="display:block;"></td>
+            <img src="{{ $message->embed('public/images/logo.png') }}" style="display:block;"></td>
     </tr>
     <tr>
         <td align="center" valign="top" bgcolor="#f1f69d" style="background-color:#f1f69d; font-family:Arial,sans-serif; font-size:13px; color:#000000; padding:10px;">
