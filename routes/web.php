@@ -125,4 +125,7 @@ Route::post('search',['as' => 'front.search', 'uses' => 'SearchsController@searc
 Route::post('/saveRech',['as' => 'saveRecherche', 'uses'=> 'ProduitsController@saveRecherche']);
 Route::post('/putFav',['as' => 'putFavoris', 'uses'=> 'ProduitsController@putFavoris']);
 
+//Route recuperation API AgentPoint
+Route::get('getapi', ['as' => 'get.api', 'uses' => 'ApiController@getdataPropertiesromApi']);
+
 
