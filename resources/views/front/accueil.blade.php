@@ -390,7 +390,7 @@
                                         <div class="property-contents clearfix"> 
                                             <header class="property-header clearfix"> 
                                                 <div class="pull-left"> 
-                                                    <h6 class="entry-title"><a href="{{url('produit/'.$produit->slug)}}">{{$produit->nom}}</a></h6> 
+                                                    <h6 class="entry-title"><a href="{{url('produit/'.$produit->slug)}}">{{$produit->nom}}</a></h6>
                                                     <span class="property-location"><i class="fa fa-map-marker"></i>{{$produit->cite.','.$produit->pays}}</span> 
                                                 </div>   
                                                 </header>    

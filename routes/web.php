@@ -21,7 +21,18 @@ Route::get('/signerContrat','Service\InscriptionController@signerContrat');
 Route::post('/paiementLoadInterface','Service\InscriptionController@paiementLoadInterface');
 Route::post('/payer','Service\PaiementController@makePaiementSubscription');
 Route::get("/creatLoginMp",'Service\InscriptionController@creatLoginMp');
-Route::get("/connexion",['as'=>'connexion',function(){ return view("connexion"); }]);
+
+//route connexion
+Route::get("/connexion",['as'=>'connexion',function(){
+    if(session('login')==''){
+        return view("connexion");
+    }
+    else{
+        return redirect('/');
+    }
+}]);
+////
+
 Route::get("/inscription-membre",'Service\InscriptionController@loadInscriptionMembre');
 Route::get("/seller",function(){ return view("seller"); });
 Route::post("/checkConditionBeforeSubscription","Service\InscriptionController@checkConditionBeforeSubscription");
