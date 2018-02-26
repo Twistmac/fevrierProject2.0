@@ -1,4 +1,6 @@
-@include("header")
+<?php
+	affichageHeader();
+?>
         <div class="property-single">
         	 <div id="main-slider"> 
                 <div class="slide">
@@ -109,7 +111,7 @@
 								  <div class="form-group">
 								    <label class="col-sm-2 control-label">Business Logo</label>
 								    <div class="col-sm-10">
-								        <img src="{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+								        <img src="storage/app/{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
 								    </div>
 								  </div>
 								  <div class="form-group">

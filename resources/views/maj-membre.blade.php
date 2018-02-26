@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-        
+
 
     <div class="page-content">
     	<div class="row">
@@ -27,8 +27,8 @@
                     <li class="current"><a href="{!! route('maj')  !!}"><i class="glyphicon glyphicon-calendar"></i> Mise à jour Profil</a></li>
                     <li><a href="{!! route('favoris') !!}"><i class="glyphicon glyphicon-stats"></i> Favoris</a></li>
                     <li><a href="{!! route('recherche-sauvegardees') !!}"><i class="glyphicon glyphicon-list"></i> Recherches sauvegardées</a></li>
-                    <li><a href="encours-dachat.php"><i class="glyphicon glyphicon-record"></i> Produits en cours d'achats</a></li>
-                    <li><a href="achetees-precedemment.php"><i class="glyphicon glyphicon-pencil"></i> Produits achetés précedemment</a></li>
+                    <li><a href="{!! route('encours_dachat') !!}"><i class="glyphicon glyphicon-record"></i> Produits en cours d'achats</a></li>
+                    <li><a href="{!! route('achatPrec') !!}"><i class="glyphicon glyphicon-pencil"></i> Produits achetés précedemment</a></li>
                     <li class="submenu">
                          <a href="#">
                             <i class="glyphicon glyphicon-list"></i> Messagerie
@@ -41,7 +41,7 @@
                             <li><a href="archive.php">Boite des archives</a></li>
                         </ul>
                     </li>
-                    <li><a href="accueil.php"><i class="glyphicon glyphicon-tasks"></i> Deconnexion</a></li>
+                    <li><a href="{!! route('deconnection') !!}"><i class="glyphicon glyphicon-tasks"></i> Deconnexion</a></li>
                 </ul>
              </div>
 		  </div>
@@ -51,7 +51,7 @@
 	  					<div class="content-box-large">
 			  				<div class="panel-heading">
 					            <div class="panel-title">Information du Membre</div>
-					          
+
 					            <div class="panel-options">
 					              <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
 					              <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
@@ -100,11 +100,11 @@
 								       <input type="text" name="contact" class="form-control" id="inputEmail3" value="{!! $telephone !!}">
 								    </div>
 								  </div>
-								  
+
 								  <div class="form-group">
 								    <label class="col-sm-2 control-label">Avatar</label>
 								    <div class="col-sm-10">
-								        <img src="public/{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+								        <img src="storage/app/{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
 								    </div>
 								  </div>
                                   <div class="form-group">
@@ -131,14 +131,14 @@
 		  				<div class="col-md-12">
 		  					<div class="content-box-header">
 			  					<div class="panel-title">New vs Returning Visitors</div>
-								
+
 								<div class="panel-options">
 									<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
 									<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
 								</div>
 				  			</div>
 				  			<div class="content-box-large box-with-header">
-				  				
+
 					  			Pellentesque luctus quam quis consequat vulputate. Sed sit amet diam ipsum. Praesent in pellentesque diam, sit amet dignissim erat. Aliquam erat volutpat. Aenean laoreet metus leo, laoreet feugiat enim suscipit quis. Praesent mauris mauris, ornare vitae tincidunt sed, hendrerit eget augue. Nam nec vestibulum nisi, eu dignissim nulla.
 								<br /><br />
 							</div>
@@ -148,14 +148,14 @@
 		  				<div class="col-md-12">
 		  					<div class="content-box-header">
 			  					<div class="panel-title">New vs Returning Visitors</div>
-								
+
 								<div class="panel-options">
 									<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
 									<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
 								</div>
 				  			</div>
 				  			<div class="content-box-large box-with-header">
-				  				
+
 					  			Pellentesque luctus quam quis consequat vulputate. Sed sit amet diam ipsum. Praesent in pellentesque diam, sit amet dignissim erat. Aliquam erat volutpat. Aenean laoreet metus leo, laoreet feugiat enim suscipit quis. Praesent mauris mauris, ornare vitae tincidunt sed, hendrerit eget augue. Nam nec vestibulum nisi, eu dignissim nulla.
 								<br /><br />
 							</div>

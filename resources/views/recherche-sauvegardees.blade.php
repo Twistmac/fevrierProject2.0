@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-        
+
 
     <div class="page-content">
         <div class="row">
@@ -23,9 +23,9 @@
             <div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     <!-- Main menu -->
-                    <li><a href="{!! route('dashboard') !!}"><i class="glyphicon glyphicon-home"></i> Tableau de bord</a></li>
-                    <li><a href="{!! route('maj') !!}"><i class="glyphicon glyphicon-calendar"></i> Mise à jour Profil</a></li>
-                    <li class="current"><a href="{!! route('favoris') !!}"><i class="glyphicon glyphicon-stats"></i> Favoris</a></li>
+                    <li><a href="{!! route('dashboard')  !!}"><i class="glyphicon glyphicon-home"></i> Tableau de bord</a></li>
+                    <li class="current"><a href="{!! route('maj')  !!}"><i class="glyphicon glyphicon-calendar"></i> Mise à jour Profil</a></li>
+                    <li><a href="{!! route('favoris') !!}"><i class="glyphicon glyphicon-stats"></i> Favoris</a></li>
                     <li><a href="{!! route('recherche-sauvegardees') !!}"><i class="glyphicon glyphicon-list"></i> Recherches sauvegardées</a></li>
                     <li><a href="{!! route('encours_dachat') !!}"><i class="glyphicon glyphicon-record"></i> Produits en cours d'achats</a></li>
                     <li><a href="{!! route('achatPrec') !!}"><i class="glyphicon glyphicon-pencil"></i> Produits achetés précedemment</a></li>
@@ -41,7 +41,7 @@
                             <li><a href="archive.php">Boite des archives</a></li>
                         </ul>
                     </li>
-                    <li><a href="accueil.php"><i class="glyphicon glyphicon-tasks"></i> Deconnexion</a></li>
+                    <li><a href="{!! route('deconnection') !!}"><i class="glyphicon glyphicon-tasks"></i> Deconnexion</a></li>
                 </ul>
              </div>
           </div>
@@ -50,7 +50,7 @@
             <div class="content-box-large">
                         <div class="panel-heading">
                             <div class="panel-title">Information du compte</div>
-                            
+
                             <div class="panel-options">
                                 <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
                                 <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
@@ -59,7 +59,7 @@
                         <div class="panel-body">
 
                         <div class="col-sm-5">
-                               <img src="{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+                               <img src="storage/app/{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
                          </div>
                          <br/>
                             {!! $nom !!}
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            
+
           </div>
         </div>
     </div>

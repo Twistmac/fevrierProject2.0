@@ -277,7 +277,7 @@ class InscriptionController extends Controller
                       $request->session()->put("personne",$personnePhysique);
                   }
                   else{
-                      $avatarPath = "assets/images/avatar.png";
+                      $avatarPath = "avatar.png";
                       $personnePhysique = $personnephysiqueController->create($localisation->IDLOCALISATION,
                           $request->nomParticulier,
                           $request->prenomParticulier,
@@ -559,6 +559,9 @@ class InscriptionController extends Controller
     public function creatLoginMp(Request $request,PersonnemoralController $personnemoralController,
                 PersonnephysiqueController $personnephysiqueController,MembreController $membreController,
                 AplController $aplController,VendeurController $vendeurController, AfaController $afaController){
+
+        $m = new Membre();
+
         if($request->session()->get("inscription")){
             if($request->session()->get("type") == "APL"){
                 $numInscription = "APL-".$this->createRandom();

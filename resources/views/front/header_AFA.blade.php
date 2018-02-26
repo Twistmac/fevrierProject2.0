@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="{{asset('searchbar/assets/css/normalize.css')}}">
     <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('searchbar/assets/css/fontello.css')}}">
-    <link href="{{url('searchbar/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
-    <link href="{{url('searchbar/assets/fonts/icon-7-stroke/css/helper.css')}}" rel="stylesheet">
+    <link href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
+    <link href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/helper.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('searchbar/assets/css/bootstrap-select.min.css')}}">
     <link rel="stylesheet" href="{{asset('searchbar/assets/css/icheck.min_all.css')}}">
     <link rel="stylesheet" href="{{asset('searchbar/assets/css/price-range.css')}}">
@@ -127,10 +127,10 @@
                             <a href="{{route('blog')}}">BLOG</a>
                         </li>
                         <li>
-                            <a href="compteAFA.php">MON COMPTE</a>
+                            <a href="#">MON COMPTE</a>
                             <ul>
                                 <li>
-                                    <a href="compteAFA.php">TABLEAU DE BORD</a>
+                                    <a href="{{route('dashboardAFA') }}">TABLEAU DE BORD</a>
                                 </li>
                                 <li>
                                     <a href="majAFA.php">MISE A JOUR PROFIL</a>

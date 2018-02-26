@@ -92,7 +92,7 @@ Route::get('/favoris',['uses'=>'ProduitUserController@Favoris','as'=>'favoris'])
 Route::get('/recherche-sauvegardees',['as'=>'recherche-sauvegardees','uses'=>'ProduitUserController@rechercheSauvegarder']);
 Route::get('/encours_dachat',['as'=>'encours_dachat','uses'=>'ProduitUserController@encours']);
 Route::get('/achetees_precedemment',['as'=>'achatPrec', 'uses'=>'ProduitUserController@achatPrec']);
-Route::get('/compteAFA',['as'=>'dashboardAFA','uses'=>'Service\MembreController@dashboardAFA']);
+Route::get('/compteAFA',['as'=>'dashboardAFA','uses'=>'MembreController@dashboardAFA']);
 //Route::get('/','HomeController@index');
 
 Route::get('produit/{slug}','ProduitsController@details')->middleware('verification');;

@@ -1,4 +1,6 @@
-@include("header")
+<?php
+    affichageHeader();
+?>
 <div class="property-single">
     <div id="main-slider">
         <div class="slide">
@@ -15,7 +17,7 @@
         </div>
     </div>
 </div>
-        
+
 
     <div class="page-content">
         <div class="row">
@@ -50,7 +52,7 @@
             <div class="content-box-large">
                         <div class="panel-heading">
                             <div class="panel-title">Information du compte</div>
-                            
+
                             <div class="panel-options">
                                 <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
                                 <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
@@ -59,7 +61,7 @@
                         <div class="panel-body">
 
                         <div class="col-sm-5">
-                               <img src="{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+                               <img src="public/{!! $avatar !!}" class="img-rounded" alt="Cinque Terre" width="304" height="236">
                          </div>
                          <br/>
                             {!! $nom !!}
@@ -110,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            
+
           </div>
         </div>
     </div>

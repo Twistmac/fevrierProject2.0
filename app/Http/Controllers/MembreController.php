@@ -111,10 +111,10 @@ class MembreController extends Controller
         }
         else{
             $name = time().'.'.$image->getClientOriginalExtension();
-            $destinationPath = public_path('assets/images/');
+            $destinationPath = storage_path('app');
             $image->move($destinationPath, $name);
 
-            $avatar='assets/images/' .$name;
+            $avatar= $name;
             $m->modifier($login,$Nom,$Prenom,$Email,$contact,$avatar);
         }
         

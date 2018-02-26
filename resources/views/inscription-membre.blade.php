@@ -357,7 +357,7 @@
                             </div>
                             <div class="content-box-large box-with-header">
 
-                                <img src="{{ URL::asset('assets/images/announcement-bg.jpg') }}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
+                                <img src="{{ asset('assets/images/announcement-bg.jpg') }}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
 
                                 <br /><br />
                             </div>
@@ -370,7 +370,7 @@
                             </div>
                             <div class="content-box-large box-with-header">
 
-                                <img src="{{  URL::asset('assets/images/announcement-bg.jpg') }}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
+                                <img src="{{  asset('assets/images/announcement-bg.jpg') }}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
 
                             </div>
                         </div>
