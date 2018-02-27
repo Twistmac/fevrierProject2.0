@@ -1,5 +1,5 @@
-<?php affichageHeader()
-
+<?php
+    affichageHeader();
 ?>
 
 

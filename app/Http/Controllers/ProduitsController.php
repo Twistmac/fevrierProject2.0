@@ -9,7 +9,7 @@ use App\Produit;
 use App\Blog;
 use App\Image;
 use App\Entite\RechercheSauvegardee;
-
+use App\Http\Controllers\Session;
 
 class ProduitsController extends Controller
 {
@@ -40,7 +40,9 @@ class ProduitsController extends Controller
             $listes->titre = Blog::trunque($listes->titre,70);
             $listes->contenu = Blog::trunque($listes->contenu);
         }
-    	return view('front.detail',compact('detailproduit','all','listblog'));
+        $uri = \Request::path();
+        session(['urlVisite'=>$uri]);
+        return view('front.detail',compact('detailproduit','all','listblog'));
     }
 
     /** Acces index page immobilier/residentiel

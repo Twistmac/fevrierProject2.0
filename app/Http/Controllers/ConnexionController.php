@@ -34,11 +34,12 @@ class ConnexionController extends Controller
         session(['login'=>$login]);
         $TypeNature = $membre->getNature($email);
 
-        if($mdp == $pwd){
+        if($mdp == $pwd && session('urlVisite') ==''){
             return redirect()->route('acceuil');
-
         }
-
+        if($mdp == $pwd && session('urlVisite') !=''){
+            return redirect(session('urlVisite'));
+        }
         else{
             session(['errorConnexion'=>'Mot de passe incorrect']);
             return redirect()->route('connexion');
