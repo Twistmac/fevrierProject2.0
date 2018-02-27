@@ -5779,8 +5779,8 @@ button.close {
 .modal {
   display: none;
   overflow: hidden;
-  position: fixed;
-  top: 250px;
+  position: sticky;
+  /* top: 250px; */
   right: 0;
   bottom: 0;
   left: 0;
