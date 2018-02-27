@@ -12,11 +12,11 @@ class SearchsController extends Controller
 {
     /** Fonction de recherche de produits
     * @param Request $request
-    * @return resultat 
+    * @return resultat
     */
     public  function searchGlobal(Request $request)
     {
-        $request->validate([
+        $this->validate($request, [
             'etats' => 'nullable|max:255',
             'villes' => 'nullable|max:255',
             'suburbs' => 'nullable|max:255'
@@ -26,23 +26,23 @@ class SearchsController extends Controller
         $produit = new Produit();
         $result = $produit->queryprincipal();
 
-        if( !empty($request->post('etats') || !empty($request->post('villes'))))
+        if( !empty($request->input('etats') || !empty($request->input('villes'))))
         {
             $result = "";
-            $result = $recherche->searchLocalisation($request->post('etats'),$request->post('villes'));
+            $result = $recherche->searchLocalisation($request->input('etats'),$request->input('villes'));
         }
 
-        if(!empty($result) && !empty($request->post('prix')) || !empty($request->post('superficie')) )
+        if(!empty($result) && !empty($request->input('prix')) || !empty($request->input('superficie')) )
         {
-            if(!is_null($request->post('prix')))
+            if(!is_null($request->input('prix')))
             {
-                $array_prix = preg_split("/,/", $request->post('prix'));
+                $array_prix = preg_split("/,/", $request->input('prix'));
                 $prix['min'] = $array_prix[0];
                 $prix['max'] = $array_prix[1];
             }
-            if(!is_null($request->post('superficie')))
+            if(!is_null($request->input('superficie')))
             {
-                $array_surface = preg_split("/,/", $request->post('superficie'));
+                $array_surface = preg_split("/,/", $request->input('superficie'));
                 $surface['min'] =  $array_surface[0];
                 $surface['max'] = $array_surface[1];
             }
@@ -55,31 +55,31 @@ class SearchsController extends Controller
                $result = $result->whereBetween('produits.surface', [ $surface['min'], $surface['max'] ]);
         }
 
-        if(!empty($request->post('sdb')) || !empty($request->post('ch')))
+        if(!empty($request->input('sdb')) || !empty($request->input('ch')))
         {
-            $sdb = preg_split("/,/", $request->post('sdb'));
-            $ch = preg_split("/,/", $request->post('ch'));
-            if(!empty($request->post('sdb')) && !empty($request->post('ch')))
+            $sdb = preg_split("/,/", $request->input('sdb'));
+            $ch = preg_split("/,/", $request->input('ch'));
+            if(!empty($request->input('sdb')) && !empty($request->input('ch')))
             {
-                $result = $result->whereBetween('optionproduits.sdb',[$sdb[0],$sdb[1]])->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]);   
+                $result = $result->whereBetween('optionproduits.sdb',[$sdb[0],$sdb[1]])->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]);
             }
-            if( !empty($request->post('sdb')) || empty($request->post('ch')) )
+            if( !empty($request->input('sdb')) || empty($request->input('ch')) )
             {
                 $result = $result->whereBetween('optionproduits.sdb',[$sdb[0],$sdb[1]]);
             }
-            elseif( empty($request->post('sdb')) || !empty($request->post('ch')) )
+            elseif( empty($request->input('sdb')) || !empty($request->input('ch')) )
             {
-                $result = $result->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]); 
+                $result = $result->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]);
             }
         }
 
-        if(!empty($request->post('typelogement')))
+        if(!empty($request->input('typelogement')))
         {
-            $result = $result->where('optionproduits.typepropriete',$request->post('typelogement'));
+            $result = $result->where('optionproduits.typepropriete',$request->input('typelogement'));
         }
         $resultat = $result->paginate(20);
         $resultat = Produit::createSlug($resultat);
     	return view('front.resultat',compact('resultat'));
-    }	
+    }
 
 }
