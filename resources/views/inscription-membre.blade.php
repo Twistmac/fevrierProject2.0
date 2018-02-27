@@ -3,7 +3,32 @@
 @endphp
 
 <div class="main-slider-wrapper clearfix content corps">
+<<<<<<< HEAD
 
+=======
+    <!-- <div id="main-slider">
+        <div class="slide">
+            <img src="{{ asset('assets/images/slider/1.jpg') }}" alt="Slide">
+        </div>
+        <div class="slide">
+            <img src="{{ asset('assets/images/slider/2.jpg') }}" alt="Slide">
+        </div>
+        <div class="slide">
+            <img src="{{ asset('assets/images/slider/3.jpg') }}" alt="Slide">
+        </div>
+        <div class="slide">
+            <img src="{{ asset('assets/images/slider/4.jpg') }}" alt="Slide">
+        </div>
+    </div>
+
+    <div id="slider">
+        <div class="container text-center">
+            <div class="jumbotron">
+                <h2>Page d'Inscription en tant que Qualité de Membre</h2>
+            </div>
+        </div>
+    </div> -->
+>>>>>>> 7eb0f5cee9ce424926b6d6046c912d75832b7d8d
 </div>
 
 
@@ -83,8 +108,30 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="prenomParticulier">Prénom *</label>
+
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control"  name="prenomParticulier" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="dateNaissance">Date de naissance *</label>
+                                    <div class="col-sm-9">
+                                        <input type="date" class="form-control"  name="dateNaissance" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="genre" class="col-sm-3 control-label">Sexe *</label>
+                                    <div class="col-md-3">
+                                        <select class="form-control" name="genre">
+                                            <option value="1" selected>Homme</option>
+                                            <option value="0">Femme</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="adresseParticulier">Adresse *</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control"  name="adresseParticulier" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -99,9 +146,40 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="etatParticulier">Etat(Si fédéral) </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control"  name="etatParticulier" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="villeParticulier">Ville *</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control"  name="villeParticulier" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="codePostal">Code postal *</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control"  name="codePostal" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-sm-3 control-label" for="emailParticulier">Adresse Email *</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="inputEmail3" name="emailParticulier" placeholder="you@exemple.com" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Contact Mobile *</label>
+                                    <div class="col-sm-2">
+                                        <select class="form-control" name="contactParticulierSuffixe">
+                                            <?php   for( $i=0; $i< count($listeContact) ; $i++){  ?>
+                                            <option value="<?php echo $listeContact[$i]; ?>"> <?php echo $listeContact[$i]; ?></option>
+                                            <?php  } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="contactParticulierNumber" placeholder="3-333-333" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
