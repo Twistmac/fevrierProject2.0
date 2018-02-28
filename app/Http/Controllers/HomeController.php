@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 use App\Produit;
 use App\Blog;
 use App\Localisation;
+use App\Publicite;
+use App\Http\Controllers\PublicitesController;
 
 
 class HomeController extends Controller
 {
     private $blog;
+    private  $publicites;
     protected $xml_parser;
     /**
      * Create a new controller instance.
@@ -20,6 +23,8 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->blog = new Blog();
+        $this->pubs = new Publicite();
+        $this->publicites = new PublicitesController($this->pubs);
         $this->xml_parser = xml_loader_files('textes');
     }
     /**
@@ -48,7 +53,9 @@ class HomeController extends Controller
             $recents[] = $produits[$r];
         }
         $counter = $produit->countProductbyType();
-        return view('front.accueil',compact('produits','listesblog','contenus','recents','counter'));
+        $publicites = json_decode(json_encode($this->publicites->getpubliciteperPage('accueil')),false);
+        //$publicites->accueil->sidebar1->lienImage
+        return view('front.accueil',compact('produits','listesblog','contenus','recents','counter','publicites'));
     }
 
 }

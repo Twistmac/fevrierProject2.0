@@ -2,22 +2,22 @@
 <contenu>
 	<accueil>
 		<sidebar1>
-			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
-			<class></class>
+			<class>...</class>
 			<width>604</width>
 			<height>236</height>
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
 			<height>236</height>
 		</sidebar2>
 		<sidebar3>
-			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -25,7 +25,7 @@
 		</sidebar3>
 
 		<sidebar4>
-			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -33,7 +33,7 @@
 		</sidebar4>
 
 		<placement1>
-			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -41,7 +41,7 @@
 		</placement1>
 
 		<placement2>
-			<lienImage>http://integration.oktobone.com/assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>

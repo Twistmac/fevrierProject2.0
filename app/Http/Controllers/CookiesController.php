@@ -31,6 +31,7 @@ class CookiesController extends Controller
     			$minutes = time() + (10 * 365 * 24 * 60 * 60);
     		}
     		$valeurCrypt = Crypt::encrypt($valeur);
+    		//time() + (10 * 365 * 24 * 60 * 60)
 	    	$setcookies = setcookie($name, $valeurCrypt, $minutes, $path, $domain, $secure, $httpOnly); 
 	    	return true;
 
@@ -62,7 +63,7 @@ class CookiesController extends Controller
     */
     public function deletecookies($nom_cookie)
     {
-    	try {
+    	try {	
 
     		if( isset($_COOKIE[$nom_cookie]))
     		{

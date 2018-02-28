@@ -79,16 +79,17 @@ class PublicitesController extends Controller
 	{
 		$data_cookie = $cookie->getcookies('publiciteIEA');
 
-		//dd( $cookie->showcookies('publiciteIEA'));
+		// dd( $cookie->showcookies('publiciteIEA'));
 
 		if( !empty($data_cookie) && isset($data_cookie) )
 		{
 			if( !empty($data_cookie[$nomPage]) )
 			{
+				//similaire : true , not :false
 				$compare = $this->verificationUpdate($data_cookie[$nomPage],$objectPub);
 				if( $compare )
 				{
-					return $data_cookie[$nomPage];
+					return $data_cookie;
 				}
 				else{
 					$cookie->deletecookies($data_cookie[$nomPage]);
@@ -96,6 +97,13 @@ class PublicitesController extends Controller
 					$save = $cookie->setcookies('publiciteIEA',$array_cookies,null,'/');
 					return $array_cookies;
 				}
+			}
+			else
+			{
+				$data_cookie[$nomPage] = $objectPub;
+				$cookie->deletecookies('publiciteIEA');
+				$cookie->setcookies('publiciteIEA',$data_cookie,null,'/'); 
+				return $data_cookie;
 			}
 		}
 		else
@@ -118,15 +126,5 @@ class PublicitesController extends Controller
 		// $modification = array_diff_assoc($arrayPub,$cookies);
 		$modification = ( $objectPub === $cookies);
 		return $modification;
-	}
-
-	/**
-	* fonction update cookie
-	* @param Array $nouveauData, string $data_cookie
-	* @return bool 
-	*/
-	public function updateCookie($dataUpdated, $data_cookie)
-	{
-
 	}
 }
