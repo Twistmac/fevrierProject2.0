@@ -2,18 +2,11 @@
 body {
   position: relative;
 }
-
 /*My modif*/
-
 #searchfooter{
   padding-left: 30px;
   padding-right: 30px;
 }
-
-
-
-
-
 /*Page Loader*/
 #page-loader {
   position: fixed;
@@ -42,6 +35,14 @@ body {
   margin: auto;
   display: none;
 }
+
+/* the last product and last article saved */
+.last-save{
+  background-color: #fcfcfc;
+  padding: 0px;
+  margin: 0px;
+}
+
 select {
   position: relative;
   cursor: pointer;
@@ -65,6 +66,7 @@ h2,
 h3 {
   text-transform: uppercase;
 }
+
 h1 a,
 h2 a,
 h3 a,
@@ -1062,12 +1064,13 @@ img.zoom-img {
   z-index: 1;
 }
 #property-listing {
-  padding: 60px 0;
+  padding-top: 15px;
 }
 #property-listing .section-header {
   margin-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
 }
-#property-listing .section-header h2 {
+#property-listing .section-header h3 {
   margin-bottom: 10px;
 }
 .property-sorting {
@@ -1265,7 +1268,10 @@ img.zoom-img {
   background: url("../images/floor-plan-map.jpg") center right no-repeat;
 }
 .property-single-metax {
-
+  text-align: justify;
+}
+.property-single-metax-center {
+  text-align: center;
 }
 .property-single-meta ul {
   margin: 0;
@@ -1323,8 +1329,13 @@ img.zoom-img {
   font-size: 8px;
 }
 /*Property Video Styles*/
+.property-meta-wrapper .entry-title {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 0 !important;
+}
+
 .property-video .entry-title {
-  border-bottom: 0 !important;
+  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 0 !important;
 }
 .property-video iframe {
@@ -1895,9 +1906,11 @@ img.zoom-img {
   }
   #property-single .common {
     padding: 20px;
-    margin-bottom: 30px;
+    background: #fff;
+    margin-bottom: 50px;
   }
-  #property-single .common .entry-title {
+
+  #slider-area .common .entry-title {
     margin-top: 0;
     margin-bottom: 20px;
     padding-bottom: 20px;

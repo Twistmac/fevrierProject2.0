@@ -288,7 +288,10 @@
                                     <option value="100">100 produits</option>
                                 </select>
                             </div>
-                            <p class="pull-left layout-view"> Vue:<i class="fa fa-th-large selected" data-layout="6"></i> <i class="fa fa-list-ul" data-layout="12"></i> </p>
+                            <p class="pull-left layout-view">
+                              Vue:
+                              <i class="fa fa-th-large selected" data-layout="6"></i>
+                              <i class="fa fa-list-ul" data-layout="12"></i> </p>
                         </div>
                     </div>
                 </header>
