@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
 <html>
-<!--<![endif]-->
-
 <head>
 <meta charset="utf-8">
-<title>Boo Admin - Welcome</title>
+<title>Admin - IEA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -34,7 +27,8 @@
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="shortcut icon" href="{{ link_img('favicon.png') }}">
+
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -66,7 +60,7 @@
                     <div class="tab-content overflow form-dark">
                         <div class="tab-pane fade in active" id="login">
                             <div class="span5">
-                                <h4 class="welcome"> <small><i class="fontello-icon-user-4"></i>Sign in </small>Boo</h4>
+                                <h4 class="welcome"> <small><i class="fontello-icon-user-4"></i>Se Connecter</small></h4>
                                 <form method="post" action="dashboard-one.html" name="login_form">
                                     <fieldset>
                                         <div class="controls">
@@ -74,22 +68,23 @@
                                         </div>
                                         <div class="controls controls-row">
                                             <input id="idPassword" class="span3" type="password" name="id_login_password" placeholder="password">
-                                            <button type="submit" class="span2 btn btn-yellow btn-large">SIGN IN</button>
+                                            <button type="submit" class="span2 btn btn-yellow btn-large">Connnecter</button>
                                         </div>
                                         <hr class="margin-xm">
                                         <label class="checkbox">
                                             <input id="remember" class="checkbox" type="checkbox">
-                                            Remember me</label>
+                                            Souviens-toi de moi</label>
                                         <hr class="margin-mm ">
-                                        <a href="#forgot" class="btn btn-boo" data-toggle="tab">Forgot Password?</a> <a href="#register" class="btn btn-boo link" data-toggle="tab">No account yet? Register now for free!</a>
+                                        <a href="#forgot" class="btn btn-boo" data-toggle="tab">Oublier mot de passe?</a>
                                     </fieldset>
                                 </form>
                                 <!-- // form -->
                             </div>
                             <div class="span7">
-                                <h4 class="welcome"><small>Place infotext for login</small></h4>
-                                <p>Lorem ipsum dolor sit amet consectetuer Curabitur egestas adipiscing laoreet Suspendisse. Lacus Sed justo penatibus vel wisi elit felis lorem Donec ipsum. Pretium nibh nibh eget adipiscing volutpat dui..</p>
-                                <p>Semper ipsum rutrum egestas Nam congue semper urna metus lorem habitasse. Sodales Nulla Vestibulum pretium justo quis vestibulum pellentesque et amet eu. Senectus augue turpis et Vestibulum ut risus velit pellentesque laoreet lacus.</p>
+                                <h4 class="welcome"><small>Investir en Australie</small></h4>
+                                <p>J'ai créé le site www.investirenaustralie.com pour développer les échanges de la communauté francophone avec l'Australie. Cela concerne donc la France Métropolitaine et ses territoires ultramarins de la Mer Méditerranée et des 3 grands océans, la Belgique, le Luxembourg, la Suisse, Monaco, le Québec, les pays de l'Afrique francophone, etc...</p>
+                                <p>Les constructeurs et promoteurs australiens déposent sur le site leurs produits immobiliers, fonciers, industriels et commerciaux; les Membres de la communauté francophone internationale intéressés par l'Australie parcourent les offres déposées sur le site, contactent les vendeurs, et peuvent initier une procédure d'achat en étant assistés de juristes et financiers australiens francophones.
+L'acheteur est donc entouré par une équipe de professionnels francophones auprès desquels ils peuvent obtenir explications et soutien.</p>
                             </div>
                         </div>
                         <!-- // Tab Login -->
@@ -161,30 +156,9 @@
                         </div>
                         <!-- // Tab Forgot -->
 
-                        <div class="web-description span12">
-                            <h5>Copyright &copy; 2012 companypage.com</h5>
-                            <p>Backend and Frontend interface for web &amp; mobile development. <br />
-                                All rights reserved.</p>
-                        </div>
                     </div>
 
                 </div>
-                <!-- // Example row -->
-
-                <div class="row">
-                	<div class="span5">
-                        <ul class="nav nav-center well well-impressed well-small" style="margin-top: 90px">
-                            <li><a href="login-01.html" class="link">Black</a></li>
-                            <li class="divider-vertical line"></li>
-                            <li><a href="index.html" class="link">Nice</a></li>
-                            <li class="divider-vertical line"></li>
-                            <li><a href="login-02.html" class="link">Base</a></li>
-                            <li class="divider-vertical line"></li>
-                            <li class="active"><a href="login-03.html" class="link">SignIn</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- // Example row -->
 
             </div>
             <!-- // page content -->
