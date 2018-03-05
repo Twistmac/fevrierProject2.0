@@ -5,17 +5,17 @@
   ----------------------------------------
 
   BOO.css - DEFAULT stylesheed
-  
+
   web           : http://www.wrapbootstrap.net/
   filename      : asset/css/boo.css
   version       : 16.11.2012
   copyright     : (c) 2012 Petr Marasek
   contact       : gootoboo@gmail.com
-  
+
   -------------------------------------------------------------------------------------------- ***/
 
 
-/* RESET 
+/* RESET
  ---------------------------------------------------------------------------- */
 
 
@@ -37,10 +37,10 @@ a:focus {
   display: inline-block;
 }
 
-/* MIXINS 
+/* MIXINS
  ---------------------------------------------------------------------------- */
- 
-/* SCAFFOLDING 
+
+/* SCAFFOLDING
  ---------------------------------------------------------------------------- */
 
 
@@ -54,8 +54,8 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: url("../img/background/body-bg-02.jpg") repeat scroll 0 0 #ECEDEF;
-  /**/-webkit-transformace : translate3d ( 0 ,  0 ,  0 ); 
+  /* background: url("../img/background/body-bg-02.jpg") repeat scroll 0 0 #ECEDEF; */
+  /**/-webkit-transformace : translate3d ( 0 ,  0 ,  0 );
 }
 
 body {
@@ -71,13 +71,13 @@ a:hover {
   color: #005580;
 }
 
-/* GRID 
- ---------------------------------------------------------------------------- */ 
- 
-/* LAYOUTS 
+/* GRID
  ---------------------------------------------------------------------------- */
- 
-/* TYPOGRAPHY 
+
+/* LAYOUTS
+ ---------------------------------------------------------------------------- */
+
+/* TYPOGRAPHY
  ---------------------------------------------------------------------------- */
 
 
@@ -246,9 +246,9 @@ hr.dashed {
   border-bottom-color: #616161;
 }
 
-/* CODE 
+/* CODE
  ---------------------------------------------------------------------------- */
- 
+
 
 
 
@@ -263,7 +263,7 @@ hr.dashed {
 
 /* FORM 902
  ---------------------------------------------------------------------------- */
- 
+
 
 
 
@@ -938,7 +938,7 @@ a.help-inline {
   border-bottom: none;
 }
 
-/* TABLE 
+/* TABLE
  ---------------------------------------------------------------------------- */
 
 
@@ -1129,7 +1129,7 @@ a.help-inline {
   background-color: #faf2cc;
 }
 
-/* Table Tool 
+/* Table Tool
  ------------------------------------------- */
 
 
@@ -1298,7 +1298,7 @@ span.arrow-table-action {
   border-bottom: none;
 }
 
-/* BOO-TABLE 
+/* BOO-TABLE
  ---------------------------------------------------------------------------- */
 
 
@@ -1333,7 +1333,7 @@ span.arrow-table-action {
   border-left: 1px solid #c8ccce;
 }
 
-/* Boo-table Caption 
+/* Boo-table Caption
  ------------------------------------------- */
 
 
@@ -1376,7 +1376,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff464a56', e
   border-right: 1px solid #2B2D38;
 }
 
-/* Boo-table theed & tfoot  
+/* Boo-table theed & tfoot
  ------------------------------------------- */
 
 
@@ -1449,7 +1449,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff5f6fa', e
   border-bottom-color: #d1d2d5;
 }
 
-/* Boo-table tbody  
+/* Boo-table tbody
  ------------------------------------------- */
 
 
@@ -1554,7 +1554,7 @@ table .search_init {
   color: #aaafbd;
 }
 
-/* Pagination 
+/* Pagination
  ------------------------------------------- */
 
 
@@ -1581,7 +1581,7 @@ table .search_init {
 }
 
 /* Length and Global filter
- -------------------------------------------  */	
+ -------------------------------------------  */
 
 
 
@@ -1610,7 +1610,7 @@ table .search_init {
   font-weight: normal
 }
 
-/* Sorting (use table or datatable) 
+/* Sorting (use table or datatable)
  -------------------------------------------  */
 
 
@@ -1942,7 +1942,7 @@ a.rowlink {
   border-top-color: #b3d58f;
 }
 
-/* TABLE IN WRAPPER 
+/* TABLE IN WRAPPER
  ------------------------------------------- */
 
 
@@ -1983,8 +1983,8 @@ a.rowlink {
   clear: both;
 }
 
-/* TABLE IN WIDGET 
- ---------------------------------------------------------------------------- */ 
+/* TABLE IN WIDGET
+ ---------------------------------------------------------------------------- */
 
 
 
@@ -2031,8 +2031,8 @@ a.rowlink {
   margin-bottom: 0px
 }
 
-/* GENERAL RADIUS FOR TABLE 
- ---------------------------------------------------------------------------- */ 
+/* GENERAL RADIUS FOR TABLE
+ ---------------------------------------------------------------------------- */
 /* top-left */
 
 
@@ -2182,7 +2182,7 @@ a.rowlink {
 }
 
 /** RADIUS IN WIDGET
- -------------------------------------------  
+ -------------------------------------------
 
 
 .boo-table thead tr > *:first-child,
@@ -2282,12 +2282,12 @@ a.rowlink {
 }
 */
 
-/* SPRITES 
+/* SPRITES
  ---------------------------------------------------------------------------- */
 [class^="icon-"], [class*=" icon-"] {
 background-image: url("../img/glyphicons-halflings.png");
 }
- 
+
 /* ARROW ICON
  ---------------------------------------------------------------------------- */
 [class^="arrowicon-"] {
@@ -2371,7 +2371,7 @@ background-image: url("../img/glyphicons-halflings.png");
   background-position: 0px -270px;
 }
 
-/* DROPDOWNS 
+/* DROPDOWNS
  ---------------------------------------------------------------------------- */
 
 
@@ -2450,7 +2450,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', en
   color: #EB5656;
 }
 
-/* WELLS 
+/* WELLS
  ---------------------------------------------------------------------------- */
 
 
@@ -2505,7 +2505,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', en
 }
 
 /*
-.well-black a { 
+.well-black a {
   color: #a4c7d5;
 }
 */
@@ -2640,13 +2640,13 @@ ol li a.well {
   display: block;
 }
 
-/* COMPONENT ANIMATIONS 
+/* COMPONENT ANIMATIONS
  ---------------------------------------------------------------------------- */
 
-/* CLOSE 
+/* CLOSE
  ---------------------------------------------------------------------------- */
 
-/* BUTTONS 
+/* BUTTONS
  ---------------------------------------------------------------------------- */
 
 
@@ -2699,7 +2699,7 @@ ol li a.well {
 
 .btn-glyph {
   cursor: pointer;
-  padding: 5px 4px 3px; 
+  padding: 5px 4px 3px;
 }
 
 .btn-glyph,
@@ -2829,7 +2829,7 @@ ol li a.well {
 *margin-top: -2px;
 }
 
-/* BUTTON GROUPS 
+/* BUTTON GROUPS
  ---------------------------------------------------------------------------- */
 
 
@@ -3088,7 +3088,7 @@ ol li a.well {
 ul.btn-toolbar {
   margin-left: 0;
   margin-top: 8px;
-  margin-bottom: 8px; 
+  margin-bottom: 8px;
   list-style: none;
 }
 
@@ -3140,7 +3140,7 @@ ul.toolbar-inline > li {
   *display: inline;
 }
 
-/* ALERTS 
+/* ALERTS
  ---------------------------------------------------------------------------- */
 
 
@@ -3161,7 +3161,7 @@ ul.toolbar-inline > li {
   border-radius: 0;
 }
 
-/* NAVS 
+/* NAVS
  ---------------------------------------------------------------------------- */
 
 
@@ -3224,7 +3224,7 @@ ul.toolbar-inline > li {
   padding: 5px 8px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;	
+  border-radius: 3px;
 }
 
 .nav-inline > .active > a.link,
@@ -3653,7 +3653,7 @@ ul.toolbar-inline > li {
   margin-bottom: 1px;
 }
 
-/* Tabs Left in Box 
+/* Tabs Left in Box
  ---------------------------------------- */
 
 
@@ -3687,7 +3687,7 @@ ul.toolbar-inline > li {
   box-shadow: -5px 0px 8px -3px rgba(0, 0, 0, 0.10);
 }
 
-/* Tabs Right in Box 
+/* Tabs Right in Box
  ---------------------------------------- */
 
 
@@ -3882,7 +3882,7 @@ ul.toolbar-inline > li {
   -moz-border-radius-bottomleft: 0;
 }
 
-/* NAVBAR 
+/* NAVBAR
  ---------------------------------------------------------------------------- */
 
 
@@ -3952,7 +3952,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', en
 
 .navbar-page .btn-navbar {
   padding: 7px 10px 8px;
-  margin-top: 4px; 
+  margin-top: 4px;
   border: none;
   background-color: transparent;
   *background-color: #e5e5e5;
@@ -4011,7 +4011,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', en
 }
 
 
-.navbar-page .btn, 
+.navbar-page .btn,
 .navbar-page .btn-group,
 .navbar-page .navbar-form input,
 .navbar-page .navbar-form select,
@@ -4050,7 +4050,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', en
 
 
 
-.navbar-page label { 
+.navbar-page label {
   margin-top: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -4222,7 +4222,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff151515', en
   padding: 0 6px 1px 5px;
 }
 
-/* Search 
+/* Search
  ---------------------------------------- */
 
 
@@ -4271,7 +4271,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff151515', en
   border-color: rgba(82, 168, 236, 0.8)
 }
 
-/* BREADCRUMBS 
+/* BREADCRUMBS
  ---------------------------------------------------------------------------- */
 
 
@@ -4346,7 +4346,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff151515', en
   display: block;
 }
 
-/* PAGINATION 
+/* PAGINATION
  ---------------------------------------------------------------------------- */
 /* pagination for list */
 
@@ -4465,7 +4465,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff151515', en
   font-size: 10.5px;
 }
 
-/* Pagination btn 
+/* Pagination btn
  ---------------------------------------- */
 
 
@@ -4542,7 +4542,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', en
   box-shadow: none;
 }
 
-/* Pagination btn 
+/* Pagination btn
  ---------------------------------------- */
 
 
@@ -4617,7 +4617,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', en
   margin: 0;
 }
 
-/* PAGER 
+/* PAGER
  ---------------------------------------------------------------------------- */
 
 
@@ -4653,7 +4653,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', en
   background-color: #fff;
 }
 
-/* MODALS 
+/* MODALS
  ---------------------------------------------------------------------------- */
 
 .modal-backdrop {
@@ -4759,10 +4759,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
 
-/* TOOLTIP 
+/* TOOLTIP
  ---------------------------------------------------------------------------- */
 
-/* POPOVERS 
+/* POPOVERS
  ---------------------------------------------------------------------------- */
 
 
@@ -4846,7 +4846,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
   border-width: 12px 0 12px 12px;
 }
 
-/* THUMBNAILS 
+/* THUMBNAILS
  ---------------------------------------------------------------------------- */
 
 
@@ -4914,7 +4914,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
 }
 */
 
-.thumbnail .img-desc { 
+.thumbnail .img-desc {
   font-size: 12px;
   line-height: 16px;
   color: #777777
@@ -4930,7 +4930,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
 
 .thumbnail .caption .action {
   padding: 0;
-} 
+}
 
 .well-black .thumbnail {
   border-color: #55585b;
@@ -4940,17 +4940,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
 .well-black .thumbnail .caption,
 .thumbnail .well-black .caption {
   color: #d1d1d1;
-} 
+}
 
 .well-black.thumbnail .img-desc,
 .well-black .thumbnail .img-desc,
 .thumbnail .well-black .img-desc {
   color: #b1b1b1;
-} 
+}
 
 
 /* BOO THUMB
-------------------------------------------------------------------------- ***/	
+------------------------------------------------------------------------- ***/
 
 
 
@@ -4982,7 +4982,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
 
 /*
 .ie8 .img-shadow,
-.ie8 .img-shadow .thumb { 
+.ie8 .img-shadow .thumb {
   width: 100%;
 }*/
 
@@ -5014,7 +5014,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
   border-radius: 3px;
 }
 
-/* MEDIA 
+/* MEDIA
  ---------------------------------------------------------------------------- */
 
 
@@ -5038,7 +5038,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
   margin-left: 10px;
 }
 
-/* LABELS and BADGES 
+/* LABELS and BADGES
  ---------------------------------------------------------------------------- */
 
 
@@ -5130,7 +5130,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee3e7', end
   color: #333;
 }
 
-/* PROGRESS BARS 
+/* PROGRESS BARS
  ---------------------------------------------------------------------------- */
 
 
@@ -5469,7 +5469,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2d3032', e
   margin-left: -15px
 }
 
-/* ACCORDION 
+/* ACCORDION
  ---------------------------------------------------------------------------- */
 
 
@@ -5490,15 +5490,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2d3032', e
   clear: both;
 }
 
-/* CAROUSEL 
+/* CAROUSEL
  ---------------------------------------------------------------------------- */
 
-/* HERO UNIT 
+/* HERO UNIT
  ---------------------------------------------------------------------------- */
 
-/*** ADMIN STYLE 
+/*** ADMIN STYLE
  ---------------------------------------------------------------------------- */
-/** Header 
+/** Header
  ------------------------------------------- */
 
 
@@ -5586,7 +5586,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   padding: 9px;
 }
 
-/** Sidebar 
+/** Sidebar
  ------------------------------------------- */
 
 
@@ -5698,7 +5698,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   width: 55px;
 }
 
-/* Nav sidebar 
+/* Nav sidebar
  ---------------------------------------- */
 
 
@@ -5925,7 +5925,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   background: rgba(255, 255, 255, 0.6);
 }
 
-/** Content 
+/** Content
  ---------------------------------------- */
 
 
@@ -5952,7 +5952,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   margin-left: 0;
 }
 
-/** Footer-Fix 
+/** Footer-Fix
  ---------------------------------------- */
 
 
@@ -5976,7 +5976,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   margin-bottom: 0;
 }
 
-/** Footer-Fix navbar 
+/** Footer-Fix navbar
  ---------------------------------------- */
 
 
@@ -6021,7 +6021,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   color: #D6B200; /*3399ff */
 }
 
-/* Footer-Fix sidebar 
+/* Footer-Fix sidebar
  ---------------------------------------- */
 
 
@@ -6058,7 +6058,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
 }
 
-/* Footer-Fix content 
+/* Footer-Fix content
  ---------------------------------------- */
 
 
@@ -6081,7 +6081,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   margin-left: 0;
 }
 
-/** Page Head 
+/** Page Head
  ---------------------------------------- */
 
 
@@ -6117,7 +6117,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   margin-top: -5px;
 }
 
-/* Page Bar 
+/* Page Bar
  ---------------------------------------- */
 
 
@@ -6152,7 +6152,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   background: url("../img/background/body-bg-02.jpg") repeat scroll 0 0 #f5f5f5;
 }
 
-/** Page Content 
+/** Page Content
  ---------------------------------------- */
 
 
@@ -6210,7 +6210,7 @@ legend .toggle-btn[class*=" aweso-icon-"]:before {
   color: #999;
 }
 
-/*** WIDGETS 
+/*** WIDGETS
  ---------------------------------------------------------------------------- */
 
 
@@ -6264,7 +6264,7 @@ legend .toggle-btn[class*=" aweso-icon-"]:before {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
 }
 
-/** widget header 
+/** widget header
  ---------------------------------------- */
 
 
@@ -6347,7 +6347,7 @@ legend .toggle-btn[class*=" aweso-icon-"]:before {
   border-top-color: #616161;
 }
 
-/** widget title 
+/** widget title
  ------------------------------------------- */
 
 
@@ -6392,7 +6392,7 @@ filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   text-shadow: 0px -1px 0 rgba(0, 0, 0, 1);
 }
 
-/** widget content 
+/** widget content
  ------------------------------------------- */
 
 
@@ -6415,7 +6415,7 @@ filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   -webkit-background-clip: padding-box;
 }
 
-/** widget body 
+/** widget body
  ------------------------------------------- */
 
 
@@ -6441,7 +6441,7 @@ filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   border-bottom: none;
 }
 
-/** widget bar 
+/** widget bar
  ------------------------------------------- */
 
 
@@ -6455,12 +6455,12 @@ filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 /*
-.widget-bordered { 
+.widget-bordered {
   margin: 5px 0 0;
-  background-color: #ebedf2; 
-  border-bottom: 1px solid #c9c9c9; 
-  -webkit-border-radius: 4px 4px 0 0; 
-        -moz-border-radius: 4px 4px 0 0; 
+  background-color: #ebedf2;
+  border-bottom: 1px solid #c9c9c9;
+  -webkit-border-radius: 4px 4px 0 0;
+        -moz-border-radius: 4px 4px 0 0;
                     border-radius: 4px 4px 0 0;
 }
 */
@@ -6486,7 +6486,7 @@ filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   margin: 0;
 }
 
-/** widget row 
+/** widget row
  ------------------------------------------- */
 
 
@@ -6510,7 +6510,7 @@ filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   border-bottom: none;
 }
 
-/** widget footer 
+/** widget footer
  ------------------------------------------- */
 
 
@@ -7056,7 +7056,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff5b5b', e
 }
 
 /* WIDGET MEDIA THUMB
- ------------------------------------------- */ 
+ ------------------------------------------- */
 
 
 
@@ -7585,16 +7585,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff5b5b', e
 .circle {
   position: relative;
   border-radius: 50em;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8) 
-  
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8)
+
 }
 
 .circle-shadow {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15),  0 0px 6px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15),  0 0px 6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2),  0 0px 6px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8) 
-  
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8)
+
 }
 
 .circle-shadow.in {
@@ -7602,7 +7602,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff5b5b', e
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35),inset 0 1px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35),inset 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35),inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  
+
 }
 
 
@@ -8058,7 +8058,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endCo
   border-color: #468847;
 }
 
-/*** LOGIN PAGE - LOGIN DEMO 
+/*** LOGIN PAGE - LOGIN DEMO
 ------------------------------------------------------------------------- ***/
 
 
@@ -8299,7 +8299,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endCo
   margin-bottom: 5px;
 }
 
-/*** RESPOSIVE 
+/*** RESPOSIVE
 ------------------------------------------------------------------------- ***/
 @media (min-width: 768px) and (max-width: 979px) {
 }
@@ -8382,7 +8382,7 @@ margin-left: 2.564102564102564%;
 }
 
 .hidden-small-desktop {
-  display: none;  
+  display: none;
 }
 
 }
@@ -8495,7 +8495,7 @@ margin-left: 2.564102564102564%;
 .form-horizontal .controls {
   margin-left: 130px;
 }
-  
+
 }
  @media (max-width: 767px) {
 
@@ -8725,7 +8725,7 @@ h3.text-size {
 }
 
 .visible-small-desktop {
-  display: none;  
+  display: none;
 }
 }
  @media (min-width: 980px) {
