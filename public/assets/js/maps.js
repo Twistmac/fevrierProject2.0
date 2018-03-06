@@ -7,7 +7,7 @@
           mapTypeId: 'roadmap'
         });
 
-        var iconBase = 'http://integration.oktobone.com/assets/images/features/';
+        var iconBase = window.location.host + '/projetfevrier2.0/assets/images/features/';
         var icons = {
           parking: {
             name: 'résidentiel',

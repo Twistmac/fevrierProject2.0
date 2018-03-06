@@ -6,13 +6,23 @@ use Illuminate\Http\Request;
 use App\Blog;
 use App\Image;
 use Illuminate\Support\Facades\Input;
+use App\Publicite;
+use App\Http\Controllers\PublicitesController;
+use Intervention\Image\Facades\Image as Resize;
+//Intervention\Image\ImageManagerStatic as Image;
 
 class BlogsController extends Controller
 {
 	private $blog;
+    private $pubs;
+    private $publicite;
+    private $listespubs;
 
 	public function __construct()
 	{
+        $this->pubs = new Publicite();
+        $this->publicite = new PublicitesController($this->pubs);
+        $this->listespubs = json_decode(json_encode($this->publicite->getpubliciteperPage('blog')),false);
 		$this->blog = new Blog();
 	}
 
@@ -24,10 +34,11 @@ class BlogsController extends Controller
 
     public function detailsblog()
     {
+        $publicites = $this->listespubs;
     	$id_blog = \Request::get('blog_id');
     	$collection = $this->blog->modelDetailArticle($id_blog);
         $this->incrementationlecture($id_blog);
-    	return view('front.detailblog',compact('collection'));
+    	return view('front.detailblog',compact('collection','publicites'));
     }
 
     /**
@@ -49,13 +60,14 @@ class BlogsController extends Controller
 
     public function listesblog()
     {
+        $publicites = $this->listespubs;
     	$listesblog = $this->blog->listblogwithimage(null,6);
     	foreach($listesblog as $listes)
         {
             $listes->slug = Blog::slugBlog($listes->titre,$listes->id);
             $listes->contenu = Blog::trunque($listes->contenu,150);
         }
-        return view('front.listesblogs',compact('listesblog'));	
+        return view('front.listesblogs',compact('listesblog','publicites'));	
     }
 
     /** 
@@ -144,20 +156,47 @@ class BlogsController extends Controller
     */
     public function updateMoteur(Request $request)
     {
+
         //get Request::all() && get blog with Query
-        $blog_updated = $request->post();//array
-        $last_blog = Blog::where('titre',$request->post('blog_titre'))->firstOrFail();//Object
-        $last_blog = json_decode(json_encode($last_blog),true);//array
+        $blog_updated = $request->input();//array
+
+        $last_blogObj = Blog::find($request->input('article'))->firstOrFail();//Object
+        $last_blog = json_decode(json_encode($last_blogObj),true);//array
         //parcourir tableau et comparer avec Request::post()
-        unset($blog_updated['_token']);
+        unset($blog_updated['_token'] , $blog_updated['_wysihtml5_mode'],$blog_updated['article']);
+        //verifier si une image a été uploadé
+        if($request->file('file'))
+        {
+            $this->validate($request, ['file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048']);
+            $image = $request->file('file');
+            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/images');
+
+            //redimensionner Image
+            $image_resize = Resize::make($image->getRealPath());              
+            $resultat = $image_resize->resize(1600, 1000);
+            $path = $destinationPath . '/' . $input['imagename'];
+            $image_resize->save($path);
+            //enregistrement image dans destinationPath
+            //$image->move($destinationPath, $input['imagename']); 
+             
+            //supprimer ancienne image
+            $image_blog = Image::where('blog_id',$request->input('article'))->first(['urlimage1']);
+            unlink( public_path() . '/images/' . $image_blog->urlimage1 );
+            //insertion image 
+            Image::where('blog_id',$request->input('article'))->update(['urlimage1' => $input['imagename']]);
+        }
+
         //renommer les keys
         $blog_updated = [
             'titre' => $blog_updated['blog_titre'],
             'contenu' => $blog_updated['blog_paragraphe'],
             'tag' => $blog_updated['metaArticleKeywords']
         ];
+
         $modification = array_diff($blog_updated,$last_blog);
-        unset($modification['blog_titre'],$modification['blog_paragraphe'],$modification['metaArticleKeywords']);
+        
+
        //if $modification NOT NULL : require update
         if(!empty($modification))
         {  

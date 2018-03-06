@@ -17,13 +17,13 @@
 <meta name="author" content="">
 
 <!-- Le styles -->
-{!! plugin_css('admin/assets/css/lib/bootstrap') !!}
-{!! plugin_css('admin/assets/css/lib/bootstrap-responsive') !!}
-{!! plugin_css('admin/assets/css/boo-extension') !!}
-{!! plugin_css('admin/assets/css/boo') !!}
-{!! plugin_css('admin/assets/css/style') !!}
-{!! plugin_css('admin/assets/css/boo-coloring') !!}
-{!! plugin_css('admin/assets/css/boo-utility') !!}
+{!! plugin_css('admin/css/lib/bootstrap') !!}
+{!! plugin_css('admin/css/lib/bootstrap-responsive') !!}
+{!! plugin_css('admin/css/boo-extension') !!}
+{!! plugin_css('admin/css/boo') !!}
+{!! plugin_css('admin/css/style') !!}
+{!! plugin_css('admin/css/boo-coloring') !!}
+{!! plugin_css('admin/css/boo-utility') !!}
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>

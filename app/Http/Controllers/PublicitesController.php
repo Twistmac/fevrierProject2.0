@@ -78,24 +78,25 @@ class PublicitesController extends Controller
 	public function savePubIntoCookie($cookie, $objectPub,$nomPage)
 	{
 		$data_cookie = $cookie->getcookies('publiciteIEA');
-
 		// dd( $cookie->showcookies('publiciteIEA'));
-
+		
 		if( !empty($data_cookie) && isset($data_cookie) )
 		{
 			if( !empty($data_cookie[$nomPage]) )
 			{
 				//similaire : true , not :false
 				$compare = $this->verificationUpdate($data_cookie[$nomPage],$objectPub);
-				if( $compare )
+				if( $compare ) //true
 				{
 					return $data_cookie;
 				}
-				else{
-					$cookie->deletecookies($data_cookie[$nomPage]);
-					$array_cookies[$nomPage] = $objectPub;
-					$save = $cookie->setcookies('publiciteIEA',$array_cookies,null,'/');
-					return $array_cookies;
+				else{ //false
+					$cookie->deletecookies('publiciteIEA');
+					unset($data_cookie[$nomPage]);
+					$data_cookie[$nomPage] = $objectPub;
+
+					$save = $cookie->setcookies('publiciteIEA',$data_cookie,null,'/');
+					return $data_cookie;
 				}
 			}
 			else

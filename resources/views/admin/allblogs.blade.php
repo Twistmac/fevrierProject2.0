@@ -30,7 +30,7 @@
                         <li class="span3">
                             <div class="thumbnail bg-gray-light text-center">
                                 <div class="equalize">
-                                    <div class="well well-nice"> <a href="#"><img class="radius3" src="{{url('/images/'.$blogs->urlimage1)}}"></a>
+                                    <div class="well well-nice"> <a href="#"><img class="radius3" src="{{url('/images/'.$blogs->urlimage1)}}" width="640" height="320"></a>
                                     </div>
                                     <div class="caption text-center">
                                         <p><b>{{$blogs->titre}}</b></p>

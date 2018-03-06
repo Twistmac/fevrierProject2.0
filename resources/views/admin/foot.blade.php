@@ -46,99 +46,99 @@
 
 <!-- Le javascript --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-{!! helper_js('admin/assets/js/lib/jquery') !!}
-{!! helper_js('admin/assets/js/lib/jquery-ui')!!}
-{!! helper_js('admin/assets/js/lib/jquery.cookie')!!}
-{!! helper_js('admin/assets/js/lib/jquery.date') !!}
-{!! helper_js('admin/assets/js/lib/jquery.mousewheel')!!}
-{!! helper_js('admin/assets/js/lib/jquery.load-image.min')!!}
-{!! helper_js('admin/assets/js/lib/bootstrap/bootstrap')!!}
+{!! helper_js('admin/js/lib/jquery') !!}
+{!! helper_js('admin/js/lib/jquery-ui')!!}
+{!! helper_js('admin/js/lib/jquery.cookie')!!}
+{!! helper_js('admin/js/lib/jquery.date') !!}
+{!! helper_js('admin/js/lib/jquery.mousewheel')!!}
+{!! helper_js('admin/js/lib/jquery.load-image.min')!!}
+{!! helper_js('admin/js/lib/bootstrap/bootstrap')!!}
 
 <!-- Plugins Bootstrap -->
-{!! helper_js('admin/assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-fuelux/all-fuelux.min')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker')!!}}
-{!! helper_js('admin/assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-select/bootstrap-select')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-bootbox/bootbox.min')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-modal/js/bootstrap-modalmanager')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-modal/js/bootstrap-modal')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min')!!}
-{!! helper_js('admin/assets/plugins/bootstrap-wizard-2/js/bwizard-only.min')!!}
- {!! helper_js('admin/assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min')!!}
+{!! helper_js('admin/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min')!!}
+{!! helper_js('admin/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5')!!}
+{!! helper_js('admin/plugins/bootstrap-fuelux/all-fuelux.min')!!}
+{!! helper_js('admin/plugins/bootstrap-datepicker/js/bootstrap-datepicker')!!}
+{!! helper_js('admin/plugins/bootstrap-timepicker/js/bootstrap-timepicker')!!}
+{!! helper_js('admin/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker')!!}
+{!! helper_js('admin/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker')!!}
+{!! helper_js('admin/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker')!!}}
+{!! helper_js('admin/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button')!!}
+{!! helper_js('admin/plugins/bootstrap-fileupload/js/bootstrap-fileupload')!!}
+{!! helper_js('admin/plugins/bootstrap-rowlink/js/bootstrap-rowlink')!!}
+{!! helper_js('admin/plugins/bootstrap-progressbar/js/bootstrap-progressbar')!!}
+{!! helper_js('admin/plugins/bootstrap-select/bootstrap-select')!!}
+{!! helper_js('admin/plugins/bootstrap-multiselect/js/bootstrap-multiselect')!!}
+{!! helper_js('admin/plugins/bootstrap-bootbox/bootbox.min')!!}
+{!! helper_js('admin/plugins/bootstrap-modal/js/bootstrap-modalmanager')!!}
+{!! helper_js('admin/plugins/bootstrap-modal/js/bootstrap-modal')!!}
+{!! helper_js('admin/plugins/bootstrap-wizard/js/bootstrap-wizard.min')!!}
+{!! helper_js('admin/plugins/bootstrap-wizard-2/js/bwizard-only.min')!!}
+ {!! helper_js('admin/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min')!!}
 
 <!-- Plugins Custom - Only example --> 
-{!! helper_js('admin/assets/plugins/pl-extension/google-code-prettify/prettify') !!}
+{!! helper_js('admin/plugins/pl-extension/google-code-prettify/prettify') !!}
 
 <!-- Plugins Custom - System --> 
-{!! helper_js('admin/assets/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
-{!! helper_js('admin/assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs')!!}
+{!! helper_js('admin/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
+{!! helper_js('admin/plugins/pl-system/xbreadcrumbs/xbreadcrumbs')!!}
 
 <!-- Plugins Custom - System info -->
-<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
-<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
-<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+{!! helper_js('admin/plugins/pl-system-info/qtip2/dist/jquery.qtip.min') !!}
+{!! helper_js('admin/plugins/pl-system-info/gritter/js/jquery.gritter.min') !!}
+{!! helper_js('admin/plugins/pl-system-info/notyfy/jquery.notyfy') !!}
 
 <!-- Plugins Custom - Content -->
-<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
-<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
-<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+{!! helper_js('admin/plugins/pl-content/list/js/list.min') !!}
+{!! helper_js('admin/plugins/pl-content/list/plugins/list.paging.min') !!}
+{!! helper_js('admin/plugins/pl-content/jpages/js/jPages') !!}
 
 <!-- Plugins Custom - Component -->
-<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
-<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+{!! helper_js('admin/plugins/pl-component/fullcalendar/fullcalendar.min') !!}
+{!! helper_js('admin/plugins/pl-component/rangeslider/jqallrangesliders.min') !!}
 
 <!-- Plugins Custom - Form -->
-{!! helper_js('admin/assets/plugins/pl-form/uniform/jquery.uniform.min')!!}
-<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
-<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
-<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
-<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
-<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
-<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
-<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+{!! helper_js('admin/plugins/pl-form/uniform/jquery.uniform.min')!!}
+{!! helper_js('admin/plugins/pl-form/select2/select2.min') !!}
+{!! helper_js('admin/plugins/pl-form/counter/jquery.counter') !!}
+{!! helper_js('admin/plugins/pl-form/elastic/jquery.elastic') !!}
+{!! helper_js('admin/plugins/pl-form/inputmask/jquery.inputmask') !!}
+{!! helper_js('admin/plugins/pl-form/inputmask/jquery.inputmask.extensions') !!}
+{!! helper_js('admin/plugins/pl-form/validate/js/jquery.validate.min') !!}
+{!! helper_js('admin/plugins/pl-form/duallistbox/jquery.duallistbox.min') !!}
 
 <!-- Plugins Custom - Gallery --> 
-{!! helper_js('admin/assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min')!!}
-{!! helper_js('admin/assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min')!!}
-{!! helper_js('admin/assets/plugins/pl-gallery/wookmark/jquery.imagesloaded')!!}
-{!! helper_js('admin/assets/plugins/pl-gallery/wookmark/jquery.wookmark.min')!!}
+{!! helper_js('admin/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min')!!}
+{!! helper_js('admin/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min')!!}
+{!! helper_js('admin/plugins/pl-gallery/wookmark/jquery.imagesloaded')!!}
+{!! helper_js('admin/plugins/pl-gallery/wookmark/jquery.wookmark.min')!!}
  
 <!-- Plugins Tables --> 
-{!! helper_js('admin/assets/plugins/pl-table/datatables/media/js/jquery.dataTables')!!}
-{!! helper_js('admin/assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins')!!}
-{!! helper_js('admin/assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter')!!}
+{!! helper_js('admin/plugins/pl-table/datatables/media/js/jquery.dataTables')!!}
+{!! helper_js('admin/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins')!!}
+{!! helper_js('admin/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter')!!}
 
 <!-- Plugins data visualization --> 
-<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
-<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
-<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
-{!! helper_js('admin/assets/plugins/pl-visualization/knob/knob')!!}
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
-<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+{!! helper_js('admin/plugins/pl-visualization/sparkline/jquery.sparkline.min') !!}
+{!! helper_js('admin/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart') !!}
+{!! helper_js('admin/plugins/pl-visualization/percentageloader/percentageloader.min') !!}
+{!! helper_js('admin/plugins/pl-visualization/knob/knob')!!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.categories') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.grow') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.orderBars') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.pie') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.resize') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.selection') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.stack') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.stackpercent') !!}
+{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.time') !!}
 
 <!-- main js --> 
-{!! helper_js('admin/assets/js/core')!!}
-{!! helper_js('admin/assets/js/application')!!}
+{!! helper_js('admin/js/core')!!}
+{!! helper_js('admin/js/application')!!}
 <!-- Only This Demo Page --> 
-{!! helper_js('admin/assets/js/demo/demo-jquery.dataTables')!!}
+{!! helper_js('admin/js/demo/demo-jquery.dataTables')!!}
 
 <!-- Only This Demo Page -->
 <script type="text/javascript">
@@ -259,14 +259,12 @@ $(document).ready(function () {
                 placeholder: "select or enter tag",
                 tokenSeparators: [",", " "]
         });
-
-
 });
 </script>
 
 
 <!-- Only This Demo Page --> 
-{!! helper_js('admin/assets/js/demo/demo-wisyhtml5')!!}
+{!! helper_js('admin/js/demo/demo-wisyhtml5')!!}
 
 <script>		
 $(function() {
