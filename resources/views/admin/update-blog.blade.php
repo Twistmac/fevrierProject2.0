@@ -4,7 +4,7 @@
         <div id="main-content" class="main-content container-fluid">
             @if(Session::has('success')) 
             <div class="alert alert-success">
-                <strong>Information ! </strong> {{Session::get('success')}}
+                <strong>Information ! </strong> {!!Session::get('success')!!}
             </div>
             @endif
             <div class="row-fluid page-head">

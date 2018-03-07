@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <p class="action"> <a class="btn btn-small" href="{{ route('blog.update',$blogs->slug)}}"><i class="fontello-icon-edit"></i> Edit</a> 
-                                    <a class="btn btn-small" data-dismiss="modal" data-toggle="modal" data-target="#dynamicModal{{$i}}">Delete</a> 
+                                    <a class="btn btn-small" data-dismiss="modal" data-toggle="modal" data-target="#dynamicModal{{$i}}">Archiver</a> 
                                     <a class="btn btn-small" href="#"><i class="fontello-icon-star-1"></i> Favoris</a> </p>
                             </div>
                              <!-- Modal -->
@@ -52,10 +52,10 @@
                                         <h4 class="modal-title">Suppression article</h4>
                                       </div>
                                       <div class="modal-body">
-                                        <p>Voulez vous vraiment supprimer l'article <br><b>{{ucfirst($blogs->titre)}}</b>  </p>
+                                        <p>Voulez vous vraiment archiver l'article <br><b>{{ucfirst($blogs->titre)}}</b>  </p>
                                       </div>
                                       <div class="modal-footer">
-                                        <a type="button" class="btn btn-primary" href="{{route('blog.delete',$blogs->slug)}}">supprimer</a>
+                                        <a type="button" class="btn btn-primary" href="{{route('blog.delete',$blogs->slug)}}">Archiver</a>
                                         <button type="reset" class="btn btn-default" data-dismiss="modal">annuler</button>
                                       </div>
                                     </div>

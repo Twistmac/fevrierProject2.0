@@ -2,11 +2,9 @@
         <!-- // sidebar -->
         
         <div id="main-content" class="main-content container-fluid">
-            @if(Session::has('success')) 
-            <div class="alert alert-danger">
-                <strong>Succes ! </strong> {{Session::get('success')}}
-            </div>
-            @endif
+            <!-- Message -->
+            @include('admin.notification')
+            <!-- end Message -->
             <div class="row-fluid page-head">
                 <h2 class="page-title"><i class="aweso-icon-list-alt"></i> Gestion de Blog <small>Ajout d'un article dans Blog </small></h2>
                 <div class="page-bar">
@@ -42,16 +40,25 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <h4>Lien : </h4>
                                     <p>
-                                        <input type="text" class="input-block-level" name="lien" placeholder="https://"/>
+                                        <input type="text" class="input-block-level" name="lien" placeholder="https://" required="required"/>
+                                    </p>
+                                    <h4>Lien Image: </h4>
+                                    <p>
+                                        <input type="text" class="input-block-level" name="lienImage" placeholder="https://"/>
+                                        <small><code>Avertissement:</code> Pour obtenir l'adresse de l'image d' un article, avec votre navigateur faite un clic droite et cliquer sur <code>"Copier l'adresse de l'image"</code></small>
                                     </p>
                                     <h4>Titre : </h4>
                                     <p>
-                                        <input type="text" class="input-block-level" name="titre"/>
+                                        <input type="text" class="input-block-level" name="titre" required="required" />
                                     </p>
                                     <h4>Description : </h4>
                                     <p>
-                                        <textarea class="input-block-level" rows="12" name="contenu"></textarea> 
+                                        <textarea class="input-block-level" rows="6" name="contenu" required="required"></textarea> 
                                     </p>
+                                    <h4>Tags : </h4>
+                                    <label for="metaArticleKeywords" class="control-label">Ecrire les mots-clés</label>                                                 
+                                    <input id="metaArticleKeywords" class="input-block-level" type="text" name="metaArticleKeywords" value="" /> 
+                                    <span class="help-block">Écrivez ou sélectionnez une étiquette et appuyez sur "entrer" ou "virgule" pour les ajouter.</span> 
                                 </div>
                                 <div class="span6">
                                     <h4 class="simple-header"> Image d'illustration <small>Taille standard</small> </h4>
