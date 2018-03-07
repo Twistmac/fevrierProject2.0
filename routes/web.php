@@ -105,11 +105,8 @@ Route::get('business/{param}-{categorie}','ProduitsController@gestioncontenu')->
 
 Route::get('business/commercial','ProduitsController@indexcommercial');
 
-// --------------------------------------------------------------------------------------------------------------------------------------------
-//ADMIN
+//admin
 //Blog
-// --------------------------------------------------------------------------------------------------------------------------------------------
-
 Route::prefix('admin')->group(function () {
     Route::get('blog/new',['as' => 'blog.new','uses'=>'BlogsController@show']);
     Route::post('blog/store',['as' => 'blog.store','uses'=>'BlogsController@store']);
@@ -122,13 +119,6 @@ Route::prefix('admin')->group(function () {
     Route::get('blog/delete/{slug}',['as' => 'blog.delete','uses' => 'BlogsController@delete'])->where('slug','[a-z0-9\-]+')->middleware('trustarticle');
     Route::get('blog/register',['as' => 'blog.showregistre', 'uses' => 'BlogsController@showregistre']);
     Route::get('blog/restore/{slug}',['as' => 'blog.restore','uses' => 'BlogsController@restorearticle'])->where('slug','[0-9\-]+')->middleware('trustarticle');
-// login administrateur
-    Route::get('auth', function(){ return view('admin.authentification');});
-// profil Admin
-    Route::get('profilAdmin', function(){ return view('admin.profilAdm');});
-// statistique
-    Route::get('stat', function(){ return view('admin.statistique');});
-
 });
 
 //Route vers page Services
@@ -144,9 +134,14 @@ Route::post('/putFav',['as' => 'putFavoris', 'uses'=> 'ProduitsController@putFav
 //Route recuperation API AgentPoint
 Route::get('getapi', ['as' => 'get.api', 'uses' => 'ApiController@getdataPropertiesromApi']);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Gestion publicites
 Route::get('publicite/{name}',['as' => 'front.pub', 'uses' => 'PublicitesController@getpubliciteperPage'])->where('name','[a-z0-9\-]+');
 
 
 >>>>>>> master
+=======
+
+
+>>>>>>> a968336a124a2727c383001d0940a28156ef5f30
