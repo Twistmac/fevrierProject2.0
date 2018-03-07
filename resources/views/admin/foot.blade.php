@@ -49,6 +49,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
 <!-- Le javascript -->
@@ -94,6 +95,19 @@
 {!! helper_js('admin/assets/js/lib/bootstrap/bootstrap')!!}
 
 <!-- Plugins Bootstrap -->
+=======
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+{!! helper_js('admin/assets/js/lib/jquery') !!}
+{!! helper_js('admin/assets/js/lib/jquery-ui')!!}
+{!! helper_js('admin/assets/js/lib/jquery.cookie')!!}
+{!! helper_js('admin/assets/js/lib/jquery.date') !!}
+{!! helper_js('admin/assets/js/lib/jquery.mousewheel')!!}
+{!! helper_js('admin/assets/js/lib/jquery.load-image.min')!!}
+{!! helper_js('admin/assets/js/lib/bootstrap/bootstrap')!!}
+
+<!-- Plugins Bootstrap -->
+>>>>>>> parent of bef0ef4... update farany
 {!! helper_js('admin/assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min')!!}
 {!! helper_js('admin/assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5')!!}
 {!! helper_js('admin/assets/plugins/bootstrap-fuelux/all-fuelux.min')!!}
@@ -114,11 +128,15 @@
 {!! helper_js('admin/assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min')!!}
 {!! helper_js('admin/assets/plugins/bootstrap-wizard-2/js/bwizard-only.min')!!}
  {!! helper_js('admin/assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min')!!}
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of bef0ef4... update farany
 
 <!-- Plugins Custom - Only example --> 
 {!! helper_js('admin/assets/plugins/pl-extension/google-code-prettify/prettify') !!}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <!-- Plugins Custom - System -->
 {!! helper_js('admin/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
@@ -208,6 +226,11 @@
 {!! helper_js('admin/assets/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
 {!! helper_js('admin/assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs')!!}
 >>>>>>> parent of bef0ef4... update farany
+=======
+<!-- Plugins Custom - System --> 
+{!! helper_js('admin/assets/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
+{!! helper_js('admin/assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs')!!}
+>>>>>>> parent of bef0ef4... update farany
 
 <!-- Plugins Custom - System info -->
 <script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
@@ -224,6 +247,7 @@
 <script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
 
 <!-- Plugins Custom - Form -->
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -267,6 +291,8 @@
 >>>>>>> parent of bef0ef4... update farany
 =======
 >>>>>>> parent of bef0ef4... update farany
+=======
+>>>>>>> parent of bef0ef4... update farany
 {!! helper_js('admin/assets/plugins/pl-form/uniform/jquery.uniform.min')!!}
 <script src="assets/plugins/pl-form/select2/select2.min.js"></script>
 <script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
@@ -277,7 +303,10 @@
 <script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of bef0ef4... update farany
 =======
 >>>>>>> parent of bef0ef4... update farany
 =======
@@ -313,6 +342,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <!-- main js -->
 {!! helper_js('admin/js/core')!!}
@@ -324,6 +354,8 @@
 >>>>>>> parent of bef0ef4... update farany
 =======
 >>>>>>> parent of bef0ef4... update farany
+=======
+>>>>>>> parent of bef0ef4... update farany
 <!-- main js --> 
 {!! helper_js('admin/assets/js/core')!!}
 {!! helper_js('admin/assets/js/application')!!}
@@ -331,7 +363,10 @@
 {!! helper_js('admin/assets/js/demo/demo-jquery.dataTables')!!}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of bef0ef4... update farany
 =======
 >>>>>>> parent of bef0ef4... update farany
 =======
@@ -350,6 +385,7 @@ $(document).ready(function () {
                         $("#legend2").html(items.range.start + " - " + items.range.end + " of " + items.count);
                 }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -751,10 +787,121 @@ $(document).ready(function () {
 
 
 >>>>>>> parent of bef0ef4... update farany
+=======
+
+        /* on select change */
+        $("#showItem").change(function () {
+                var newPerPage = parseInt($(this).val());
+                $("ul.holder").jPages("destroy").jPages({
+                        containerID: "gallery",
+                        perPage: newPerPage
+                });
+        });
+
+        $('#gallery .nailthumb-container.show-loading').nailthumb({
+                titleWhen: 'hover',
+                animationTime: 3000,
+                replaceAnimation: 'fade',
+                imageFromWrappingLink: true,
+                onStart: function (container) {
+                        container.showLoading({
+                                'overlayWidth': 30, //null
+                                'overlayHeight': 30 //null
+                        });
+                },
+                onFinish: function (container) {
+                        container.hideLoading();
+                }
+        });
+
+        $("#gallery a.edit").click(function () {
+                $("#previewImage").html($("<img>").attr("src", this.href));
+                return false;
+
+        });
+
+        // Start slideshow button:
+        $('#start-slideshow').button().click(function () {
+                var options = $(this).data(),
+                        modal = $(options.target),
+                        data = modal.data('modal');
+                if(data) {
+                        $.extend(data.options, options);
+                }
+                else {
+                        options = $.extend(modal.data(), options);
+                }
+                modal.find('.modal-slideshow').find('i')
+                        .removeClass('fontello-icon-play')
+                        .addClass('fontello-icon-pause');
+                modal.modal(options);
+        });
+
+        // Toggle fullscreen button:
+        $('#toggle-fullscreen').button().click(function () {
+                var button = $(this),
+                        root = document.documentElement;
+                if(!button.hasClass('active')) {
+                        $('#modal-gallery').addClass('modal-fullscreen');
+                        if(root.webkitRequestFullScreen) {
+                                root.webkitRequestFullScreen(
+                                window.Element.ALLOW_KEYBOARD_INPUT);
+                        }
+                        else if(root.mozRequestFullScreen) {
+                                root.mozRequestFullScreen();
+                        }
+                }
+                else {
+                        $('#modal-gallery').removeClass('modal-fullscreen');
+                        (document.webkitCancelFullScreen || document.mozCancelFullScreen || $.noop).apply(document);
+                }
+        });
+
+        // Only demo form Tag
+        var fileTagData = [{
+                id: "Storm",
+                text: "Storm"
+        }, {
+                id: "Scenic",
+                text: "Scenic"
+        }, {
+                id: "Lakes",
+                text: "Lakes"
+        }, {
+                id: "Rivers",
+                text: "Rivers"
+        }, {
+                id: "Forest",
+                text: "Forest"
+        }, {
+                id: "Flowers",
+                text: "Flowers"
+        }]
+        $("#fileTag").select2({
+                tags: fileTagData,
+                createSearchChoice: function (term, data) {
+                        if($(data).filter(function () {
+                                return this.text.localeCompare(term) === 0;
+                        }).length === 0) {
+                                return {
+                                        id: term,
+                                        text: term
+                                };
+                        }
+                },
+                width: "100%",
+                multiple: true,
+                placeholder: "select or enter tag",
+                tokenSeparators: [",", " "]
+        });
+
+
+>>>>>>> parent of bef0ef4... update farany
 });
 </script>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -778,15 +925,20 @@ $(document).ready(function () {
 >>>>>>> parent of bef0ef4... update farany
 =======
 >>>>>>> parent of bef0ef4... update farany
+=======
+>>>>>>> parent of bef0ef4... update farany
 <!-- Only This Demo Page --> 
 {!! helper_js('admin/assets/js/demo/demo-wisyhtml5')!!}
 
 <script>		
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
 =======
 >>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
+=======
+>>>>>>> parent of bef0ef4... update farany
 =======
 >>>>>>> parent of bef0ef4... update farany
 =======
