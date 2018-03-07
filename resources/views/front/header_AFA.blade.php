@@ -133,7 +133,7 @@
                                     <a href="{{route('dashboardAFA') }}">TABLEAU DE BORD</a>
                                 </li>
                                 <li>
-                                    <a href="majAFA.php">MISE A JOUR PROFIL</a>
+                                    <a href="{!! route('majAFA') !!}">MISE A JOUR PROFIL</a>
                                 </li>
                                 <li>
                                     <a href="encoursAFA.php">PRODUIT EN COURS DE VENTE</a>
@@ -159,7 +159,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="immobilier.php">DECONNEXION</a>
+                                    <a href="{!! route('deconnection') !!}">DECONNEXION</a>
                                 </li>
                     </ul>
                 </nav>
