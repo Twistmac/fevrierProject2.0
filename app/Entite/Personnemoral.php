@@ -14,7 +14,8 @@ class Personnemoral extends Model {
 	'TELEPHONE', 'EMAIL', 'ETATPAIEMENTCOMPTE', 'OBSERVATION', 'OPERABILITE', 'LANGUAGE', 'CRM_PROVIDER_NAME', 'CRM_PROVIDER_EMAIL', 
 	'COMPTEPAYPAL', 'REFBANCAIRE', 'LOGIN', 'MOTDEPASSE', 'UPDATED_AT', 'CREATED_AT', 'TYPENATURE'];
 	protected $primaryKey = "IDPERSONNEMORALE";
-    
+    const CREATED_AT = 'CREATED_AT';
+    const UPDATED_AT = 'UPDATED_AT';
 
     public function localisation(){
         return $this->hasMany('App\Entite\Localisation','idlocalisation');

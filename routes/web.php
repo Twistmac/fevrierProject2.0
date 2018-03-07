@@ -63,18 +63,23 @@ Route::get('/accueilMembre',['as'=>'accueilMembre', function()
 Route::get("/home",['as'=>'home', 'uses'=>'HomeController@acceuilMembre']);
 
 
-////// AFA //////////
-Route::get('/maJAFA',['as'=>'majAFA', 'uses'=>'AfaController@majAFA']);
-Route::get('/setBusiness',['as'=>'setBusinessDetail', 'uses'=>'AfaController@setBusinessDetail']);
-Route::post('/setBusiness',['as'=>'setBusinessDetail', 'uses'=>'AfaController@setBusinessDetail']);
 
-
-
-
-
-
-
-
+Route::get('/acceuilAFA',['as'=>'acceuilAFA', function()
+{
+    if(session('login')==''){
+        return redirect()->route('ErrorSession');
+    }
+    else{    return View::make('acceuilAFA');
+    }
+}]);
+Route::get('/acceuilAPL',['as'=>'acceuilAPL', function()
+{
+    if(session('login')==''){
+        return redirect()->route('ErrorSession');
+    }
+    else{    return View::make('acceuilAPL');
+    }
+}]);
 Route::get('/Reconnexion',['as'=>'ErrorSession', function () {
     session(['errorConnexion'=>"Veuillez vous connecter s'il vous plait"]);
     return redirect()->route('connexion');
