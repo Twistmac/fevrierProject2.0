@@ -1,18 +1,18 @@
-<?php affichageHeader() ?>
+@php affichageHeader() @endphp
         <div id="property-single"> 
             <div class="main-slider-wrapper clearfix content corps"> 
             <div id="main-slider"> 
                 <div class="slide">
-                    <img src="assets/images/slider/1.jpg" alt="Slide">
+                    <img src="{!! asset('assets/images/slider/1.jpg') !!}" alt="Slide">
                 </div>                 
                 <div class="slide">
-                    <img src="assets/images/slider/2.jpg" alt="Slide">
+                    <img src="{!! asset('assets/images/slider/2.jpg') !!}" alt="Slide">
                 </div>                 
                 <div class="slide">
-                    <img src="assets/images/slider/3.jpg" alt="Slide">
+                    <img src="{!! asset('assets/images/slider/3.jpg') !!}" alt="Slide">
                 </div>                 
                 <div class="slide">
-                    <img src="assets/images/slider/4.jpg" alt="Slide">
+                    <img src="{!! asset('assets/images/slider/4.jpg') !!}" alt="Slide">
                 </div>                 
             </div>  
 

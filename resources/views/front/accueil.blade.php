@@ -466,6 +466,7 @@
                                 <i class="fa fa-th selected" data-layout="4"></i>
                                 <i class="fa fa-list-ul" data-layout="12"></i>
                             </p>
+<<<<<<< HEAD
                           </div>
                         </div>
                     </header>
@@ -491,6 +492,34 @@
                                         <a href="{{url('produit/'.$produit->slug)}}" class="btn btn-default btn-price pull-right" data-hover="Détails">
                                             <strong>{{$produit->prix}}</strong>
                                         </a>
+=======
+                            <div class="content-box-large box-with-header">
+                                  <img src="{{link_img( $publicites->accueil->sidebar1->lienImage )}}" class="img-rounded" alt=" {{$publicites->accueil->sidebar1->description}} " width="{{ $publicites->accueil->sidebar1->width }}" height=" {{$publicites->accueil->sidebar1->height}} ">
+                                <br /><br />
+                            </div>
+                        </div>
+                        </section>
+                        <section class="property-meta-wrapper common text-center bg-info">
+                            <div class="content-box-header">
+                                <div class="panel-title">Espaces publicitaires</div>
+                            </div>
+                            <div class="content-box-large box-with-header">
+                                  <img src="{{link_img( $publicites->accueil->sidebar2->lienImage )}}" class="img-rounded" alt="{{ $publicites->accueil->sidebar2->description }}" width=" {{$publicites->accueil->sidebar2->width}} " height=" {{$publicites->accueil->sidebar2->height}} ">
+                                <br /><br />
+                            </div>
+                        </section>
+                        <section class="widget recent-properties clearfix">
+                            <h5 class="title">Récents</h5>
+                            @foreach($recents as $recent)
+                            <div class="property clearfix">
+                                <a href="#" class="feature-image zoom">
+                                    <img data-action="zoom" src="{{url('images/'.$recent->urlimage1)}}" alt="Property Image">
+                                </a>
+                                <div class="property-contents">
+                                    <h6 class="entry-title"><a href="{{ url('/produit'.$recent->slug) }}">{{ $recent->nom }}</a></h6>
+                                    <span class="btn-price">{{ $recent->prix }}</span>
+                                    <span class="property-location"><i class="fa fa-map-marker"></i>{{ $recent->cite }}</span>
+>>>>>>> master
                                     <div class="property-meta clearfix">
                                         <span><i class="fa fa-arrows-alt"></i> {{$produit->surface}}</span>
                                         <span><i class="fa fa-bed"></i> {{$produit->ch}}</span>
@@ -503,6 +532,7 @@
                                     <!-- <div class="author-box clearfix">
                                     </div> -->
                                 </div>
+<<<<<<< HEAD
                             </article>
                         </div>
                         @endforeach
@@ -581,6 +611,41 @@
                          </div>
                          @endforeach
                        </div>
+=======
+                            </div>
+                            @endforeach
+                        </section>
+                        <section class="widget property-taxonomies clearfix">
+                            <h5 class="title">Status récents</h5>
+                            <ul class="clearfix">
+                                @foreach($counter as $compte)
+                                    <li>
+                                        <a href="#">{{ $compte['libelle'] }}</a>
+                                        <span class="pull-right">{{ $compte['count'] }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </section>
+                        <section class="property-meta-wrapper common text-center bg-info">
+                            <div class="content-box-header">
+                                <div class="panel-title">Espaces publicitaires</div>
+                            </div>
+                            <div class="content-box-large box-with-header">
+                                  <img src="{{link_img( $publicites->accueil->sidebar3->lienImage )}}" class="img-rounded" alt="{{ $publicites->accueil->sidebar2->description }}" width="{{ $publicites->accueil->sidebar3->lienImage }}" height="{{ $publicites->accueil->sidebar3->height }}">
+                                <br/><br/>
+                            </div>
+                        </section>
+                        <section class="property-meta-wrapper common text-center bg-info">
+                            <div class="content-box-header">
+                                <div class="panel-title">Espaces publicitaires</div>
+                            </div>
+                            <div class="content-box-large box-with-header">
+                                  <img src="{{link_img( $publicites->accueil->sidebar4->lienImage )}}" class="img-rounded" alt="{{$publicites->accueil->sidebar4->lienImage}}" width="{{$publicites->accueil->sidebar4->lienImage}}" height="{{ $publicites->accueil->sidebar4->height }}">
+                                <br /><br />
+                            </div>
+                        </section>
+                    </div>
+>>>>>>> master
                 </div>
                 {{$listesblog->links()}}
           </div>

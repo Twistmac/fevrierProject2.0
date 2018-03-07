@@ -16,10 +16,14 @@ class SearchsController extends Controller
     */
     public  function searchGlobal(Request $request)
     {
+<<<<<<< HEAD
         $this->validate($request, [
+=======
+        $this->validate($request , [
+>>>>>>> master
             'etats' => 'nullable|max:255',
             'villes' => 'nullable|max:255',
-            'suburbs' => 'nullable|max:255'
+            'suburbs' => 'nullable|max:255',
         ]);
 
         $recherche = new Search();
