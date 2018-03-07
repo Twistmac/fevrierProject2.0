@@ -5779,10 +5779,10 @@ button.close {
 .modal {
   display: none;
   overflow: hidden;
-  position: sticky;
+  position: fixed;
   /* top: 250px; */
   right: 0;
-  bottom: 0;
+  /* bottom: 0; */
   left: 0;
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
