@@ -127,8 +127,13 @@ Route::prefix('admin')->group(function () {
     Route::get('blog/delete/{slug}',['as' => 'blog.delete','uses' => 'BlogsController@delete'])->where('slug','[a-z0-9\-]+')->middleware('trustarticle');
     Route::get('blog/register',['as' => 'blog.showregistre', 'uses' => 'BlogsController@showregistre']);
     Route::get('blog/restore/{slug}',['as' => 'blog.restore','uses' => 'BlogsController@restorearticle'])->where('slug','[0-9\-]+')->middleware('trustarticle');
-
+// login administrateur
     Route::get('auth', function(){ return view('admin.authentification');});
+// profil Admin
+    Route::get('profilAdmin', function(){ return view('admin.profilAdm');});
+// statistique
+    Route::get('stat', function(){ return view('admin.statistique');});
+
 });
 
 //Route vers page Services
