@@ -27,7 +27,7 @@
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="{{ link_img('assets/images/favicon.png') }}">
+<link rel="shortcut icon" href="{{ link_img('favicon.png') }}">
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -68,9 +68,7 @@
                                         </div>
                                         <div class="controls controls-row">
                                             <input id="idPassword" class="span3" type="password" name="id_login_password" placeholder="password">
-                                            <a href="{{url('admin/profilAdmin')}}">
-                                              <button type="submit" class="span2 btn btn-yellow btn-large">Connnecter</button>
-                                            </a>
+                                            <button type="submit" class="span2 btn btn-yellow btn-large">Connnecter</button>
                                         </div>
                                         <hr class="margin-xm">
                                         <label class="checkbox">
@@ -83,13 +81,80 @@
                                 <!-- // form -->
                             </div>
                             <div class="span7">
-                                <!-- <h4 class="welcome"><small>Investir en Australie</small></h4> -->
-                                <img src="{{ link_img('images/logo.png') }}">
+                                <h4 class="welcome"><small>Investir en Australie</small></h4>
                                 <p>J'ai créé le site www.investirenaustralie.com pour développer les échanges de la communauté francophone avec l'Australie. Cela concerne donc la France Métropolitaine et ses territoires ultramarins de la Mer Méditerranée et des 3 grands océans, la Belgique, le Luxembourg, la Suisse, Monaco, le Québec, les pays de l'Afrique francophone, etc...</p>
                                 <p>Les constructeurs et promoteurs australiens déposent sur le site leurs produits immobiliers, fonciers, industriels et commerciaux; les Membres de la communauté francophone internationale intéressés par l'Australie parcourent les offres déposées sur le site, contactent les vendeurs, et peuvent initier une procédure d'achat en étant assistés de juristes et financiers australiens francophones.
 L'acheteur est donc entouré par une équipe de professionnels francophones auprès desquels ils peuvent obtenir explications et soutien.</p>
                             </div>
                         </div>
+                        <!-- // Tab Login -->
+
+                        <div class="tab-pane fade" id="forgot">
+                            <div class="span5">
+                                <h4 class="welcome"><small><i class="fontello-icon-help-2"></i>Forgot your password?</small></h4>
+                                <form class="" method="post" action="dashboard-one.html" name="forgot_password">
+                                    <p class="note">Enter your e-mail address, we will send you an e-mail code for password reset.</p>
+                                    <div class="controls">
+                                        <input id="email" class="input-block-level" type="email" name="id_email_forgot" placeholder="your email">
+                                    </div>
+                                    <p class="text-center">or</p>
+                                    <div class="controls">
+                                        <input id="email" class="input-block-level" type="tel" name="id_phone_forgot" placeholder="number phone">
+                                    </div>
+                                    <hr class="margin-xm">
+                                    <button type="submit" class="btn-block btn btn-yellow btn-large">Submit</button>
+                                    <hr class="margin-mm">
+                                    <p>Have you remembered? <a href="#login" class="btn btn-boo" data-toggle="tab">Try to log in again.</a> or <a href="#register" class="btn btn-boo link" data-toggle="tab">Register now for free!</a></p>
+                                </form>
+                                <!-- // form -->
+                            </div>
+                            <div class="span7">
+                                <h4 class="welcome"><small>Place infotext for forgot password</small></h4>
+                                <p>Lorem ipsum dolor sit amet consectetuer Curabitur egestas adipiscing laoreet Suspendisse. Lacus Sed justo penatibus vel wisi elit felis lorem Donec ipsum. Pretium nibh nibh eget adipiscing volutpat dui..</p>
+                                <p>Semper ipsum rutrum egestas Nam congue semper urna metus lorem habitasse. Sodales Nulla Vestibulum pretium justo quis vestibulum pellentesque et amet eu. Senectus augue turpis et Vestibulum ut risus velit pellentesque laoreet lacus.</p>
+                            </div>
+                        </div>
+                        <!-- // Tab Forgot -->
+
+                        <div class="tab-pane fade" id="register">
+                            <div class="span7">
+                                <h4 class="welcome"><small>Place infotext for registration</small></h4>
+                                <p>Lorem ipsum dolor sit amet consectetuer Curabitur egestas adipiscing laoreet Suspendisse. Lacus Sed justo penatibus vel wisi elit felis lorem Donec ipsum. Pretium nibh nibh eget adipiscing volutpat dui..</p>
+                                <p>Semper ipsum rutrum egestas Nam congue semper urna metus lorem habitasse. Sodales Nulla Vestibulum pretium justo quis vestibulum pellentesque et amet eu. Senectus augue turpis et Vestibulum ut risus velit pellentesque laoreet lacus.</p>
+                            </div>
+                            <div class="span5">
+                                <h4 class="welcome"> <small><i class="fontello-icon-users"></i>New User Registration</small></h4>
+                                <form method="post" action="dashboard-one.html" name="login_form">
+                                    <fieldset>
+                                        <legend class="two"><span>Account information</span></legend>
+                                        <div class="controls controls-row">
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_name" placeholder="name">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_username" placeholder="username">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_email_address" placeholder="email address">
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend class="two"><span>Password</span></legend>
+                                        <div class="controls controls-row">
+                                            <input id="idPassw" class="span3" type="password" name="password" placeholder="password">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input id="idPassw" class="span3" type="password" name="confirm_password" placeholder="confirm password">
+                                        </div>
+                                        <hr class="margin-xx">
+                                        <button type="submit" class="btn btn-green btn-block btn-large">REGISTER TO BOO</button>
+                                        <hr class="margin-xm">
+                                        <p class="text-right">Have you remembered? <a href="#login" class="btn btn-boo" data-toggle="tab">Try to log in again.</a></p>
+                                    </fieldset>
+                                </form>
+                                <!-- // form -->
+                            </div>
+                        </div>
+                        <!-- // Tab Forgot -->
 
                     </div>
 
