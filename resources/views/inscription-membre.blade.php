@@ -13,34 +13,10 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class="row">
-              <div id="myModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
-                  <div class="modal-dialog">
-
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h4 class="modal-title">Message d'information</h4>
-                          </div>
-                          <div class="modal-body">
-                              <p>Merci de votre intention de vous inscrire en qualité de Membre sur le site "Investir en Australie".
-                                  En plus de pouvoir, comme tout Visiteur, voir dans le détail les produits et opérer des sélections
-                                  multicritères, votre inscription vous permettra d'enregistrer vos recherches multicritères,
-                                  d'enregistrer les produits qui vous intéressent dans vos "favoris", de partager des produits avec
-                                  vos amis par emails et sur les réseaux sociaux, d'échanger avec une Agence Francophone Australienne
-                                  située à proximité du bien qui vous intéresse. Lorsque vous aurez pris la décision d'acheter vous
-                                  pourrez lancer la procédure d'acquisition en ligne. Au cours de cette procédure il vous sera proposé
-                                  les services de certains de nos partenaires australiens francophones auxquels vous pourriez faire appel
-                                  si vous en aviez besoin.</p>
-                          </div>
-                          <div class="modal-footer">
-                              <a type="button" class="pull-left btn btn-primary" href="javascript:history.back()">Abandonner</a>
-                              <a type="button" class="btn btn-primary" href="#section1" id="custom-close">Continuer</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
               <div style="margin-top: 50px">
                 <div class="col-md-8">
+
+
                     <div class="row">
                         <div class="col-md-12" id="section1">
                             <ol class="breadcrumb">
@@ -51,11 +27,36 @@
                     </div>
 
 
+                    <div id="myModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog">
+
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Message d'information</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Merci de votre intention de vous inscrire en qualité de Membre sur le site "Investir en Australie".
+                                        En plus de pouvoir, comme tout Visiteur, voir dans le détail les produits et opérer des sélections
+                                        multicritères, votre inscription vous permettra d'enregistrer vos recherches multicritères,
+                                        d'enregistrer les produits qui vous intéressent dans vos "favoris", de partager des produits avec
+                                        vos amis par emails et sur les réseaux sociaux, d'échanger avec une Agence Francophone Australienne
+                                        située à proximité du bien qui vous intéresse. Lorsque vous aurez pris la décision d'acheter vous
+                                        pourrez lancer la procédure d'acquisition en ligne. Au cours de cette procédure il vous sera proposé
+                                        les services de certains de nos partenaires australiens francophones auxquels vous pourriez faire appel
+                                        si vous en aviez besoin.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a type="button" class="pull-left btn btn-primary" href="javascript:history.back()">Abandonner</a>
+                                    <a type="button" class="btn btn-primary" href="#section1" id="custom-close">Continuer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="content-box-large">
                         <div class="panel-heading">
-                            <div class="panel-title">Inscription en Qualité de Membre</div>
+                            <div class="panel-title">Inscription en tant que Qualité de Membre</div>
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -193,7 +194,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Contact Mobile *</label>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-9">
 
                                         <select class="form-control" name="prefixPhone">
 
