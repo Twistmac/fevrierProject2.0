@@ -18,6 +18,7 @@ class SearchsController extends Controller
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->validate($request, [
 =======
         $this->validate($request , [
@@ -25,9 +26,12 @@ class SearchsController extends Controller
 =======
         $request->validate([
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+        $this->validate($request, [
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
             'etats' => 'nullable|max:255',
             'villes' => 'nullable|max:255',
-            'suburbs' => 'nullable|max:255',
+            'suburbs' => 'nullable|max:255'
         ]);
 
         $recherche = new Search();

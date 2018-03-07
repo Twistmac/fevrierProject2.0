@@ -46,12 +46,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
 <!-- Le javascript -->
 <!-- Placed at the end of the document so the pages load faster -->
-=======
-<!-- Le javascript --> 
-<!-- Placed at the end of the document so the pages load faster --> 
->>>>>>> master
 {!! helper_js('admin/js/lib/jquery') !!}
 {!! helper_js('admin/js/lib/jquery-ui')!!}
 {!! helper_js('admin/js/lib/jquery.cookie')!!}
@@ -80,7 +79,6 @@
 {!! helper_js('admin/plugins/bootstrap-modal/js/bootstrap-modal')!!}
 {!! helper_js('admin/plugins/bootstrap-wizard/js/bootstrap-wizard.min')!!}
 {!! helper_js('admin/plugins/bootstrap-wizard-2/js/bwizard-only.min')!!}
-<<<<<<< HEAD
 {!! helper_js('admin/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min')!!}
 =======
 <!-- Le javascript --> 
@@ -121,14 +119,6 @@
 
 <<<<<<< HEAD
 <!-- Plugins Custom - System -->
-=======
- {!! helper_js('admin/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min')!!}
-
-<!-- Plugins Custom - Only example --> 
-{!! helper_js('admin/plugins/pl-extension/google-code-prettify/prettify') !!}
-
-<!-- Plugins Custom - System --> 
->>>>>>> master
 {!! helper_js('admin/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
 {!! helper_js('admin/plugins/pl-system/xbreadcrumbs/xbreadcrumbs')!!}
 =======
@@ -161,7 +151,6 @@
 {!! helper_js('admin/plugins/pl-form/inputmask/jquery.inputmask.extensions') !!}
 {!! helper_js('admin/plugins/pl-form/validate/js/jquery.validate.min') !!}
 {!! helper_js('admin/plugins/pl-form/duallistbox/jquery.duallistbox.min') !!}
-<<<<<<< HEAD
 
 <!-- Plugins Custom - Gallery -->
 {!! helper_js('admin/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min')!!}
@@ -233,40 +222,6 @@
 {!! helper_js('admin/js/core')!!}
 {!! helper_js('admin/js/application')!!}
 <!-- Only This Demo Page -->
-=======
-
-<!-- Plugins Custom - Gallery --> 
-{!! helper_js('admin/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min')!!}
-{!! helper_js('admin/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min')!!}
-{!! helper_js('admin/plugins/pl-gallery/wookmark/jquery.imagesloaded')!!}
-{!! helper_js('admin/plugins/pl-gallery/wookmark/jquery.wookmark.min')!!}
- 
-<!-- Plugins Tables --> 
-{!! helper_js('admin/plugins/pl-table/datatables/media/js/jquery.dataTables')!!}
-{!! helper_js('admin/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins')!!}
-{!! helper_js('admin/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter')!!}
-
-<!-- Plugins data visualization --> 
-{!! helper_js('admin/plugins/pl-visualization/sparkline/jquery.sparkline.min') !!}
-{!! helper_js('admin/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart') !!}
-{!! helper_js('admin/plugins/pl-visualization/percentageloader/percentageloader.min') !!}
-{!! helper_js('admin/plugins/pl-visualization/knob/knob')!!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.categories') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.grow') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.orderBars') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.pie') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.resize') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.selection') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.stack') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.stackpercent') !!}
-{!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.time') !!}
-
-<!-- main js --> 
-{!! helper_js('admin/js/core')!!}
-{!! helper_js('admin/js/application')!!}
-<!-- Only This Demo Page --> 
->>>>>>> master
 {!! helper_js('admin/js/demo/demo-jquery.dataTables')!!}
 =======
 <!-- main js --> 
@@ -338,6 +293,7 @@ $(document).ready(function () {
                 modal.modal(options);
         });
 
+<<<<<<< HEAD
         // Toggle fullscreen button:
         $('#toggle-fullscreen').button().click(function () {
                 var button = $(this),
@@ -360,6 +316,8 @@ $(document).ready(function () {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
      // Start slideshow button:
      $('#start-slideshow').button().click(function () {
              var options = $(this).data(),
@@ -455,6 +413,7 @@ $(document).ready(function () {
              placeholder: "select or enter tag",
              tokenSeparators: [",", " "]
      });
+<<<<<<< HEAD
 =======
         // Only demo form Tag
         var fileTagData = [{
@@ -496,16 +455,22 @@ $(document).ready(function () {
 >>>>>>> master
 =======
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
 });
 </script>
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
 <!-- Only This Demo Page -->
 {!! helper_js('admin/js/demo/demo-wisyhtml5')!!}
 {!! helper_js('admin/js/demo/d3')!!}
 <script>
+<<<<<<< HEAD
 =======
 <!-- Only This Demo Page --> 
 {!! helper_js('admin/js/demo/demo-wisyhtml5')!!}
@@ -518,6 +483,8 @@ $(document).ready(function () {
 
 <script>		
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
 $(function() {
 				$.configureBoxes({selectOnSubmit: false});
 				$.configureBoxes({

@@ -446,6 +446,9 @@
                             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
                           </div>
                         </div>
                     </header>
@@ -471,6 +474,7 @@
                                         <a href="{{url('produit/'.$produit->slug)}}" class="btn btn-default btn-price pull-right" data-hover="Détails">
                                             <strong>{{$produit->prix}}</strong>
                                         </a>
+<<<<<<< HEAD
 =======
                             <div class="content-box-large box-with-header">
                                   <img src="{{link_img( $publicites->accueil->sidebar1->lienImage )}}" class="img-rounded" alt=" {{$publicites->accueil->sidebar1->description}} " width="{{ $publicites->accueil->sidebar1->width }}" height=" {{$publicites->accueil->sidebar1->height}} ">
@@ -513,12 +517,17 @@
 >>>>>>> master
 =======
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
                                     <div class="property-meta clearfix">
                                         <span><i class="fa fa-arrows-alt"></i> {{ $recent->surface }}</span>
                                     </div>
                                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
                             </article>
                         </div>
                         @endforeach
@@ -597,6 +606,7 @@
                          </div>
                          @endforeach
                        </div>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
@@ -646,6 +656,8 @@
 >>>>>>> master
 =======
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
                 </div>
             </div>
         </div>
