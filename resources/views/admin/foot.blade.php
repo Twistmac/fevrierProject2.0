@@ -46,6 +46,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- Le javascript -->
 <!-- Placed at the end of the document so the pages load faster -->
 =======
@@ -136,6 +137,46 @@
 {!! helper_js('admin/assets/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
 {!! helper_js('admin/assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs')!!}
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+{!! helper_js('admin/assets/js/lib/jquery') !!}
+{!! helper_js('admin/assets/js/lib/jquery-ui')!!}
+{!! helper_js('admin/assets/js/lib/jquery.cookie')!!}
+{!! helper_js('admin/assets/js/lib/jquery.date') !!}
+{!! helper_js('admin/assets/js/lib/jquery.mousewheel')!!}
+{!! helper_js('admin/assets/js/lib/jquery.load-image.min')!!}
+{!! helper_js('admin/assets/js/lib/bootstrap/bootstrap')!!}
+
+<!-- Plugins Bootstrap -->
+{!! helper_js('admin/assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-fuelux/all-fuelux.min')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker')!!}}
+{!! helper_js('admin/assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-select/bootstrap-select')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-bootbox/bootbox.min')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-modal/js/bootstrap-modalmanager')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-modal/js/bootstrap-modal')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min')!!}
+{!! helper_js('admin/assets/plugins/bootstrap-wizard-2/js/bwizard-only.min')!!}
+ {!! helper_js('admin/assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min')!!}
+
+<!-- Plugins Custom - Only example --> 
+{!! helper_js('admin/assets/plugins/pl-extension/google-code-prettify/prettify') !!}
+
+<!-- Plugins Custom - System --> 
+{!! helper_js('admin/assets/plugins/pl-system/nicescroll/jquery.nicescroll.min')!!}
+{!! helper_js('admin/assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs')!!}
+>>>>>>> parent of bef0ef4... update farany
 
 <!-- Plugins Custom - System info -->
 <script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
@@ -152,6 +193,7 @@
 <script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
 
 <!-- Plugins Custom - Form -->
+<<<<<<< HEAD
 <<<<<<< HEAD
 {!! helper_js('admin/plugins/pl-form/uniform/jquery.uniform.min')!!}
 {!! helper_js('admin/plugins/pl-form/select2/select2.min') !!}
@@ -190,6 +232,8 @@
 {!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.stackpercent') !!}
 {!! helper_js('admin/plugins/pl-visualization/flot/jquery.flot.time') !!}
 =======
+=======
+>>>>>>> parent of bef0ef4... update farany
 {!! helper_js('admin/assets/plugins/pl-form/uniform/jquery.uniform.min')!!}
 <script src="assets/plugins/pl-form/select2/select2.min.js"></script>
 <script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
@@ -198,7 +242,10 @@
 <script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
 <script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
 <script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of bef0ef4... update farany
 
 <!-- Plugins Custom - Gallery --> 
 {!! helper_js('admin/assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min')!!}
@@ -227,6 +274,7 @@
 <script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
 <script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <!-- main js -->
@@ -269,12 +317,17 @@
 >>>>>>> master
 {!! helper_js('admin/js/demo/demo-jquery.dataTables')!!}
 =======
+=======
+>>>>>>> parent of bef0ef4... update farany
 <!-- main js --> 
 {!! helper_js('admin/assets/js/core')!!}
 {!! helper_js('admin/assets/js/application')!!}
 <!-- Only This Demo Page --> 
 {!! helper_js('admin/assets/js/demo/demo-jquery.dataTables')!!}
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of bef0ef4... update farany
 
 <!-- Only This Demo Page -->
 <script type="text/javascript">
@@ -289,6 +342,7 @@ $(document).ready(function () {
                         $("#legend2").html(items.range.start + " - " + items.range.end + " of " + items.count);
                 }
         });
+<<<<<<< HEAD
 
         /* on select change */
         $("#showItem").change(function () {
@@ -377,6 +431,77 @@ $(document).ready(function () {
              modal.modal(options);
      });
 =======
+=======
+
+        /* on select change */
+        $("#showItem").change(function () {
+                var newPerPage = parseInt($(this).val());
+                $("ul.holder").jPages("destroy").jPages({
+                        containerID: "gallery",
+                        perPage: newPerPage
+                });
+        });
+
+        $('#gallery .nailthumb-container.show-loading').nailthumb({
+                titleWhen: 'hover',
+                animationTime: 3000,
+                replaceAnimation: 'fade',
+                imageFromWrappingLink: true,
+                onStart: function (container) {
+                        container.showLoading({
+                                'overlayWidth': 30, //null
+                                'overlayHeight': 30 //null
+                        });
+                },
+                onFinish: function (container) {
+                        container.hideLoading();
+                }
+        });
+
+        $("#gallery a.edit").click(function () {
+                $("#previewImage").html($("<img>").attr("src", this.href));
+                return false;
+
+        });
+
+        // Start slideshow button:
+        $('#start-slideshow').button().click(function () {
+                var options = $(this).data(),
+                        modal = $(options.target),
+                        data = modal.data('modal');
+                if(data) {
+                        $.extend(data.options, options);
+                }
+                else {
+                        options = $.extend(modal.data(), options);
+                }
+                modal.find('.modal-slideshow').find('i')
+                        .removeClass('fontello-icon-play')
+                        .addClass('fontello-icon-pause');
+                modal.modal(options);
+        });
+
+        // Toggle fullscreen button:
+        $('#toggle-fullscreen').button().click(function () {
+                var button = $(this),
+                        root = document.documentElement;
+                if(!button.hasClass('active')) {
+                        $('#modal-gallery').addClass('modal-fullscreen');
+                        if(root.webkitRequestFullScreen) {
+                                root.webkitRequestFullScreen(
+                                window.Element.ALLOW_KEYBOARD_INPUT);
+                        }
+                        else if(root.mozRequestFullScreen) {
+                                root.mozRequestFullScreen();
+                        }
+                }
+                else {
+                        $('#modal-gallery').removeClass('modal-fullscreen');
+                        (document.webkitCancelFullScreen || document.mozCancelFullScreen || $.noop).apply(document);
+                }
+        });
+
+>>>>>>> parent of bef0ef4... update farany
         // Only demo form Tag
         var fileTagData = [{
                 id: "Storm",
@@ -414,6 +539,7 @@ $(document).ready(function () {
                 placeholder: "select or enter tag",
                 tokenSeparators: [",", " "]
         });
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
 
 
@@ -496,10 +622,15 @@ $(document).ready(function () {
 >>>>>>> master
 =======
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+
+
+>>>>>>> parent of bef0ef4... update farany
 });
 </script>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <!-- Only This Demo Page -->
@@ -513,11 +644,16 @@ $(document).ready(function () {
 <script>		
 >>>>>>> master
 =======
+=======
+>>>>>>> parent of bef0ef4... update farany
 <!-- Only This Demo Page --> 
 {!! helper_js('admin/assets/js/demo/demo-wisyhtml5')!!}
 
 <script>		
+<<<<<<< HEAD
 >>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+=======
+>>>>>>> parent of bef0ef4... update farany
 $(function() {
 				$.configureBoxes({selectOnSubmit: false});
 				$.configureBoxes({
