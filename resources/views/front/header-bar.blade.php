@@ -23,6 +23,7 @@
         {!! helper_css('head') !!}
 
         <!-- sylesheet css search-bar -->
+        <!-- <link rel="stylesheet" href="{{asset('searchbar/assets/css/normalize.css')}}"> -->
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/fontello.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css')}}">
