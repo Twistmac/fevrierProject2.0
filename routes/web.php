@@ -119,8 +119,6 @@ Route::prefix('admin')->group(function () {
     Route::get('blog/delete/{slug}',['as' => 'blog.delete','uses' => 'BlogsController@delete'])->where('slug','[a-z0-9\-]+')->middleware('trustarticle');
     Route::get('blog/register',['as' => 'blog.showregistre', 'uses' => 'BlogsController@showregistre']);
     Route::get('blog/restore/{slug}',['as' => 'blog.restore','uses' => 'BlogsController@restorearticle'])->where('slug','[0-9\-]+')->middleware('trustarticle');
-
-    Route::get('auth', function(){ return view('admin.authentification');});
 });
 
 //Route vers page Services
@@ -135,3 +133,5 @@ Route::post('/putFav',['as' => 'putFavoris', 'uses'=> 'ProduitsController@putFav
 
 //Route recuperation API AgentPoint
 Route::get('getapi', ['as' => 'get.api', 'uses' => 'ApiController@getdataPropertiesromApi']);
+
+

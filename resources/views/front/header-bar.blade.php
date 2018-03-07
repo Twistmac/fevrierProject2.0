@@ -9,14 +9,10 @@
         <title>Investir en Australie</title>
         <!-- Styles -->
         <link href="../../../fonts.googleapis.com/css178b.css?family=Montserrat:400,700|Poppins:400,600" rel="stylesheet">
-
         <!-- favicon and touch icons -->
         <link rel="shortcut icon" href="{{ link_img('favicon.png') }}">
        <!-- Bootstrap -->
         {!! plugin_css('assets/css/multirange') !!}
-        {!! plugin_css('assets/css/owl.carousel') !!}
-        {!! plugin_css('assets/css/owl.transitions') !!}
-        {!! plugin_css('assets/css/owl.theme') !!}
         {!! plugin_css('plugins/font-awesome/css/font-awesome.min') !!}
         {!! plugin_css('plugins/slick/slick') !!}
         {!! plugin_css('plugins/slick-nav/slicknav') !!}
@@ -27,7 +23,7 @@
         {!! helper_css('head') !!}
 
         <!-- sylesheet css search-bar -->
-        <!-- <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/fontello.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/helper.css')}}" rel="stylesheet">
@@ -38,15 +34,14 @@
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.theme.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.transitions.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/style.css')}}">
-        <link rel="stylesheet" href="{{asset('searchbar/assets/css/responsive.css')}}"> -->
-
-        <!-- <link rel="stylesheet" href="{{asset('searchbar/assets/css/style.css')}}"> -->
+        <link rel="stylesheet" href="{{asset('searchbar/assets/css/responsive.css')}}">
 
     </head>
     <body {!! (empty($body)) ? null : $body!!}>
         <div id="page-loader">
             <div class="loaders">
                 <img src="{{ link_img('assets/images/loader/3.gif') }}" alt="First Loader">
+                <!-- <img src="{{ link_img('assets/images/loader/4.gif') }}" alt="First Loader"> -->
             </div>
         </div>
         <header id="head">
@@ -100,6 +95,7 @@
                     </div>
                 </div>
             </div>
+            <!-- <nav class="navbar navbar-default navbar-fixed-top">     -->
             <div class="container top-menu" >
                 <div class="row">
                     <div class="col-md-3" >
