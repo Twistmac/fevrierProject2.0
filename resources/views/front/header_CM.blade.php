@@ -22,6 +22,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css" rel="stylesheet" />
 {!! helper_css('head') !!}
 
+<!-- sylesheet css search-bar -->
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/fontello.css')}}">
+    <link href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
+    <link href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/helper.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/bootstrap-select.min.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/icheck.min_all.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/price-range.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.transitions.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('searchbar/assets/css/responsive.css')}}">
 
 </head>
 <body {!! (empty($body)) ? null : $body!!}>
@@ -35,12 +49,12 @@
     <div id="site-header-top" class="barreNoir">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <div class="clearfix">
                         <p class="contanct">Appelez-nous: +61 00 000 000</p>
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-7">
                     <div class="clearfix">
                         <div class="language-in-header">
                             <a href="#"><i class="fa fa-google-plus"></i></a>
@@ -83,7 +97,7 @@
                     </a>
                 </figure>
             </div>
-            <div class="col-md-6 col-sm-7 ">
+            <div class="col-md-5 col-sm-7 ">
                 <nav id="site-nav" class="nav navbar-default menuBtn">
                     <ul class="nav navbar-nav ">
                         <li>
