@@ -9,7 +9,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Gestion des Blog</title>
+<title>IEA-Admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -17,13 +17,13 @@
 <meta name="author" content="">
 
 <!-- Le styles -->
-{!! plugin_css('admin/assets/css/lib/bootstrap') !!}
-{!! plugin_css('admin/assets/css/lib/bootstrap-responsive') !!}
-{!! plugin_css('admin/assets/css/boo-extension') !!}
-{!! plugin_css('admin/assets/css/boo') !!}
-{!! plugin_css('admin/assets/css/style') !!}
-{!! plugin_css('admin/assets/css/boo-coloring') !!}
-{!! plugin_css('admin/assets/css/boo-utility') !!}
+{!! plugin_css('admin/css/lib/bootstrap') !!}
+{!! plugin_css('admin/css/lib/bootstrap-responsive') !!}
+{!! plugin_css('admin/css/boo-extension') !!}
+{!! plugin_css('admin/css/boo') !!}
+{!! plugin_css('admin/css/style') !!}
+{!! plugin_css('admin/css/boo-coloring') !!}
+{!! plugin_css('admin/css/boo-utility') !!}
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -32,8 +32,18 @@
     <script src="assets/plugins/flot/excanvas.min.js"></script>
 <![endif]-->
 
+{!! helper_js('admin/amcharts/amcharts') !!}
+{!! helper_js('admin/amcharts/xy') !!}
+{!! helper_js('admin/amcharts/funnel') !!}
+{!! helper_js('admin/amcharts/pie') !!}
+{!! helper_js('admin/amcharts/serial') !!}
+{!! helper_js('admin/amcharts/graphe') !!}
+{!! helper_js('admin/amcharts/gantt') !!}
+{!! helper_js('admin/amcharts/gauge') !!}
+{!! helper_js('admin/amcharts/radar') !!}
+
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="{{link_img('admin/assets/ico/favicon.ico')}}">
+<link rel="shortcut icon" href="{{link_img('assets/images/favicon.png')}}">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{link_img('admin/assets/ico/apple-touch-icon-144-precomposed.png')}}">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{link_img('admin/assets/ico/apple-touch-icon-114-precomposed.png')}}">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{link_img('admin/assets/ico/apple-touch-icon-72-precomposed.png')}}">
@@ -47,13 +57,13 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
                       <div class="navbar-inner">
                           <div class="container-fluid">
-                              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                              <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                                   <span class="icon-bar"></span>
                                   <span class="icon-bar"></span>
                                   <span class="icon-bar"></span>
-                              </button>
+                              </button> -->
                               <a class="brand" href="#">
-                                  <img src="{{link_img('admin/assets/img/logo.png')}}" width="50" height="50">
+                                  <img src="{{link_img('admin/img/logo.png')}}" width="100" height="50">
                               </a>
                               <div class="search-global">
                                   <input id="globalSearch" class="search search-query input-medium" type="search">
@@ -75,34 +85,34 @@
                           </div>
                       </div>
                   </div>
-            <!-- // navbar -->            
+            <!-- // navbar -->
             <div class="header-drawer">
-                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Menu</a> </div>
                 <!-- // Resposive navigation -->
                 <div class="breadcrumbs-nav hidden-phone">
                     <ul id="breadcrumbs" class="breadcrumb">
                         <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
-                        <li class="active">Boo Admin </li>
+                        <li class="active">Profil administrateur </li>
                     </ul>
                 </div>
-                <!-- // breadcrumbs --> 
+                <!-- // breadcrumbs -->
             </div>
-            <!-- // drawer --> 
+            <!-- // drawer -->
         </div>
     </div>
     <!-- // header-container -->
-    
+
     <div id="main-container">
          <div id="main-sidebar" class="sidebar sidebar-inverse">
                   <div class="sidebar-item">
                       <div class="media profile">
                           <div class="media-thumb media-left thumb-bordereb">
-                              <a class="img-shadow" href="detailAdministrateur.html">
-                                  <img class="thumb" src="{{link_img('admin/assets/img/profil.png')}}">
+                              <a class="img-shadow" href="{{url('admin/profilAdmin')}}">
+                                  <img class="thumb" src="{{link_img('admin/img/profil.png')}}">
                               </a>
                           </div>
                           <div class="media-body">
-                              <h5 class="media-heading">RAFALIMANANA Njaka <small>as Administrateur</small></h5>
+                              <h5 class="media-heading">Adminstrateur User</h5>
                               <p class="data">Dernier acces: 27 juin 2017</p>
                           </div>
                       </div>
@@ -110,19 +120,23 @@
                   <ul id="mainSideMenu" class="nav nav-list nav-side">
                     <li class="accordion-group">
                         <div class="accordion-heading">
-                            <a href="detailAdministrateur.html" data-parent="" class="accordion-toggle"><i class="fontello-icon-user-4"></i> Mon profil</a>
+                            <a href="{{url('admin/profilAdmin')}}" data-parent="" class="accordion-toggle"><i class="fontello-icon-user-4"></i> Mon profil</a>
                         </div>
                     </li>
                       <li class="accordion-group">
                           <div class="accordion-heading">
-                              <a href="statistique.html" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistique</a>
+                              <a href="#" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistique</a>
                           </div>
                       </li>
                       <li class="accordion-group">
                           <div class="accordion-heading">
-                              <a href="gestionUtilisateurGeneral.html" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-users-1"></i> Gestion utilisateurs</a>
+                              <a href="#accMembres" data-parent="#mainSideMenu"  data-toggle="collapse" class="accordion-toggle">
+                                <i class="fontello-icon-users-1"></i>
+                                <i class="chevron fontello-icon-right-open-3"></i>
+                                Gestion utilisateurs
+                              </a>
                           </div>
-                          <ul class="accordion-content nav nav-list" id="accMembres">
+                          <ul class="accordion-content nav nav-list collapse" id="accMembres">
                               <li>
                                   <a href="gestionUtilisateurAFA.html"> <i class="fontello-icon-right-dir"></i>AFA</a>
                               </li>
@@ -236,5 +250,5 @@
                   <div class="sidebar-item"></div>
               </div>
         <!-- // sidebar -->
-        
+
     </div>
