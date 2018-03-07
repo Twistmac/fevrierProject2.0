@@ -57,7 +57,7 @@ class PagesController extends Controller
     {
         $parser = $this->xml_parser; 
         $array = $request->all();
-        unset($array['_token'],$array['_wysihtml5_mode']);
+        unset($array['_token']);
 
         switch ($request->post('parameter')) {
             case 'accueil':

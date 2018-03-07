@@ -373,12 +373,11 @@
 
 
                                 <div class="content-box-large box-with-header">
-                                      <img src="{{link_img( $publicites->sidebar1->lienImage )}}" class="{{ $publicites->sidebar1->class }}" alt="{{ $publicites->sidebar1->description }}" width="{{ $publicites->sidebar1->width }}" height="{{$publicites->sidebar1->height}}">
+                                      <img src="{{link_img('assets/images/announcement-bg.jpg')}}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
                                     <br /><br />
                                 </div>
                             </div>
                         </section>
-<<<<<<< HEAD
                             <section class="property-meta-wrapper common text-center bg-info">
                                 <h2 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
                                 ESPACES PUBLICITES</h2>
@@ -396,27 +395,6 @@
                             <section class="widget recent-properties clearfix">
                                 <h5 class="title">Récents</h5>
                                 <div class="property clearfix">
-=======
-                            <section class="property-meta-wrapper common text-center bg-info"> 
-                                <h5 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
-                                ESPACES PUBLICITES</h5> 
-                                <div class="content-box-large box-with-header">
-                                      <img src="{{link_img( $publicites->sidebar2->lienImage )}}" class="{{ $publicites->sidebar2->class }}" alt="{{ $publicites->sidebar2->description }}" width="{{ $publicites->sidebar2->width }}" height="{{ $publicites->sidebar2->height }}">
-                                    <br /><br />
-                                </div>
-                            </section>                             
-                            <section class="property-meta-wrapper common text-center bg-info"> 
-                                <h5 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
-                                ESPACES PUBLICITES</h5> 
-                                <div class="content-box-large box-with-header">
-                                      <img src="{{link_img( $publicites->sidebar3->lienImage )}}" class="{{ $publicites->sidebar3->class }}" alt="{{ $publicites->sidebar3->description }}" width="{{ $publicites->sidebar3->width }}" height="{{ $publicites->sidebar3->height }}">
-                                    <br /><br />
-                                </div>
-                            </section>                             
-                            <section class="widget recent-properties clearfix"> 
-                                <h5 class="title">Récents</h5> 
-                                <div class="property clearfix"> 
->>>>>>> master
                                     <a href="#" class="feature-image zoom">
                                         <img data-action="zoom" src="{{link_img('assets/images/property/1.jpg')}}" alt="Property Image">
                                     </a>

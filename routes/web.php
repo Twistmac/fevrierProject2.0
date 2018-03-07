@@ -134,14 +134,8 @@ Route::post('/putFav',['as' => 'putFavoris', 'uses'=> 'ProduitsController@putFav
 //Route recuperation API AgentPoint
 Route::get('getapi', ['as' => 'get.api', 'uses' => 'ApiController@getdataPropertiesromApi']);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Gestion publicites
 Route::get('publicite/{name}',['as' => 'front.pub', 'uses' => 'PublicitesController@getpubliciteperPage'])->where('name','[a-z0-9\-]+');
 
-
->>>>>>> master
 =======
-
-
->>>>>>> a968336a124a2727c383001d0940a28156ef5f30
+>>>>>>> parent of 538fb20... Merge branch 'master' into Affichage-front
