@@ -27,17 +27,20 @@
         {!! helper_css('head') !!}
 
         <!-- sylesheet css search-bar -->
-        <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
+        <!-- <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/fontello.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/fonts/icon-7-stroke/css/helper.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/bootstrap-select.min.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/icheck.min_all.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/price-range.css')}}">
-        <link rel="stylesheet" href="{{asset('searchbar/assets/css/responsive.css')}}">
+        <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.carousel.css')}}">
+        <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.theme.css')}}">
+        <link rel="stylesheet" href="{{asset('searchbar/assets/css/owl.transitions.css')}}">
+        <link rel="stylesheet" href="{{asset('searchbar/assets/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('searchbar/assets/css/responsive.css')}}"> -->
+
         <!-- <link rel="stylesheet" href="{{asset('searchbar/assets/css/style.css')}}"> -->
-
-
 
     </head>
     <body {!! (empty($body)) ? null : $body!!}>

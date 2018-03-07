@@ -105,11 +105,8 @@ Route::get('business/{param}-{categorie}','ProduitsController@gestioncontenu')->
 
 Route::get('business/commercial','ProduitsController@indexcommercial');
 
-// --------------------------------------------------------------------------------------------------------------------------------------------
-//ADMIN
+//admin
 //Blog
-// --------------------------------------------------------------------------------------------------------------------------------------------
-
 Route::prefix('admin')->group(function () {
     Route::get('blog/new',['as' => 'blog.new','uses'=>'BlogsController@show']);
     Route::post('blog/store',['as' => 'blog.store','uses'=>'BlogsController@store']);
