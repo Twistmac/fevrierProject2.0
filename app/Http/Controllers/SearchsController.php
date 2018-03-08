@@ -12,14 +12,14 @@ class SearchsController extends Controller
 {
     /** Fonction de recherche de produits
     * @param Request $request
-    * @return resultat 
+    * @return resultat
     */
     public  function searchGlobal(Request $request)
     {
-        $this->validate($request , [
+        $this->validate($request, [
             'etats' => 'nullable|max:255',
             'villes' => 'nullable|max:255',
-            'suburbs' => 'nullable|max:255',
+            'suburbs' => 'nullable|max:255'
         ]);
 
         $recherche = new Search();
@@ -61,7 +61,7 @@ class SearchsController extends Controller
             $ch = preg_split("/,/", $request->input('ch'));
             if(!empty($request->input('sdb')) && !empty($request->input('ch')))
             {
-                $result = $result->whereBetween('optionproduits.sdb',[$sdb[0],$sdb[1]])->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]);   
+                $result = $result->whereBetween('optionproduits.sdb',[$sdb[0],$sdb[1]])->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]);
             }
             if( !empty($request->input('sdb')) || empty($request->input('ch')) )
             {
@@ -69,7 +69,7 @@ class SearchsController extends Controller
             }
             elseif( empty($request->input('sdb')) || !empty($request->input('ch')) )
             {
-                $result = $result->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]); 
+                $result = $result->whereBetween('optionproduits.ch',[$ch[0],$ch[1]]);
             }
         }
 
@@ -80,6 +80,6 @@ class SearchsController extends Controller
         $resultat = $result->paginate(20);
         $resultat = Produit::createSlug($resultat);
     	return view('front.resultat',compact('resultat'));
-    }	
+    }
 
 }

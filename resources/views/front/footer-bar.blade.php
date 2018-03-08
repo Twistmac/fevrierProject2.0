@@ -103,7 +103,7 @@
         {!! helper_js('plugins/wow/wow.min') !!}
         {!! helper_js('plugins/zoom/zoom') !!}
         {!! helper_js('plugins/mixitup/mixitup.min') !!}
-        <script src="../../../maps.googleapis.com/maps/api/js7809?key=AIzaSyBTSL8YiNBYPdCfFthy6DmL9x7oiM1kYgk&amp;libraries=places"></script>
+        <script src="../../../maps.googleapis.com/maps/api/js7809?key=AIzaSyD2MtZynhsvwI2B40juK6SifR_OSyj4aBA&amp;libraries=places"></script>
         {!! helper_js('plugins/whats-nearby/source/WhatsNearby') !!}
         {!! helper_js('assets/js/theme') !!}
         {!! helper_js('assets/js/multirange') !!}

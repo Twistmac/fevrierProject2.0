@@ -1,5 +1,4 @@
-<?php affichageHeader(); ?>
-
+@include('front.header')
  <div id="site-banner" class="text-center clearfix" style="padding-top: 250px">
             <div class="container">
                 <h1 class="title wow slideInLeft">Blog</h1>
@@ -118,20 +117,24 @@
                 <div class="col-lg-4 col-md-4"> 
                     <div id="property-sidebar"> 
                         <section class="property-meta-wrapper common text-center bg-info"> 
-                            <h5 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
-                                ESPACES PUBLICITES</h5> 
-                            <img src="{{link_img( $publicites->blog->sidebar1->lienImage )}}" class="{{ $publicites->blog->sidebar1->class }}" alt="{{ $publicites->blog->sidebar1->description }}" width="{{ $publicites->blog->sidebar1->width }}" height="{{ $publicites->blog->sidebar1->height }}">
+                            <h2 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
+                                ESPACES PUBLICITES</h2> 
+                            <p class="wow slideInRight" style="visibility: hidden; animation-name: none;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut                         <br> 
+                           			labore et dolore magna aliquan ut enim ad minim veniam.</p> 
                         </section>                         
                         <section class="property-meta-wrapper common text-center bg-info"> 
-                            <h5 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
-                                ESPACES PUBLICITES</h5> 
-                            <img src="{{link_img( $publicites->blog->sidebar2->lienImage )}}" class="{{ $publicites->blog->sidebar2->class }}" alt="{{ $publicites->blog->sidebar2->description }}" width="{{ $publicites->blog->sidebar2->width }}" height="{{ $publicites->blog->sidebar2->height }}">
+                            <h2 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
+                                ESPACES PUBLICITES</h2> 
+                            <p class="wow slideInRight" style="visibility: hidden; animation-name: none;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut                         <br> 
+                           			labore et dolore magna aliquan ut enim ad minim veniam.</p> 
                         </section>                         
                         <section class="widget recent-properties clearfix"> 
                             <h5 class="title">Récents</h5> 
                             <div class="property clearfix"> 
                                 <a href="#" class="feature-image zoom">
-                                    <img data-action="zoom" src="{{ link_img('assets/images/property/1.jpg') }}" alt="Property Image">
+                                    <img data-action="zoom" src="assets/images/property/1.jpg" alt="Property Image">
                                 </a>                                 
                                 <div class="property-contents"> 
                                     <h6 class="entry-title"> <a href="single-property.html">Maison familiale luxe</a></h6> 
@@ -146,7 +149,7 @@
                             </div>                             
                             <div class="property clearfix"> 
                                 <a href="#" class="feature-image zoom">
-                                    <img data-action="zoom" src="{{ link_img('assets/images/property/2.jpg') }}" alt="Property Image">
+                                    <img data-action="zoom" src="assets/images/property/2.jpg" alt="Property Image">
                                 </a>                                 
                                 <div class="property-contents"> 
                                     <h6 class="entry-title"> <a href="single-property.html">Maison familiale luxe</a></h6> 
@@ -161,7 +164,7 @@
                             </div>                             
                             <div class="property clearfix"> 
                                 <a href="#" class="feature-image zoom">
-                                    <img data-action="zoom" src="{{ link_img('assets/images/property/3.jpg') }}" alt="Property Image">
+                                    <img data-action="zoom" src="assets/images/property/3.jpg" alt="Property Image">
                                 </a>                                 
                                 <div class="property-contents"> 
                                     <h6 class="entry-title"> <a href="single-property.html">Maison familiale luxe</a></h6> 

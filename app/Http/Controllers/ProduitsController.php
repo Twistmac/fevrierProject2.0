@@ -10,20 +10,14 @@ use App\Blog;
 use App\Image;
 use App\Entite\RechercheSauvegardee;
 use App\Http\Controllers\Session;
-use App\Publicite;
-use App\Http\Controllers\PublicitesController;
 
 class ProduitsController extends Controller
 {
 	private $slug;
 	private $produit;
-    private $publicites;
-    private $pubs;
 
 	public function __construct()
 	{
-        $this->pubs = new Publicite();
-        $this->publicites = new PublicitesController($this->pubs);
 		$this->produit = new Produit();
 	}
 	/**
@@ -58,10 +52,8 @@ class ProduitsController extends Controller
     public function indexresidentiel()
     {
         $categorie = "Résidentiel";
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('immobilier');
-        $publicites = json_decode(json_encode($publicitesTemplate['immobilier']),false);
         $requete = $this->getsortbyCategoryinArray($categorie);
-        return view('front.template',compact('requete','categorie','publicites'));
+        return view('front.template',compact('requete','categorie'));
     }
 
     /** Fonction de gestion de contenu 
@@ -103,10 +95,8 @@ class ProduitsController extends Controller
     public function indexfoncier()
     {
         $categorie = "Foncier";
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('immobilier');
-        $publicites = json_decode(json_encode($publicitesTemplate['immobilier']),false);
         $requete = $this->getsortbyCategoryinArray($categorie);
-        return view('front.template',compact('requete','categorie','publicites'));
+        return view('front.template',compact('requete','categorie'));
     }
 
     /** Fonction get alls products Industriel
@@ -119,9 +109,7 @@ class ProduitsController extends Controller
         $categorie = "Industriel";
         $body = 'style="background-color: #ddd"';
         $requete = $this->getsortbyCategoryinArray($categorie);
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('business');
-        $publicites = json_decode(json_encode($publicitesTemplate['business']),false);
-        return view('front.template',compact('requete','categorie','body','publicites'));
+        return view('front.template',compact('requete','categorie','body'));
     }
 
     /** Fonction get alls products Commercial
@@ -132,9 +120,7 @@ class ProduitsController extends Controller
     {
         $categorie = "Commercial";
         $requete = $this->getsortbyCategoryinArray($categorie);
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('business');
-        $publicites = json_decode(json_encode($publicitesTemplate['business']),false);
-        return view('front.template',compact('requete','categorie','publicites'));
+        return view('front.template',compact('requete','categorie'));
     }
 
     public function saveRecherche(Request $request){

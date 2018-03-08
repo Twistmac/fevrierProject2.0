@@ -4,7 +4,7 @@
         <div id="main-content" class="main-content container-fluid">
             @if(Session::has('success')) 
             <div class="alert alert-success">
-                <strong>Information ! </strong> {!!Session::get('success')!!}
+                <strong>Information ! </strong> {{Session::get('success')}}
             </div>
             @endif
             <div class="row-fluid page-head">
@@ -14,6 +14,7 @@
                 </div>
             </div>
             <!-- // page head -->
+            
             @foreach($resultat as $resultats)
             <div id="page-content" class="page-content">
                 <section>
@@ -23,7 +24,6 @@
                     <form method="post" action="{{route('blog.moteur-update')}}" enctype="multipart/form-data" 
                                 data-upload-template-id="template-upload-1" data-download-template-id="template-download-1">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="hidden" name="article" value="{{ $resultats->id }}">
                     <div class="well well-nice form-dark">
                         <div class="control-group">
                             <textarea id="wysiBooEditorBlack" class="input-block-level" style="height: 100px" name="blog_titre" placeholder="Enter text ...">{{$resultats->titre}}</textarea>

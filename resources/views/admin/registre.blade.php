@@ -20,7 +20,6 @@
                     <div class="page-header">
                         <h3><i class="fa fa-list-ol" aria-hidden="true"></i><small>Gestion des registres</small></h3>
                         <p>Classement des articles <code> disponibles</code> et <code> archivés </code> dans le plateforme <code> Investir en Australie </code> </p>
-                        <p>Pour <code>autoriser</code> ou <code>restaurer</code> un article, cliquez sur le bouton <code>Restaurer</code>
                     </div>
                     <div class="row-fluid">
                         <div class="span12">
@@ -62,5 +61,5 @@
                 </section>
             </div>
         </div>
-        
+
 @include('admin.foot')

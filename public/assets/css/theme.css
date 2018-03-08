@@ -2,18 +2,11 @@
 body {
   position: relative;
 }
-
 /*My modif*/
-
 #searchfooter{
   padding-left: 30px;
   padding-right: 30px;
 }
-
-
-
-
-
 /*Page Loader*/
 #page-loader {
   position: fixed;
@@ -42,6 +35,14 @@ body {
   margin: auto;
   display: none;
 }
+
+/* the last product and last article saved */
+.last-save{
+  background-color: #fcfcfc;
+  padding: 0px;
+  margin: 0px;
+}
+
 select {
   position: relative;
   cursor: pointer;
@@ -57,12 +58,6 @@ select {
 .listing-template #site-banner {
   margin-bottom: 0;
 }
-.btn {
-  border: none;
-  box-shadow: none;
-  text-transform: uppercase;
-  transition-duration: 0.3s;
-}
 a {
   transition-duration: 0.3s;
 }
@@ -71,6 +66,7 @@ h2,
 h3 {
   text-transform: uppercase;
 }
+
 h1 a,
 h2 a,
 h3 a,
@@ -479,125 +475,7 @@ img.zoom-img {
 .layout-item {
   transition-duration: 0.4s;
 }
-/* Header Styles */
-#site-header {
-  padding-bottom: 18px;
-  background: #fff;
-}
-#site-header-top {
-  background: #333;
-  font-size: 12px;
-  color: #919191;
-  margin-bottom: 24px;
-}
-#site-header-top p {
-  font-size: inherit;
-  color: inherit;
-  line-height: 30px;
-  margin: 9px 0 6px 0;
-}
-#site-header-top .fa {
-  margin-right: 4px;
-  font-size: 15px;
-  vertical-align: middle;
-}
-#site-header-top select {
-  outline: none;
-}
-.currency-in-header,
-.language-in-header,
-.header-btn {
-  float: right;
-}
-.currency-in-header,
-.language-in-header {
-  margin: 14px 0 6px 20px;
-}
-.currency-in-header select,
-.language-in-header select {
-  border: none;
-  outline: none;
-  background-image: url("../images/header-arrow.png");
-}
-.header-btn {
-  font: 600 12px 'Montserrat', sans-serif;
-  margin-left: 20px;
-  border-radius: 0;
-}
-#site-nav {
-  text-transform: uppercase;
-  background: none;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 5px;
-  margin-left: -45px;
-}
-#site-nav li {
-  list-style: none;
-}
-#site-nav li:hover > a {
-  color: #6c98e1;
-}
-#site-nav a {
-  color: inherit;
-  display: block;
-}
-#site-nav a:hover {
-  color: #6c98e1;
-}
-#site-nav .nav > li {
-  margin-left: 35px;
-}
-#site-nav .nav > li > a {
-  padding: 10px 0;
-}
-#site-nav li {
-  position: relative;
-}
-#site-nav li ul {
-  position: absolute;
-  left: 170px;
-  top: -6px;
-  display: none;
-  min-width: 200px;
-  background: #fff;
-  padding: 10px 15px;
-  z-index: 99;
-}
-#site-nav li ul li {
-  border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 7px;
-  margin-bottom: 7px;
-}
-#site-nav li ul li:last-child {
-  border-bottom: 0;
-  padding: 0;
-  margin: 0;
-}
-#site-nav > ul > li > ul {
-  left: 0;
-  top: 40px;
-  padding-top: 30px;
-}
-.contact-in-header {
-  border-left: 1px solid #dfdfdf;
-  margin-left: 30px;
-  padding-left: 27px;
-}
-.contact-in-header .fa {
-  font-size: 61px;
-  color: #6c98e1;
-  float: left;
-  margin-right: 15px;
-  line-height: 51px;
-}
-.contact-in-header span {
-  color: #999999;
-}
-.contact-in-header strong {
-  font-size: 21px;
-  color: #6c98e1;
-}
+
 /* Main Slider Styles */
 .main-slider-wrapper {
   position: relative;
@@ -1158,7 +1036,7 @@ img.zoom-img {
 /* Announcement Styles*/
 #announcement-section {
   position: relative;
-  background: url("../images/announcement-bg-2.jpg") center no-repeat;
+  background: url("../images/announcement-bg.jpg") center no-repeat;
   padding: 70px 0;
 }
 #announcement-section:after {
@@ -1186,12 +1064,13 @@ img.zoom-img {
   z-index: 1;
 }
 #property-listing {
-  padding: 60px 0;
+  padding-top: 15px;
 }
 #property-listing .section-header {
   margin-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
 }
-#property-listing .section-header h2 {
+#property-listing .section-header h3 {
   margin-bottom: 10px;
 }
 .property-sorting {
@@ -1389,7 +1268,10 @@ img.zoom-img {
   background: url("../images/floor-plan-map.jpg") center right no-repeat;
 }
 .property-single-metax {
-  
+  text-align: justify;
+}
+.property-single-metax-center {
+  text-align: center;
 }
 .property-single-meta ul {
   margin: 0;
@@ -1447,8 +1329,13 @@ img.zoom-img {
   font-size: 8px;
 }
 /*Property Video Styles*/
+.property-meta-wrapper .entry-title {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 0 !important;
+}
+
 .property-video .entry-title {
-  border-bottom: 0 !important;
+  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 0 !important;
 }
 .property-video iframe {
@@ -2019,9 +1906,11 @@ img.zoom-img {
   }
   #property-single .common {
     padding: 20px;
-    margin-bottom: 30px;
+    background: #fff;
+    margin-bottom: 50px;
   }
-  #property-single .common .entry-title {
+
+  #slider-area .common .entry-title {
     margin-top: 0;
     margin-bottom: 20px;
     padding-bottom: 20px;
