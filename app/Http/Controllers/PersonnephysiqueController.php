@@ -70,6 +70,7 @@ class PersonnephysiqueController extends Controller
         $personnePhysique = $this->get($id);
         $personnePhysique->LOGIN = $personnePhysique->EMAIL;
         $personnePhysique->MOTDEPASSE = $mp;
+        $personnePhysique->save();
         return $personnePhysique;
     }
 }
