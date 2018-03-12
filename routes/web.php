@@ -133,7 +133,12 @@ Route::prefix('admin')->group(function () {
     Route::get('profilAdmin', function(){ return view('admin.profilAdm');});
 // statistique
     Route::get('stat', function(){ return view('admin.statistique');});
-
+// gestion utilisateurs
+    Route::get('users', function(){ return view('admin.gestionUsers');});
+// sellers
+    Route::get('sellers', function(){ return view('admin.sellers');});
+// details vendreurs
+  Route::get('sellersDetail', function(){ return view('admin.detailSellers');});
 });
 
 //Route vers page Services

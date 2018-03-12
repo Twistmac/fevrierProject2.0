@@ -125,7 +125,7 @@
                     </li>
                       <li class="accordion-group">
                           <div class="accordion-heading">
-                              <a href="#" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistique</a>
+                              <a href="{{url('admin/stat')}}" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistique</a>
                           </div>
                       </li>
                       <li class="accordion-group">
@@ -133,36 +133,24 @@
                               <a href="#accMembres" data-parent="#mainSideMenu"  data-toggle="collapse" class="accordion-toggle">
                                 <i class="fontello-icon-users-1"></i>
                                 <i class="chevron fontello-icon-right-open-3"></i>
-                                Gestion utilisateurs
+                                Parties Prenantes
                               </a>
                           </div>
                           <ul class="accordion-content nav nav-list collapse" id="accMembres">
+                            <li>
+                                <a href="{{url('admin/users')}}"> <i class="fontello-icon-right-dir"></i>Tous</a>
+                            </li>
                               <li>
-                                  <a href="gestionUtilisateurAFA.html"> <i class="fontello-icon-right-dir"></i>AFA</a>
+                                  <a href="{{url('admin/sellers')}}"> <i class="fontello-icon-right-dir"></i>Vendeurs</a>
                               </li>
                               <li>
-                                  <a href="gestionUtilisateurAPL.html"> <i class="fontello-icon-right-dir"></i>APL</a>
+                                  <a href="#"> <i class="fontello-icon-right-dir"></i>AFA</a>
                               </li>
                               <li>
-                                  <a href="gestionUtilisateurClient.html"> <i class="fontello-icon-right-dir"></i>Membres</a>
+                                  <a href="#l"> <i class="fontello-icon-right-dir"></i>APL</a>
                               </li>
                               <li>
-                                  <a href="gestionUtilisateurVendeurPromoteur.html"> <i class="fontello-icon-right-dir"></i>Vendeurs promoteurs</a>
-                              </li>
-                              <li>
-                                  <a href="gestionUtilisateurVendeurConstructeur.html"> <i class="fontello-icon-right-dir"></i>Vendeurs constructeurs</a>
-                              </li>
-                              <li>
-                                  <a href="gestionInscriptionAnnule.html"> <i class="fontello-icon-right-dir"></i>Inscription annulée</a>
-                              </li>
-                              <li>
-                                  <a href="gestionUtilisateurAcces.html"> <i class="fontello-icon-right-dir"></i>Droit d'accés utilisateurs</a>
-                              </li>
-                              <li>
-                                  <a href="gestionUtilisateurNewsletter.html"> <i class="fontello-icon-right-dir"></i>Membres dans newsletter</a>
-                              </li>
-                              <li>
-                                  <a href="gestionUtilisateurPartageDonnee.html"> <i class="fontello-icon-right-dir"></i>Membres acceptant de partager leur données</a>
+                                  <a href="gestionUtilisateurVendeurPromoteur.html"> <i class="fontello-icon-right-dir"></i>Visiteurs Membres</a>
                               </li>
                           </ul>
                       </li>

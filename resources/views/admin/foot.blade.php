@@ -62,7 +62,7 @@
 {!! helper_js('admin/plugins/bootstrap-timepicker/js/bootstrap-timepicker')!!}
 {!! helper_js('admin/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker')!!}
 {!! helper_js('admin/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker')!!}
-{!! helper_js('admin/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker')!!}}
+{!! helper_js('admin/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker')!!}
 {!! helper_js('admin/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button')!!}
 {!! helper_js('admin/plugins/bootstrap-fileupload/js/bootstrap-fileupload')!!}
 {!! helper_js('admin/plugins/bootstrap-rowlink/js/bootstrap-rowlink')!!}

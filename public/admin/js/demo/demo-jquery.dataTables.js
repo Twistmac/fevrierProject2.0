@@ -4,12 +4,12 @@
 	----------------------------------------
 
 	JS - Demo DataTable
-	
+
 	-------------------------------------------------------------------------------------------------------------------------------- ***/
 $(document)
         .ready(function () {
 
-        
+
 
 
 // DATATABLE SETTINGS component-table-boo.html
@@ -102,7 +102,7 @@ $(document)
 						minimumResultsForSearch: 6,
 						width: "off"
 				});
-						
+
 
 				// DATATABLE exampleDTB-2
 				// -------------------------------------------------------------------------------- * -->
@@ -139,12 +139,12 @@ $(document)
                 $('#exampleDTB-2_wrapper .table-reset-wrapper')
                         .html($('.DTB_resetTable')
                         .html());
-				
+
 				$('#exampleDTB-2_length select').select2({
 						minimumResultsForSearch: 6,
 						width: "off"
 				});
-				
+
 
 				// DATATABLE exampleDTC
 				// -------------------------------------------------------------------------------- * -->
@@ -206,13 +206,13 @@ $(document)
                 $('#exampleDTC_wrapper .table-action-wrapper')
                         .html($('#DTC_actionTable')
                         .html());
-				
+
 				$('#exampleDTC_length select').select2({
 						minimumResultsForSearch: 6,
 						width: "off"
 				});
-					
-						
+
+
 				// DATATABLE exampleDTCF
 				// -------------------------------------------------------------------------------- * -->
         		$('#exampleDTCF')
@@ -284,7 +284,7 @@ $(document)
                 $('#exampleDTCF_wrapper .table-action-wrapper')
                         .html($('#DTCF_actionTable')
                         .html());
-				
+
 				$('#exampleDTCF_length select').select2({
 						minimumResultsForSearch: 6,
 						width: "off"
@@ -363,7 +363,7 @@ $(document)
 					aoColumnDefs: [{
 							"aTargets": [0],
                                                         'sWidth': '40px'
-                                        }, {                
+                                        }, {
                                                         "aTargets": [2],
 							'sClass': 'hidden-phone'
 					}, {
@@ -376,12 +376,12 @@ $(document)
                                                         'sClass': 'hidden-tablet hidden-phone'
                                         }],
 					sDom: "<'row-fluid'<'widget-header'<'span6'l><'span6'f>>>rt<'row-fluid'<'widget-footer'<'span6'><'span6'p>>"
-	
+
 			});
 			$('#lastLogedTable_length select').select2({
 					minimumResultsForSearch: 6,
 					width: "off"
 			});
-			
-			
+
+
 });
