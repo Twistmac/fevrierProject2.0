@@ -52,8 +52,8 @@ class Personnemoral extends Model {
     public function getId($login)
     {
         $result = Personnemoral::where('Login', $login)->get();
-        foreach ($result as $result) {
-            return $result->IDPERSONNEMORALE;
+        foreach ($result as $res) {
+            return $res->IDPERSONNEMORALE;
         }
     }
 
@@ -62,7 +62,6 @@ class Personnemoral extends Model {
     public function getAll($login)
     {
         $result = Personnemoral::with('Localisation')
-            ->join('localisation','Localisation.idlocalisation','=','Personnemoral.idlocalisation')
             ->where('Personnemoral.login',$login)->get();;
         foreach ($result as $res) {
             return $res;
