@@ -62,6 +62,7 @@ class Personnemoral extends Model {
     public function getAll($login)
     {
         $result = Personnemoral::with('Localisation')
+            ->join('localisations','localisations.idlocalisation','=','Personnemoral.idlocalisation')
             ->where('Personnemoral.login',$login)->get();;
         foreach ($result as $res) {
             return $res;
