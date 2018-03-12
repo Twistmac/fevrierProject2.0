@@ -133,17 +133,14 @@ Route::prefix('admin')->group(function () {
     Route::get('profilAdmin', function(){ return view('admin.profilAdm');});
 // statistique
     Route::get('stat', function(){ return view('admin.statistique');});
-<<<<<<< HEAD
 // gestion utilisateurs
     Route::get('users', function(){ return view('admin.gestionUsers');});
 // sellers
     Route::get('sellers', function(){ return view('admin.sellers');});
 // details vendreurs
   Route::get('sellersDetail', function(){ return view('admin.detailSellers');});
-=======
-// gestion utilisateurs  
+// gestion utilisateurs
     Route::get('users', function(){ return view('admin.gestionUsers');});
->>>>>>> e7aec35abdbd6b4d7b3dc5d27b7f321fe3d1eaf7
 });
 
 //Route vers page Services
