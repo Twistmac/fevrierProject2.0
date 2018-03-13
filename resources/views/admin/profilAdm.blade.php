@@ -5,6 +5,9 @@
                 <div id="main-content" class="main-content container-fluid">
                     <div id="page-content" class="page-content tab-content overflow-y">
                         <div id="TabTop1" class="tab-pane padding-bottom30 active fade in">
+                            <!-- Message notification -->
+                            @include('admin.notification')
+                            <!-- end Message notification -->
                             <div class="page-header">
                                 <h3>Profil administrateur</h3>
                             </div>
@@ -16,17 +19,22 @@
                                         </div>
                                         <div class="widget-content">
                                             <div class="widget-body">
-                                                <form id="accounForm" class="form-horizontal" method="" action="">
+                                                    <form id="accounForm" class="form-horizontal" method="post" action="{{ route('update.user') }}" enctype="multipart/form-data" data-upload-template-id="template-upload-1" data-download-template-id="template-download-1">
+                                                        {{ csrf_field() }}
                                                     <div class="row-fluid">
-                                                        <div class="span12">
+                                                        <div class="span4">
                                                             <div class="control-group no-margin-bootom">
-                                                                <label class="control-label label-left">
-                                                                    <img src="{{link_img('admin/img/profil.png')}}" class="thumbnail" width="96" height="96"></br>
-
-                                                                </label>
-                                                                <button class="btn cancel">+ Upload image</button>
-                                                                <div class="controls">
-                                                                    <address> <h2>Administrateur User</h2></address>
+                                                                <div class="span6">
+                                                                    <div class="well well-nice inline">
+                                                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                                            <div class="fileupload-preview thumbnail" style="width: 96px; height: 96px;">
+                                                                                <img src="{{link_img('admin/img/'. $info_admin->urlimage )}}">
+                                                                            </div>
+                                                                            <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Changer</span>
+                                                                                <input type="file" name="file" id="file">
+                                                                                </span> <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Effacer</a> </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -44,7 +52,7 @@
                                                                             <span class="required">*</span>
                                                                         </label>
                                                                         <div class="controls">
-                                                                            <input id="nom" class="span11" type="text" name="nom" value="">
+                                                                            <input id="nom" class="span11" type="text" name="nom" {!! $info_admin->name !!} >
                                                                         </div>
                                                                     </li>
                                                                     <li class="control-group">
@@ -52,13 +60,7 @@
                                                                             <span class="required">*</span>
                                                                         </label>
                                                                         <div class="controls">
-                                                                            <input id="prenom" class="span11" type="text" name="prenom" value="">
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="control-group">
-                                                                        <label for="motDePasse" class="control-label">Mot de passe</label>
-                                                                        <div class="controls">
-                                                                            <input id="motDePasse" class="span11" type="text" name="motDePasse" value="">
+                                                                            <input id="prenom" class="span11" type="text" name="prenom" required="required" {!! $info_admin->firstname !!} >
                                                                         </div>
                                                                     </li>
                                                                     <li class="control-group">
@@ -70,23 +72,22 @@
                                                                     <li class="control-group">
                                                                         <label for="confirmationMotDePasse" class="control-label">Confirmer mot de passe</label>
                                                                         <div class="controls">
-                                                                            <input id="confirmationMotDePasse" class="span11" type="text" name="confirmationMotDePasse" value="">
+                                                                            <input id="confirmationMotDePasse" class="span11" type="password" name="confirmationMotDePasse" value="">
                                                                         </div>
                                                                     </li>
                                                                     <li class="control-group">
                                                                         <label for="genre" class="control-label">Genre</label>
                                                                         <div class="controls">
-                                                                            <input id="genre" type="hidden" name="genre" value="" />
                                                                             <div id="genreListe" class="btn-group change" data-toggle="buttons-radio" data-target="genre">
-                                                                                <button type="button" class="btn" class-toggle="btn-green" name="btnHomme" value="homme">&nbsp; Homme &nbsp;</button>
-                                                                                <button type="button" class="btn" class-toggle="btn-green" name="btnFemme" value="femme">Femme</button>
+                                                                                <button type="button" class="btn" class-toggle="btn-green" name="genre" value="homme">&nbsp; Homme &nbsp;</button>
+                                                                                <button type="button" class="btn" class-toggle="btn-green" name="genre" value="femme">Femme</button>
                                                                             </div>
                                                                         </div>
                                                                     </li>
 
                                                                     <!-- // form item -->
                                                                     <li class="section-form">
-                                                                        <h4>Information sur la contact</h4>
+                                                                        <h4>Information sur contact</h4>
                                                                     </li>
                                                                     <!-- // section form divider -->
                                                                     <li class="control-group">
@@ -95,7 +96,7 @@
                                                                         </label>
                                                                         <div class="controls">
                                                                             <div class="input-append block">
-                                                                                <input id="email" class="span6" type="text" name="email" value="">
+                                                                                <input id="email" class="span6" type="text" name="email" {!! $info_admin->email !!} >
                                                                             </div>
                                                                         </div>
                                                                     </li>
@@ -105,13 +106,13 @@
                                                                             <span class="required">*</span>
                                                                         </label>
                                                                         <div class="controls controls-row">
-                                                                            <input id="telephone" class="span6" type="text" name="telephone" value="">
+                                                                            <input id="telephone" class="span6" type="text" name="telephone" {!! $info_admin->telephone !!} >
                                                                         </div>
                                                                     </li>
                                                                     <!-- // form item -->
                                                                 </ul>
                                                             </fieldset>
-                                                          
+                                                            
                                                             <div class="form-actions">
                                                                 <button type="submit" class="btn btn-blue">Valider</button>
                                                                 <button class="btn cancel">Annuler</button>

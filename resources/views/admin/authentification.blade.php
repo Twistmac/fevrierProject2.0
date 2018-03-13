@@ -61,24 +61,65 @@
                         <div class="tab-pane fade in active" id="login">
                             <div class="span5">
                                 <h4 class="welcome"> <small><i class="fontello-icon-user-4"></i>Se Connecter</small></h4>
-                                <form method="post" action="dashboard-one.html" name="login_form">
-                                    <fieldset>
-                                        <div class="controls">
-                                            <input id="idLogin" class="span5" type="text" name="id_login_email" placeholder="your ID or email">
+                                <form method="post" action="{{ route('login') }}" name="login_form">
+                                    {{ csrf_field() }}
+
+                                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                        <label for="email" class="col-md-4 control-label">Adresse E-Mail</label>
+
+                                        <div class="col-md-6">
+                                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                                            
                                         </div>
-                                        <div class="controls controls-row">
-                                            <input id="idPassword" class="span3" type="password" name="id_login_password" placeholder="password">
-                                            <a href="{{url('admin/profilAdmin')}}">
-                                              <button type="submit" class="span2 btn btn-yellow btn-large">Connnecter</button>
+                                    </div>
+
+                                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                        <label for="password" class="col-md-4 control-label">Mot de passe</label>
+
+                                        <div class="col-md-6">
+                                            <input id="password" type="password" class="form-control" name="password" required>
+
+                                           
+                                        </div>
+                                    </div>
+
+                                     <div class="form-group">
+                                        <div class="col-md-6 col-md-offset-4">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Se souvenir de moi
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-8 col-md-offset-4">
+                                            <button type="submit" class="btn btn-warning">
+                                                Connexion
+                                            </button>
+
+                                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                Mot de passe oublié?
                                             </a>
+
+                                            @if ($errors->has('email'))
+                                                <span class="help-block">
+                                                    <strong style="color:#e60c0c">{{ $errors->first('email') }}</strong>
+                                                </span>
+                                            @endif
+
+                                             @if ($errors->has('password'))
+                                                <span class="help-block">
+                                                    <strong style="color:#e60c0c">{{ $errors->first('password') }}</strong>
+                                                </span>
+                                            @endif
+
                                         </div>
-                                        <hr class="margin-xm">
-                                        <label class="checkbox">
-                                            <input id="remember" class="checkbox" type="checkbox">
-                                            Souviens-toi de moi</label>
-                                        <hr class="margin-mm ">
-                                        <a href="#forgot" class="btn btn-boo" data-toggle="tab">Oublier mot de passe?</a>
-                                    </fieldset>
+                                    </div>
+
+                                    
                                 </form>
                                 <!-- // form -->
                             </div>

@@ -114,8 +114,12 @@ Route::get('business/commercial','ProduitsController@indexcommercial');
 //ADMIN
 //Blog
 // --------------------------------------------------------------------------------------------------------------------------------------------
+// login administrateur
+Route::get('/admin/', function(){ return view('admin.authentification');});
+//Admin login 
+Auth::routes();
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('blog/new',['as' => 'blog.new','uses'=>'BlogsController@show']);
     Route::post('blog/store',['as' => 'blog.store','uses'=>'BlogsController@store']);
     Route::get('blog/listes',['as' => 'blog.all','uses' => 'BlogsController@showall']);
@@ -127,12 +131,14 @@ Route::prefix('admin')->group(function () {
     Route::get('blog/delete/{slug}',['as' => 'blog.delete','uses' => 'BlogsController@delete'])->where('slug','[a-z0-9\-]+')->middleware('trustarticle');
     Route::get('blog/register',['as' => 'blog.showregistre', 'uses' => 'BlogsController@showregistre']);
     Route::get('blog/restore/{slug}',['as' => 'blog.restore','uses' => 'BlogsController@restorearticle'])->where('slug','[0-9\-]+')->middleware('trustarticle');
-// login administrateur
-    Route::get('auth', function(){ return view('admin.authentification');});
-// profil Admin
-    Route::get('profilAdmin', function(){ return view('admin.profilAdm');});
-// statistique
-    Route::get('stat', function(){ return view('admin.statistique');});
+ // profil Admin
+    Route::get('profilAdmin', ['as' => 'show.users', 'uses' => 'UsersController@showUsers']);
+//mise a jour update profil Admin
+    Route::post('update-user', ['as' => 'update.user', 'uses' => 'UsersController@updateUsers']);
+// page statistique
+    Route::get('statistique', function(){ return view('admin.statistique');});
+//accueil BackOffice
+    Route::get('/home', function(){ return view('admin.statistique');})->name('admin.home');
 // gestion utilisateurs
     Route::get('users', function(){ return view('admin.gestionUsers');});
 // sellers
@@ -155,3 +161,7 @@ Route::post('/putFav',['as' => 'putFavoris', 'uses'=> 'ProduitsController@putFav
 
 //Route recuperation API AgentPoint
 Route::get('getapi', ['as' => 'get.api', 'uses' => 'ApiController@getdataPropertiesromApi']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
