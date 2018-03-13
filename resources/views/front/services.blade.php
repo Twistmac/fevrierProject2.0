@@ -54,10 +54,8 @@
 <section id="announcement-section" class="text-center">
        <div class="container ">
            <h2 class="title wow slideInLeft">Espaces publicitaires</h2>
-           <p class="wow slideInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br>
-               labore et dolore magna aliquan ut enim ad minim veniam.</p>
-           <a class="btn" href="#"><img src="assets/images/iso-btn.png" alt="ISO Button"></a>
-           <a class="btn" href="#"><img src="assets/images/playstore-btn.png" alt="Play Store Button"></a>
+           <a class="btn" href="{{ $publicites->services->placement1->lien }}"><img src="{{ link_img( $publicites->services->placement1->lienImage ) }}" width="{{ $publicites->services->placement1->width }}" height="{{ $publicites->services->placement1->height }}" alt="{{ $publicites->services->placement1->description }}"></a>
+           <a class="btn" href="{{ $publicites->services->placement2->lien }}"><img src="{{ link_img( $publicites->services->placement2->lienImage ) }}" width="{{ $publicites->services->placement2->width }}" height="{{ $publicites->services->placement2->height }}" alt="{{ $publicites->services->placement2->description }}"></a>
        </div>
 </section>
 
@@ -99,10 +97,8 @@
 <section id="announcement-section" class="text-center">
        <div class="container ">
            <h2 class="title wow slideInLeft">Espaces publicitaires</h2>
-           <p class="wow slideInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br>
-               labore et dolore magna aliquan ut enim ad minim veniam.</p>
-           <a class="btn" href="#"><img src="assets/images/iso-btn.png" alt="ISO Button"></a>
-           <a class="btn" href="#"><img src="assets/images/playstore-btn.png" alt="Play Store Button"></a>
+           <a class="btn" href="{{ $publicites->services->placement3->lien }}"><img src="{{ link_img( $publicites->services->placement3->lienImage ) }}" width="{{ $publicites->services->placement3->width }}" height="{{ $publicites->services->placement3->height }}" alt="{{ $publicites->services->placement3->description }}"></a>
+           <a class="btn" href="{{ $publicites->services->placement4->lien }}"><img src="{{ link_img( $publicites->services->placement4->lienImage ) }}" width="{{ $publicites->services->placement4->width }}" height="{{ $publicites->services->placement4->height }}" alt="{{ $publicites->services->placement4->description }}"></a>
        </div>
 </section>
 

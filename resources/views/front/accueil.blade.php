@@ -383,7 +383,7 @@
                                       <div class="panel-title">Espaces publicitaires</div>
                                     </p>
                                     <div class="content-box-large box-with-header">
-                                        <img src="{{link_img('assets/images/announcement-bg.jpg')}}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
+                                        <img src="{{link_img( $publicites->accueil->sidebar1->lienImage )}}" class="img-rounded" alt=" {{$publicites->accueil->sidebar1->description}} " width="{{ $publicites->accueil->sidebar1->width }}" height=" {{$publicites->accueil->sidebar1->height}} ">
                                       <br /><br />
                                     </div>
                                 </div>
@@ -393,7 +393,7 @@
                                   <div class="panel-title">Espaces publicitaires</div>
                               </div>
                               <div class="content-box-large box-with-header">
-                                    <img src="{{link_img('assets/images/announcement-bg.jpg')}}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
+                                    <img src="{{link_img( $publicites->accueil->sidebar2->lienImage )}}" class="img-rounded" alt="{{ $publicites->accueil->sidebar2->description }}" width=" {{$publicites->accueil->sidebar2->width}} " height=" {{$publicites->accueil->sidebar2->height}} ">
                                   <br /><br />
                               </div>
                           </section>
@@ -431,7 +431,7 @@
                                   <div class="panel-title">Espaces publicitaires</div>
                               </div>
                               <div class="content-box-large box-with-header">
-                                    <img src="{{link_img('assets/images/announcement-bg.jpg')}}" class="img-rounded" alt="Cinque Terre" width="600" height="420">
+                                    <img src="{{link_img( $publicites->accueil->sidebar3->lienImage )}}" class="img-rounded" alt="{{ $publicites->accueil->sidebar2->description }}" width="{{ $publicites->accueil->sidebar3->lienImage }}" height="{{ $publicites->accueil->sidebar3->height }}">
                                   <br /><br />
                               </div>
                           </section>
@@ -440,7 +440,7 @@
                                   <div class="panel-title">Espaces publicitaires</div>
                               </div>
                               <div class="content-box-large box-with-header">
-                                    <img src="{{link_img('assets/images/announcement-bg.jpg')}}" class="img-rounded" alt="Cinque Terre" width="604" height="236">
+                                    <img src="{{link_img( $publicites->accueil->sidebar4->lienImage )}}" class="img-rounded" alt="{{$publicites->accueil->sidebar4->lienImage}}" width="{{$publicites->accueil->sidebar4->lienImage}}" height="{{ $publicites->accueil->sidebar4->height }}">
                                   <br /><br />
                               </div>
                           </section>

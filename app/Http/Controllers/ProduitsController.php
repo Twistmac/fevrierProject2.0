@@ -10,16 +10,22 @@ use App\Blog;
 use App\Image;
 use App\Entite\RechercheSauvegardee;
 use App\Http\Controllers\Session;
+use App\Publicite;
+use App\Http\Controllers\PublicitesController;
 
 class ProduitsController extends Controller
 {
 	private $slug;
-	private $produit;
+    private $produit;
+    private $publicites;
+    private $pubs;
 
-	public function __construct()
-	{
-		$this->produit = new Produit();
-	}
+    public function __construct()
+    {
+        $this->pubs = new Publicite();
+        $this->publicites = new PublicitesController($this->pubs);
+        $this->produit = new Produit();
+    }
 	/**
      * fonction details d'un produit
      * @return Object collection produit
@@ -52,8 +58,10 @@ class ProduitsController extends Controller
     public function indexresidentiel()
     {
         $categorie = "Résidentiel";
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('immobilier');
+        $publicites = json_decode(json_encode($publicitesTemplate['immobilier']),false);
         $requete = $this->getsortbyCategoryinArray($categorie);
-        return view('front.template',compact('requete','categorie'));
+        return view('front.template',compact('requete','categorie','publicites'));
     }
 
     /** Fonction de gestion de contenu 
@@ -95,8 +103,10 @@ class ProduitsController extends Controller
     public function indexfoncier()
     {
         $categorie = "Foncier";
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('immobilier');
+        $publicites = json_decode(json_encode($publicitesTemplate['immobilier']),false);
         $requete = $this->getsortbyCategoryinArray($categorie);
-        return view('front.template',compact('requete','categorie'));
+        return view('front.template',compact('requete','categorie','publicites'));
     }
 
     /** Fonction get alls products Industriel
@@ -109,7 +119,9 @@ class ProduitsController extends Controller
         $categorie = "Industriel";
         $body = 'style="background-color: #ddd"';
         $requete = $this->getsortbyCategoryinArray($categorie);
-        return view('front.template',compact('requete','categorie','body'));
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('business');
+        $publicites = json_decode(json_encode($publicitesTemplate['business']),false);
+        return view('front.template',compact('requete','categorie','body','publicites'));
     }
 
     /** Fonction get alls products Commercial
@@ -120,7 +132,9 @@ class ProduitsController extends Controller
     {
         $categorie = "Commercial";
         $requete = $this->getsortbyCategoryinArray($categorie);
-        return view('front.template',compact('requete','categorie'));
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('business');
+        $publicites = json_decode(json_encode($publicitesTemplate['business']),false);
+        return view('front.template',compact('requete','categorie','publicites'));
     }
 
     public function saveRecherche(Request $request){

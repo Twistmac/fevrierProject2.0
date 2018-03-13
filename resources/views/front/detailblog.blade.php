@@ -119,16 +119,13 @@
                         <section class="property-meta-wrapper common text-center bg-info"> 
                             <h2 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
                                 ESPACES PUBLICITES</h2> 
-                            <p class="wow slideInRight" style="visibility: hidden; animation-name: none;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut                         <br> 
-                           			labore et dolore magna aliquan ut enim ad minim veniam.</p> 
+                            <img src="{{link_img( $publicites->blog->sidebar1->lienImage )}}" class="{{ $publicites->blog->sidebar1->class }}" alt="{{ $publicites->blog->sidebar1->description }}" width="{{ $publicites->blog->sidebar1->width }}" height="{{ $publicites->blog->sidebar1->height }}">
+ 
                         </section>                         
                         <section class="property-meta-wrapper common text-center bg-info"> 
                             <h2 class="title wow slideInLeft" style="visibility: hidden; animation-name: none;">
                                 ESPACES PUBLICITES</h2> 
-                            <p class="wow slideInRight" style="visibility: hidden; animation-name: none;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut                         <br> 
-                           			labore et dolore magna aliquan ut enim ad minim veniam.</p> 
+                            <img src="{{link_img( $publicites->blog->sidebar2->lienImage )}}" class="{{ $publicites->blog->sidebar2->class }}" alt="{{ $publicites->blog->sidebar2->description }}" width="{{ $publicites->blog->sidebar2->width }}" height="{{ $publicites->blog->sidebar2->height }}"> 
                         </section>                         
                         <section class="widget recent-properties clearfix"> 
                             <h5 class="title">Récents</h5> 
