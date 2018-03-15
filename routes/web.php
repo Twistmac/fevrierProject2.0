@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@index')->name('acceuil');
+Route::get('/', ['as' => 'accueil' , 'uses' => 'HomeController@index' ]);
 //Route::get('/', function () {  return view('front.accueil');});
 Route::get('/acceptation-APL',function () {  return view('acceptation-APL');});
 Route::get('/subscriptionAPL','Service\InscriptionController@loadInscriptionAPL');
@@ -100,15 +100,15 @@ Route::get('blog/detail/{slug}','BlogsController@detailsblog')->middleware('trus
 Route::get('blog/',['as' => 'blog', 'uses' => 'BlogsController@listesblog']);
 
 //residentiel
-Route::get('immobilier/residentiel','ProduitsController@indexresidentiel');
+Route::get('immobilier/residentiel', ['as' => 'immobilier.residentiel', 'uses' => 'ProduitsController@indexresidentiel' ]);
 Route::get('immobilier/{param}-{categorie}','ProduitsController@gestioncontenu')->where('param','[0-9]+'); //residentiel/{param}
-Route::get('immobilier/foncier','ProduitsController@indexfoncier');
+Route::get('immobilier/foncier',['as' => 'immobilier.foncier', 'uses' => 'ProduitsController@indexfoncier' ]);
 
 //foncier
-Route::get('business/industriel','ProduitsController@indexindustriel');
+Route::get('business/industriel',['as' => 'business.industriel', 'uses' => 'ProduitsController@indexindustriel' ]);
 Route::get('business/{param}-{categorie}','ProduitsController@gestioncontenu')->where('param','[0-9]+'); //foncier/{param}
 
-Route::get('business/commercial','ProduitsController@indexcommercial');
+Route::get('business/commercial',['as' => 'business.commercial', 'uses' => 'ProduitsController@indexcommercial' ]);
 
 // --------------------------------------------------------------------------------------------------------------------------------------------
 //ADMIN
@@ -147,6 +147,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
   Route::get('sellersDetail', function(){ return view('admin.detailSellers');});
 // gestion utilisateurs
     Route::get('users', function(){ return view('admin.gestionUsers');});
+//gestion des publicites
+    Route::get('registre-publicite', ['as' => 'registre.publicite', 'uses' => 'PublicitesController@listespagespublicites'] );
+// modification publicites par page
+    Route::get('publicites/{name}', ['as' => 'admin.pub.name' , 'uses' => 'PublicitesController@publiciteperPage'])->where('name','[a-z0-9\-]+')->middleware('verifypublicite');
+
 });
 
 //Route vers page Services

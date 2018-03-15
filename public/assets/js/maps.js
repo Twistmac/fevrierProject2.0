@@ -6,8 +6,8 @@
           center: new google.maps.LatLng(-33.91722, 151.23064),
           mapTypeId: 'roadmap'
         });
-
-        var iconBase = 'http://integration.oktobone.com/assets/images/features/';
+        
+        var iconBase = window.location.host + '/fevrierProjet3.0/assets/images/features/';
         var icons = {
           parking: {
             name: 'résidentiel',

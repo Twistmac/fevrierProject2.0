@@ -37,10 +37,6 @@ class UsersController extends Controller
     */
     public function updateUsers(Request $request)
     {
-        $this->validate($request,['genre' => 'required']);
-
-        dd( $request->input('genre') );
-
     	if( !empty( $request->input('nouveauMotDePasse')) && !empty($request->input('confirmationMotDePasse')) )
     	{
     		if( $request->input('nouveauMotDePasse') === $request->input('confirmationMotDePasse') )

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','updated_at'
     ];
 
     /**
@@ -34,10 +34,8 @@ class User extends Authenticatable
     */
     public function getEmailAttribute($value)
     {
-        if( is_null($value) )
-            return "placeholder='aucun(e)'";
-        else
-            return "value='".$value."'";
+        if( !is_null($value) )
+            return $value;
     }
 
     /**
@@ -47,10 +45,8 @@ class User extends Authenticatable
     */
     public function getNameAttribute($value)
     {
-        if( is_null($value) )
-            return "placeholder='aucun(e)'";
-        else
-            return "value=".$value."";
+        if( !is_null($value) )
+            return $value;
     }
 
     /**
@@ -60,10 +56,8 @@ class User extends Authenticatable
     */
     public function getFirstnameAttribute($value)
     {
-        if( is_null($value) )
-            return "placeholder='aucun(e)'";
-        else
-            return "value='".$value."'";
+        if( !is_null($value) )
+            return $value;
     }
 
     /**
@@ -73,10 +67,8 @@ class User extends Authenticatable
     */
     public function getTelephoneAttribute($value)
     {
-        if( is_null($value) )
-            return "placeholder='aucun(e)'";
-        else
-            return "value='".$value."'";
+        if( !is_null($value) )
+            return $value;
     }
 
     /**

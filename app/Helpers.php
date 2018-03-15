@@ -87,6 +87,19 @@ if( ! function_exists('paginationAdmin') )
 	}
 }
 
+/**
+* Helpers affichage Image Publicite
+* @param string $nom_image
+* @return string url image publicite
+*/
+if( ! function_exists('pub') )
+{
+	function pub($nom_image)
+	{
+		return asset('admin/img/publicite/' . $nom_image );
+	}
+}
+
 //test session existe et include l'entete
 function affichageHeader(){
 	$membre = new Membre();

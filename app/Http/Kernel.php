@@ -55,6 +55,7 @@ class Kernel extends HttpKernel
         'ip' => \App\Http\Middleware\Ip::class,
         'verification' => \App\Http\Middleware\Verificationproduit::class,
         'trustarticle' => \App\Http\Middleware\Verifyarticle::class,
-        'verifyhome' => \App\Http\Middleware\Verifyhome::class
+        'verifyhome' => \App\Http\Middleware\Verifyhome::class,
+        'verifypublicite' => \App\Http\Middleware\Verifypublicite::class
     ];
 }

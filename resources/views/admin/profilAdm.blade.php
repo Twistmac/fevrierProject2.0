@@ -52,7 +52,7 @@
                                                                             <span class="required">*</span>
                                                                         </label>
                                                                         <div class="controls">
-                                                                            <input id="nom" class="span11" type="text" name="nom" {!! $info_admin->name !!} >
+                                                                            <input id="nom" class="span11" type="text" name="nom" required="required" value="{!! $info_admin->name !!}" >
                                                                         </div>
                                                                     </li>
                                                                     <li class="control-group">
@@ -60,7 +60,7 @@
                                                                             <span class="required">*</span>
                                                                         </label>
                                                                         <div class="controls">
-                                                                            <input id="prenom" class="span11" type="text" name="prenom" required="required" {!! $info_admin->firstname !!} >
+                                                                            <input id="prenom" class="span11" type="text" name="prenom" required="required" value="{!! $info_admin->firstname !!}" >
                                                                         </div>
                                                                     </li>
                                                                     <li class="control-group">
@@ -96,7 +96,7 @@
                                                                         </label>
                                                                         <div class="controls">
                                                                             <div class="input-append block">
-                                                                                <input id="email" class="span6" type="text" name="email" {!! $info_admin->email !!} >
+                                                                                <input id="email" class="span6" type="text" name="email" value="{!! $info_admin->email !!}" >
                                                                             </div>
                                                                         </div>
                                                                     </li>
@@ -106,7 +106,7 @@
                                                                             <span class="required">*</span>
                                                                         </label>
                                                                         <div class="controls controls-row">
-                                                                            <input id="telephone" class="span6" type="text" name="telephone" {!! $info_admin->telephone !!} >
+                                                                            <input id="telephone" class="span6" type="text" name="telephone" value="{!! $info_admin->telephone !!}" >
                                                                         </div>
                                                                     </li>
                                                                     <!-- // form item -->

@@ -18,7 +18,10 @@ $(document)
 				// -------------------------------------------------------------------------------- * -->
 				$('#exampleDT')
                         .dataTable({
-                        iDisplayLength: 3,
+                        iDisplayLength: 5,
+                        aaSorting: [
+                                [0, 'desc']
+                        ],
                         sDom: "<'row-fluid' <'span4'l> <'span8'pf> > rt <'row-fluid' <'span12'i> >"
                 });
 				$('#exampleDT_length select').select2({

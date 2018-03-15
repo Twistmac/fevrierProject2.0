@@ -108,12 +108,12 @@
                       <div class="media profile">
                           <div class="media-thumb media-left thumb-bordereb">
                               <a class="img-shadow" href="{{url('admin/profilAdmin')}}">
-                                  <img class="thumb" src="{{link_img('admin/img/profil.png')}}">
+                                  <img class="thumb" src="{{link_img('admin/img/'. Auth::user()->urlimage)}}">
                               </a>
                           </div>
                           <div class="media-body">
-                              <h5 class="media-heading">Adminstrateur User</h5>
-                              <p class="data">Dernier acces: 27 juin 2017</p>
+                              <h5 class="media-heading">{{ Auth::user()->firstname . ' ' . Auth::user()->name }}</h5>
+                              <p class="data">Dernière modif : {{ date('d/m/Y',strtotime(Auth::user()->updated_at))}}</p>
                           </div>
                       </div>
                   </div>
@@ -166,7 +166,7 @@
                       </li>
                       <li class="accordion-group">
                           <div class="accordion-heading">
-                              <a href="gestionPublicite.html" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-credit-card"></i> Gestion des publicités</a>
+                              <a href="{{route('registre.publicite')}}" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-credit-card"></i> Gestion des publicités</a>
                           </div>
                       </li>
                       <li class="accordion-group">

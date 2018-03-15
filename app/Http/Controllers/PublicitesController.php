@@ -128,4 +128,25 @@ class PublicitesController extends Controller
 		$modification = ( $objectPub === $cookies);
 		return $modification;
 	}
+
+	/**
+	* fonction listes des pages possédant des publicites
+	* @param null
+	* @return Collection Object 
+	*/
+	public function listespagespublicites()
+	{
+		$pages = $this->publicite->getlistespages(1);
+		return view('admin.listespages',compact('pages'));
+	}
+
+	/**
+	* fonction listes les publicites d'une page 
+	* @param string $nom_de_la_page
+	* @return Array $listes_pub 
+	*/
+	public function publiciteperPage($nom_page)
+	{
+		dd( $this->xml_loader->$nom_page );
+	}
 }
