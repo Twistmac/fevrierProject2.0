@@ -132,7 +132,7 @@ class Handler implements ExceptionHandlerContract
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
 
-        return redirect()->guest('/connexion');
+        return redirect()->guest('/connexion'); // /connexion
     }
 
     /**

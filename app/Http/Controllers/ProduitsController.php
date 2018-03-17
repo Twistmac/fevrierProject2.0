@@ -58,8 +58,8 @@ class ProduitsController extends Controller
     public function indexresidentiel()
     {
         $categorie = "Résidentiel";
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('immobilier');
-        $publicites = json_decode(json_encode($publicitesTemplate['immobilier']),false);
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('residentiel');
+        $publicites = json_decode(json_encode($publicitesTemplate['residentiel']),false);
         $requete = $this->getsortbyCategoryinArray($categorie);
         return view('front.template',compact('requete','categorie','publicites'));
     }
@@ -103,8 +103,8 @@ class ProduitsController extends Controller
     public function indexfoncier()
     {
         $categorie = "Foncier";
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('immobilier');
-        $publicites = json_decode(json_encode($publicitesTemplate['immobilier']),false);
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('foncier');
+        $publicites = json_decode(json_encode($publicitesTemplate['foncier']),false);
         $requete = $this->getsortbyCategoryinArray($categorie);
         return view('front.template',compact('requete','categorie','publicites'));
     }
@@ -119,8 +119,8 @@ class ProduitsController extends Controller
         $categorie = "Industriel";
         $body = 'style="background-color: #ddd"';
         $requete = $this->getsortbyCategoryinArray($categorie);
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('business');
-        $publicites = json_decode(json_encode($publicitesTemplate['business']),false);
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('industriel');
+        $publicites = json_decode(json_encode($publicitesTemplate['industriel']),false);
         return view('front.template',compact('requete','categorie','body','publicites'));
     }
 
@@ -132,8 +132,8 @@ class ProduitsController extends Controller
     {
         $categorie = "Commercial";
         $requete = $this->getsortbyCategoryinArray($categorie);
-        $publicitesTemplate = $this->publicites->getpubliciteperPage('business');
-        $publicites = json_decode(json_encode($publicitesTemplate['business']),false);
+        $publicitesTemplate = $this->publicites->getpubliciteperPage('commercial');
+        $publicites = json_decode(json_encode($publicitesTemplate['commercial']),false);
         return view('front.template',compact('requete','categorie','publicites'));
     }
 

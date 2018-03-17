@@ -59,11 +59,6 @@ Route::get('/accueilMembre',['as'=>'accueilMembre', function()
 
 }]);
 
-//home
-Route::get("/home",['as'=>'home', 'uses'=>'HomeController@acceuilMembre']);
-
-
-
 Route::get('/acceuilAFA',['as'=>'acceuilAFA', function()
 {
     if(session('login')==''){
@@ -149,8 +144,12 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('users', function(){ return view('admin.gestionUsers');});
 //gestion des publicites
     Route::get('registre-publicite', ['as' => 'registre.publicite', 'uses' => 'PublicitesController@listespagespublicites'] );
-// modification publicites par page
-    Route::get('publicites/{name}', ['as' => 'admin.pub.name' , 'uses' => 'PublicitesController@publiciteperPage'])->where('name','[a-z0-9\-]+')->middleware('verifypublicite');
+// parametrage publicites par page
+    Route::get('setting-publicite/{name}', ['as' => 'admin.pub.name' , 'uses' => 'PublicitesController@publiciteperPage'])->where('name','[a-z0-9\-]+')->middleware('verifypublicite');
+//modification publicite 
+    Route::post('update-pub', ['as' => 'update.pub', 'uses' => 'PublicitesController@updatePublicite']);
+//Ajouter publicite
+    Route::post('add-pub', ['as' => 'add.pub', 'uses' => 'PublicitesController@ajouterPub']);
 
 });
 

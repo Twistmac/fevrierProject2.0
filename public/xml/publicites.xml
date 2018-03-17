@@ -10,11 +10,11 @@
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
-			<description>Cinque Terre</description>
+			<lienImage>assets/images/1521274655.jpg</lienImage>
+			<description>publicite coca-cola</description>
 			<class>...</class>
-			<width>604</width>
-			<height>236</height>
+			<width>800</width>
+			<height>451</height>
 		</sidebar2>
 		<sidebar3>
 			<lienImage>assets/images/announcement-bg.jpg</lienImage>
@@ -50,7 +50,7 @@
 
 	</accueil>
 
-	<immobilier>
+	<residentiel>
 		<sidebar1>
 			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
@@ -74,9 +74,35 @@
 			<width>604</width>
 			<height>236</height>
 		</sidebar3>
-	</immobilier>
+	</residentiel>
 
-	<business>
+	<foncier>
+		<sidebar1>
+			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<class>img-rounded</class>
+			<width>604</width>
+			<height>236</height>
+		</sidebar1>
+
+		<sidebar2>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<class>img-rounded</class>
+			<width>604</width>
+			<height>236</height>
+		</sidebar2>
+
+		<sidebar3>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<class>img-rounded</class>
+			<width>604</width>
+			<height>236</height>
+		</sidebar3>
+	</foncier>
+
+	<industriel>
 		<sidebar1>
 			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
@@ -100,7 +126,33 @@
 			<width>604</width>
 			<height>236</height>
 		</sidebar3>
-	</business>
+	</industriel>
+
+	<commercial>
+		<sidebar1>
+			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<class>img-rounded</class>
+			<width>604</width>
+			<height>236</height>
+		</sidebar1>
+
+		<sidebar2>
+			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<class>img-rounded</class>
+			<width>604</width>
+			<height>236</height>
+		</sidebar2>
+
+		<sidebar3>
+			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<description>Cinque Terre</description>
+			<class>img-rounded</class>
+			<width>604</width>
+			<height>236</height>
+		</sidebar3>
+	</commercial>
 
 	<services>
 		<placement1>

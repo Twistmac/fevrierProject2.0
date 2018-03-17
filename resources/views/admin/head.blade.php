@@ -207,7 +207,7 @@
                                 <a href="dragAndDrop.html"> <i class="fontello-icon-right-dir"></i> Emplacement des widgets </a>
                             </li>
                               <li>
-                                  <a href="gestionPageStatique.html"> <i class="fontello-icon-right-dir"></i> Page statique </a>
+                                  <a href="{{ route('pages.all') }}"> <i class="fontello-icon-right-dir"></i> Page statique </a>
                               </li>
                               <li>
                                   <a href="gestionPageSlider.html"> <i class="fontello-icon-right-dir"></i> Slider </a>

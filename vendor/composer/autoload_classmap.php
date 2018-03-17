@@ -92,6 +92,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Middleware\\Verifyarticle' => $baseDir . '/app/Http/Middleware/Verifyarticle.php',
     'App\\Http\\Middleware\\Verifyhome' => $baseDir . '/app/Http/Middleware/Verifyhome.php',
+    'App\\Http\\Middleware\\Verifypublicite' => $baseDir . '/app/Http/Middleware/Verifypublicite.php',
     'App\\Http\\Service\\BlogsController' => $baseDir . '/app/Http/Controllers/Service/BlogsController.php',
     'App\\Http\\Service\\HomeController' => $baseDir . '/app/Http/Controllers/Service/HomeController.php',
     'App\\Http\\Service\\MembreController' => $baseDir . '/app/Http/Controllers/Service/MembreController.php',

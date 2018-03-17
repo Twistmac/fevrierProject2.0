@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Input;
 use App\Publicite;
 use App\Http\Controllers\PublicitesController;
 use Intervention\Image\Facades\Image as Resize;
-//Intervention\Image\ImageManagerStatic as Image;
+//use Intervention\Image\ImageManagerStatic as Resize;
 
 class BlogsController extends Controller
 {
@@ -304,8 +304,14 @@ class BlogsController extends Controller
     * @param Request $request
     * @return Array $input['imagename']
     */
-    public function uploadAndResize($request)
+    public function uploadAndResize($request, $width=null, $height=null)
     {
+        if( is_null($width) && is_null($height) )
+        {
+            $width = 1600; 
+            $height = 1000;
+        }
+
         if($request->file('file'))
         {
             $this->validate($request, ['file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048']);
@@ -315,7 +321,7 @@ class BlogsController extends Controller
 
             //redimensionner Image
             $image_resize = Resize::make($image->getRealPath());              
-            $resultat = $image_resize->resize(1600, 1000);
+            $resultat = $image_resize->resize($width, $height);
             $path = $destinationPath . '/' . $input['imagename'];
             $image_resize->save($path);
             return $input['imagename'];

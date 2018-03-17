@@ -58,8 +58,9 @@ class PagesController extends Controller
         $parser = $this->xml_parser; 
         $array = $request->all();
         unset($array['_token']);
+        unset($array['_wysihtml5_mode']);
 
-        switch ($request->post('parameter')) {
+        switch ($request->input('parameter')) {
             case 'accueil':
                     $object = $this->xml_parser->accueil;
                 break;
@@ -80,7 +81,6 @@ class PagesController extends Controller
                 break;
         }
         unset($array['parameter']);
-
         foreach($object as $cle => $obj)
         {
             foreach ($array as $key => $value)

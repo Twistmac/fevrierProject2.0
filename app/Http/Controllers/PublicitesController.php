@@ -4,18 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Publicite;
+use App\Image;
 use App\Http\Requests;
 use App\Http\Controllers\CookiesController;
+use App\Http\Controllers\BlogsController;
 
 class PublicitesController extends Controller
 {
     protected $public;
     protected $xml_loader;
+    private $image;
 
     public function __construct(Publicite $pub)
 	{
 		$this->publicite = $pub;
 		$this->xml_loader = xml_loader_files('publicites');
+		$this->image = new Image();
 	}
 	/**
 	* fonction main publicite 
@@ -147,6 +151,84 @@ class PublicitesController extends Controller
 	*/
 	public function publiciteperPage($nom_page)
 	{
-		dd( $this->xml_loader->$nom_page );
+		//listes des pages publicites
+		$listesPage = Publicite::all();
+		foreach ($listesPage as $lists) {
+			$nomlists[] = $lists;
+		}
+		//listes des sections d'une page
+		$sections = $this->xml_loader->$nom_page;
+		foreach ($sections as $key => $value) {
+			foreach ($value as $cle => $valeur) {
+				$listsection[] = $cle;
+			}
+		}
+		//Data de chaque section de page
+		//$this->xml_loader->$nom_page->$listsection[0]->lienImage
+		$datas = $this->xml_loader->$nom_page;
+		return view('admin.settingpub',compact('nomlists','listsection','datas','nom_page'));
 	}
+
+	/**
+	* fonction ajouter une nouvelle publicite 
+	* @param Request $request 
+	* @return Responce 
+	*/
+	public function updatePublicite( Request $request )
+	{
+		dd( $request->all() );
+	}
+
+	/**
+	* fonction qui modifie une section publicite
+	* @param Request $request
+	* @return Response 
+	*/ 
+	public function ajouterPub( Request $request)
+	{
+		$this->validate($request,[
+			'file' => 'required'
+		]);
+
+		if( is_null($request->input('width')) && is_null($request->input('height')) ){
+			$width = 800; 
+			$height = 451;
+		}
+		else{
+			$width = $request->input('width'); 
+			$height = $request->input('height');
+		}
+		$blog = new BlogsController();
+		//insertion Image
+		$nomImage = $blog->uploadAndResize($request,$width,$height);
+		$array_options = [$request->input('description'),$request->input('class'),$request->input('width'),$request->input('height')];
+		Image::create(['urlimage1' => $nomImage, 'type' => 'pub', 'options' => implode(";",$array_options) ]);
+		//assignation de la pub à la section
+		if( !empty($request->input('appliquer')) )
+			$update = $this->assignationPub($request->input('page'),$request->input('section'),array_merge([1 => $nomImage], $array_options ));
+
+		return back()->with('success','La publicité a été sauvegardé avec succés');
+		
+	}
+
+	/**
+	* fonction assignation publicite sur une section 
+	* @param string $page, string $section, string $image, Array $option
+	* @return Response 
+	*/
+	 public function assignationPub($page,$section,$option)
+	 {
+	 	$parser =  $this->xml_loader;
+	 	$update = $this->xml_loader->$page->$section;
+	 	if( is_array($option) )
+	 	{
+	 		$update->lienImage = 'assets/images/' . $option[0];
+		 	$update->description = $option[1];
+		 	$update->class = $option[2];
+		 	$update->width = $option[3];
+		 	$update->height = $option[4];
+	 	}
+	 	$parser->saveXML(public_path().'/xml/publicites.xml');
+	 	return back()->with('success','La publicite a été sauvegardé et assigné à la section');
+	 }
 }

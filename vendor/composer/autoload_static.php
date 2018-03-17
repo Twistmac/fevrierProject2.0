@@ -402,6 +402,7 @@ class ComposerStaticInit9d9c044849007e2861ea177840d15a2d
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Middleware\\Verifyarticle' => __DIR__ . '/../..' . '/app/Http/Middleware/Verifyarticle.php',
         'App\\Http\\Middleware\\Verifyhome' => __DIR__ . '/../..' . '/app/Http/Middleware/Verifyhome.php',
+        'App\\Http\\Middleware\\Verifypublicite' => __DIR__ . '/../..' . '/app/Http/Middleware/Verifypublicite.php',
         'App\\Http\\Service\\BlogsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Service/BlogsController.php',
         'App\\Http\\Service\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Service/HomeController.php',
         'App\\Http\\Service\\MembreController' => __DIR__ . '/../..' . '/app/Http/Controllers/Service/MembreController.php',
