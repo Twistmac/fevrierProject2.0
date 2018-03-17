@@ -2,7 +2,7 @@
 <contenu>
 	<accueil>
 		<sidebar1>
-			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
+			<lienImage>images/publicite2-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -10,22 +10,22 @@
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>assets/images/1521274655.jpg</lienImage>
-			<description>publicite coca-cola</description>
+			<lienImage>images/1521284915.jpg</lienImage>
+			<description>publicite coca-cola </description>
+			<class>...</class>
+			<width>800</width>
+			<height>450</height>
+		</sidebar2>
+		<sidebar3>
+			<lienImage>images/1521289903.png</lienImage>
+			<description>Envie de vacance australie</description>
 			<class>...</class>
 			<width>800</width>
 			<height>451</height>
-		</sidebar2>
-		<sidebar3>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
-			<description>Cinque Terre</description>
-			<class>...</class>
-			<width>604</width>
-			<height>236</height>
 		</sidebar3>
 
 		<sidebar4>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -33,7 +33,7 @@
 		</sidebar4>
 
 		<placement1>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -41,18 +41,18 @@
 		</placement1>
 
 		<placement2>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
-			<description>Cinque Terre</description>
+			<lienImage>images/announcement-bg.jpg</lienImage>
+			<description>image placement 2 announcement </description>
 			<class>...</class>
-			<width>604</width>
-			<height>236</height>
+			<width>800</width>
+			<height>451</height>
 		</placement2>
 
 	</accueil>
 
 	<residentiel>
 		<sidebar1>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -60,7 +60,7 @@
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -68,7 +68,7 @@
 		</sidebar2>
 
 		<sidebar3>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -78,7 +78,7 @@
 
 	<foncier>
 		<sidebar1>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -86,7 +86,7 @@
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -94,7 +94,7 @@
 		</sidebar2>
 
 		<sidebar3>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -104,7 +104,7 @@
 
 	<industriel>
 		<sidebar1>
-			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
+			<lienImage>images/publicite2-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -112,7 +112,7 @@
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -120,7 +120,7 @@
 		</sidebar2>
 
 		<sidebar3>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -130,7 +130,7 @@
 
 	<commercial>
 		<sidebar1>
-			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
+			<lienImage>images/publicite2-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -138,7 +138,7 @@
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>assets/images/announcement-bg.jpg</lienImage>
+			<lienImage>images/announcement-bg.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -146,7 +146,7 @@
 		</sidebar2>
 
 		<sidebar3>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>img-rounded</class>
 			<width>604</width>
@@ -156,7 +156,7 @@
 
 	<services>
 		<placement1>
-			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
+			<lienImage>images/publicite2-gformat.jpg</lienImage>
 			<lien>#</lien>
 			<description>Cinque Terre</description>
 			<class>...</class>
@@ -165,7 +165,7 @@
 		</placement1>
 
 		<placement2>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<lien>#</lien>
 			<description>Cinque Terre</description>
 			<class>...</class>
@@ -174,7 +174,7 @@
 		</placement2>
 
 		<placement3>
-			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
+			<lienImage>images/publicite2-gformat.jpg</lienImage>
 			<lien>#</lien>
 			<description>Cinque Terre</description>
 			<class>...</class>
@@ -183,7 +183,7 @@
 		</placement3>
 
 		<placement4>
-			<lienImage>assets/images/publicite2-gformat.jpg</lienImage>
+			<lienImage>images/publicite2-gformat.jpg</lienImage>
 			<lien>#</lien>
 			<description>Cinque Terre</description>
 			<class>...</class>
@@ -194,7 +194,7 @@
 
 	<blog>
 		<sidebar1>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -202,7 +202,7 @@
 		</sidebar1>
 
 		<sidebar2>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>
@@ -210,7 +210,7 @@
 		</sidebar2>
 
 		<sidebar3>
-			<lienImage>assets/images/publicite3-gformat.jpg</lienImage>
+			<lienImage>images/publicite3-gformat.jpg</lienImage>
 			<description>Cinque Terre</description>
 			<class>...</class>
 			<width>604</width>

@@ -166,7 +166,9 @@ class PublicitesController extends Controller
 		//Data de chaque section de page
 		//$this->xml_loader->$nom_page->$listsection[0]->lienImage
 		$datas = $this->xml_loader->$nom_page;
-		return view('admin.settingpub',compact('nomlists','listsection','datas','nom_page'));
+		//listes des publicites archives 
+		$archives = $this->listsarchivespub();
+		return view('admin.settingpub',compact('nomlists','listsection','datas','nom_page','archives'));
 	}
 
 	/**
@@ -176,7 +178,32 @@ class PublicitesController extends Controller
 	*/
 	public function updatePublicite( Request $request )
 	{
-		dd( $request->all() );
+		$this->validate($request,[
+			'description' => 'required'
+		]);
+
+		//recolte des données 
+		$array_update = [ $request->input('description'),$request->input('class'),$request->input('width'),$request->input('height') ];
+		$imageXml = preg_replace("/images\//",'',$request->input('nameImage'));
+		//update dans la base de donnée
+		if( Image::where('urlimage1', $imageXml ) )
+			Image::where('urlimage1',$imageXml)->update(['options'=> implode(";",$array_update) ]);
+
+		//assignation d'une image déjà stockée 
+		if( !is_null($request->input('archives')) )
+		{
+			//get information option image
+			$option = $this->listsarchivespub($request->input('archives'));
+			$array_segment = explode(";",$option[0]->options);
+			$assigne = $this->assignationPub($request->input('page'),$request->input('section'), array_merge([1 => $option[0]->urlimage1], $array_segment) );
+			if( $assigne )
+				return back()->with('success','La publicite a été sauvegardé et assigné à la section');
+		}
+
+		//update dans le fichier xml
+		$update_xml = $this->assignationPub($request->input('page'),$request->input('section'), array_merge([1 => $imageXml], $array_update) );
+		if( $update_xml )
+			return back()->with('success','La publicite a été sauvegardé et assigné à la section');
 	}
 
 	/**
@@ -187,7 +214,8 @@ class PublicitesController extends Controller
 	public function ajouterPub( Request $request)
 	{
 		$this->validate($request,[
-			'file' => 'required'
+			'file' => 'required',
+			'description' => 'required'
 		]);
 
 		if( is_null($request->input('width')) && is_null($request->input('height')) ){
@@ -204,8 +232,11 @@ class PublicitesController extends Controller
 		$array_options = [$request->input('description'),$request->input('class'),$request->input('width'),$request->input('height')];
 		Image::create(['urlimage1' => $nomImage, 'type' => 'pub', 'options' => implode(";",$array_options) ]);
 		//assignation de la pub à la section
-		if( !empty($request->input('appliquer')) )
+		if( !empty($request->input('appliquer')) ){
 			$update = $this->assignationPub($request->input('page'),$request->input('section'),array_merge([1 => $nomImage], $array_options ));
+			if( $update)
+				return back()->with('success','La publicite a été sauvegardé et assigné à la section');
+		}
 
 		return back()->with('success','La publicité a été sauvegardé avec succés');
 		
@@ -214,7 +245,7 @@ class PublicitesController extends Controller
 	/**
 	* fonction assignation publicite sur une section 
 	* @param string $page, string $section, string $image, Array $option
-	* @return Response 
+	* @return bool 
 	*/
 	 public function assignationPub($page,$section,$option)
 	 {
@@ -222,13 +253,36 @@ class PublicitesController extends Controller
 	 	$update = $this->xml_loader->$page->$section;
 	 	if( is_array($option) )
 	 	{
-	 		$update->lienImage = 'assets/images/' . $option[0];
+	 		$update->lienImage = 'images/' . $option[0];
 		 	$update->description = $option[1];
 		 	$update->class = $option[2];
 		 	$update->width = $option[3];
 		 	$update->height = $option[4];
 	 	}
 	 	$parser->saveXML(public_path().'/xml/publicites.xml');
-	 	return back()->with('success','La publicite a été sauvegardé et assigné à la section');
+	 	return true;
+	 }
+
+	 /**
+	 * fonction listes des publicites archivés dans la base de donnée 
+	 * @param null
+	 * @return Collection Object 
+	 */
+	 public function listsarchivespub($type=null)
+	 {
+	 	if( is_null($type) )
+	 		$listes =  Image::where('type','pub')->get();
+	 	else
+	 		$listes = Image::where('id',$type)->get();
+
+	 	foreach($listes as $lst)
+	 	{
+	 		$segments = explode(";",$lst->options);
+	 		$lst->description = $segments[0];
+	 		$lst->class = $segments[1];
+	 		$lst->width = $segments[2];
+	 		$lst->height = $segments[3];
+	 	}
+	 	return $listes;
 	 }
 }

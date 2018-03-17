@@ -2,6 +2,9 @@
 
 <div id="main-content" class="main-content container-fluid">
             <div class="row-fluid page-head">
+                 <!-- Message de notification -->
+                    @include('admin.notification')
+                <!-- fin Message de notification -->
                 <h2 class="page-title"><i class="fontello-icon-picture"></i> Paramêtrage Publicité <small>éditer, organiser et visualiser les publicités apparaissant ssur le côté Front-Office du site </small></h2>
                 <p class="pagedesc">Cette section vous permettra de modifier les publicités affichant sur le côté Client de votre site.  Elle a été conçue pour faciliter l'intégration des publicités et la gestion de ses contenus.</p>
             </div>
@@ -14,7 +17,7 @@
                         <div class="nav-collapse collapse navbar-responsive-collapse">
                                 <ul class="nav">
                                 	@foreach($nomlists as $listes)
-                                    <li><a href="{{ route('admin.pub.name',$listes->lien) }}">{{ $listes->nompage }}</a></li>
+                                    <li><a href="{{ route('admin.pub.name',$listes->nompage) }}">{{ $listes->nompage }}</a></li>
                                     <li class="divider-vertical"></li>
                                     @endforeach
                                 </ul>
@@ -89,10 +92,10 @@
 					                                        <input type="hidden" name="section"  value="{{$section}}">
                                                             <input type="hidden" name="page" value="{{$nom_page}}">
 					                                        <h6>Class Image : <code>width</code></h6>
-					                                         <div class="controls"><p><input type="text" class="input-block-level" name="width" value="604" /></p></div>
+					                                         <div class="controls"><p><input type="text" class="input-block-level" name="width" value="800" /></p></div>
 					                                        <h6>Dimension Image : <code>height</code></h6>
-					                                         <div class="controls"><p><input type="text" class="input-block-level" name="height" value="236" /></p></div>
-					                                        <h6>Description Image : <code>alt</code></h6>
+					                                         <div class="controls"><p><input type="text" class="input-block-level" name="height" value="451" required="required" /></p></div>
+					                                        <h6>Description Image : <code>alt</code> ( * Champs Obligatoire )</h6>
 					                                         <div class="controls"><p><textarea type="text" class="input-block-level" name="description" /></textarea></p></div>
 					                                        <h6>Class Image : <code>class</code></h6>
 					                                         <div class="controls"><p><input type="text" class="input-block-level" name="class" value="..." /></p></div>
@@ -108,6 +111,8 @@
 										<form id="formNextAccountSettings" class="form-horizontal form-condensed label-left no-margin-bootom" method="post" action="{{ route('update.pub') }}">
 											{{ csrf_field() }}
 											<input type="hidden" name="section" value="{{$section}}">
+                                            <input type="hidden" name="page" value="{{$nom_page}}">
+                                            <input type="hidden" name="nameImage" value="{{$datas->$section->lienImage}}">
                                         <fieldset class="form-dark ">
                                             <ul class="form-list">
                                                 <li class="control-group">
@@ -137,7 +142,7 @@
                                                 <li class="control-group">
                                                     <label for="fileDescript" class="control-label">Image Description: <code>alt</code></label>
                                                     <div class="controls">
-                                                        <textarea id="fileDescript" class="input-block-level auto" rows="3" placeholder="Enter text ..." name="description">{{$datas->$section->description}}</textarea>
+                                                        <textarea id="fileDescript" class="input-block-level auto" rows="3" placeholder="Enter text ..." name="description" required="required">{{$datas->$section->description}}</textarea>
                                                     </div>
                                                 </li>
                                                 <!-- // form item -->
@@ -145,19 +150,13 @@
                                                 <li class="control-group">
                                                     <label for="fileToGallery" class="control-label">Publicité(s) Archivée(s)</label>
                                                     <div class="controls">
-                                                        <select id="fileToGallery" class="selectpicker input-medium" data-style="btn-info"  name="fileToGallery">
-                                                            <option value="1">Gallery 01</option>
-                                                            <option value="2">Gallery 02</option>
-                                                            <option value="3">Gallery 03</option>
+                                                        <select id="fileToGallery" class="selectpicker input-medium" data-style="btn-info"  name="archives">
+                                                            <option>Parcourir...</option>
+                                                            @foreach($archives as $arch)
+                                                            <option value="{{$arch->id}}">{{ucfirst($arch->description)}}</option>
+                                                            @endforeach
+                                                            
                                                         </select>
-                                                    </div>
-                                                </li>
-                                                <!-- // form item -->
-                                                
-                                                <li class="control-group">
-                                                    <label for="fileTag" class="control-label">Tag for item</label>
-                                                    <div class="controls">
-                                                        <input id="fileTag" class="" type="text" name="tag" />
                                                     </div>
                                                 </li>
                                                 <!-- // form item -->
@@ -194,21 +193,26 @@
                                         <option>Gallery 09</option>
                                         <option>Gallery 10</option>
                                     </select>
-                                    </span> <i class="fontello-icon-picture"></i> Gallery item</h4>
+                                    </span> <i class="fontello-icon-picture"></i> Galerie des publicités : </h4>
                                 <div class="scrollBox" style="height:740px; padding-right: 10px"> 
                                 
                                     <!-- class for thumbnail size - square75 square100 square150 square200 square260 
                                     	 							horizontal75 horizontal100 horizontal150 horizontal200 horizontal260 
                                     	 							vertical75 vertical100 vertical150 vertical200 vertical260 -->
                                     <ul id="gallery3" class="gallery media-list horizontal100" data-slideshow="3000" data-toggle="modal-gallery" data-target="#modal-gallery">
+
+                                        @foreach($archives as $archiv)
+
                                         <!-- Reposition the block .thumbnail-action and add div.clearfix  -->
                                         <li class="thumbnail media">
                                             <div class="pull-left">
-                                                <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_01.jpg" title="image 01" rel="gallery"></a> </div>
+                                                <div class="nailthumb-container show-loading"> <img class="thumb media-object" src="{{link_img('images/' . $archiv->urlimage1)}}" width="100" height="100"> </div>
                                             </div>
                                             <div class="media-body">
-                                                <h4 class="media-heading"><a href="assets/img/demo/gallery/gall_01/image_01.jpg" class="edit">Image title</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetuer lacinia pede Lorem tellus Nullam. Congue vel ipsum egestas.</p>
+                                                <h4 class="media-heading"><a href="{{link_img('images/'.$archiv->urlimage1)}}" target="_blank" class="edit">{{ucfirst($archiv->description)}}</a></h4>
+                                                <p><b>Nom de l'image : </b> {{ $archiv->urlimage1 }}</p>
+                                                <p><b>Dimension Image : </b> {{ $archiv->width }} x {{$archiv->height}}</p>
+                                                <p><b>Class Image : </b> {{ $archiv->class }}</p>
                                                 
                                             </div>
                                             <div class="clearfix margin-0s"></div>
@@ -223,95 +227,8 @@
                                             </div>
                                         </li>
                                         <!-- // gallery item -->
-                                        
-                                        <li class="thumbnail media">
-                                            <div class="pull-left">
-                                                <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_02.jpg" title="image 02" rel="gallery"></a> </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><a href="assets/img/demo/gallery/gall_01/image_02.jpg" class="edit">Image title</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetuer lacinia pede Lorem tellus Nullam. Congue vel ipsum egestas.</p>
-                                                
-                                            </div>
-                                            <div class="clearfix margin-0s"></div>
-                                            <div class="thumbnail-action"> 
-                                                <span class="data-icon"> 
-                                                    <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> 
-                                                </span> 
-                                                <span class="menu-icon"> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_02.jpg" class="btn-glyph edit fontello-icon-edit"></a> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_02.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> 
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <!-- // gallery item -->
-                                        
-                                        <li class="thumbnail media">
-                                            <div class="pull-left">
-                                                <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_03.jpg" title="image 03" rel="gallery"></a> </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><a href="assets/img/demo/gallery/gall_01/image_03.jpg" class="edit">Image title</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetuer lacinia pede Lorem tellus Nullam. Congue vel ipsum egestas.</p>
-                                                
-                                            </div>
-                                            <div class="clearfix margin-0s"></div>
-                                            <div class="thumbnail-action"> 
-                                                <span class="data-icon"> 
-                                                    <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> 
-                                                </span> 
-                                                <span class="menu-icon"> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_03.jpg" class="btn-glyph edit fontello-icon-edit"></a> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_03.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> 
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <!-- // gallery item -->
-                                        
-                                        <li class="thumbnail media">
-                                            <div class="pull-left">
-                                                <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_04.jpg" title="image 04" rel="gallery"></a> </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><a href="assets/img/demo/gallery/gall_01/image_04.jpg" class="edit">Image title</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetuer lacinia pede Lorem tellus Nullam. Congue vel ipsum egestas.</p>
-                                                
-                                            </div>
-                                            <div class="clearfix margin-0s"></div>
-                                            <div class="thumbnail-action"> 
-                                                <span class="data-icon"> 
-                                                    <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> 
-                                                </span> 
-                                                <span class="menu-icon"> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_04.jpg" class="btn-glyph edit fontello-icon-edit"></a> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_04.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> 
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <!-- // gallery item -->
-                                        
-                                        <li class="thumbnail media">
-                                            <div class="pull-left">
-                                                <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_05.jpg" title="image 05" rel="gallery"></a> </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><a href="assets/img/demo/gallery/gall_01/image_05.jpg" class="edit">Image title</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetuer lacinia pede Lorem tellus Nullam. Congue vel ipsum egestas.</p>
-                                                
-                                            </div>
-                                            <div class="clearfix margin-0s"></div>
-                                            <div class="thumbnail-action"> 
-                                                <span class="data-icon"> 
-                                                    <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> 
-                                                </span> 
-                                                <span class="menu-icon"> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_05.jpg" class="btn-glyph edit fontello-icon-edit"></a> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_05.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> 
-                                                </span>
-                                            </div>
-                                        </li>
 
-                                        <!-- // gallery item -->
+                                        @endforeach
 
                                     </ul>
                                 </div>
