@@ -190,20 +190,20 @@ class PublicitesController extends Controller
 			Image::where('urlimage1',$imageXml)->update(['options'=> implode(";",$array_update) ]);
 
 		//assignation d'une image déjà stockée 
-		if( !is_null($request->input('archives')) )
+		if( !is_null($request->input('archives')) && $request->input('archives') != 'Parcourir...')
 		{
 			//get information option image
 			$option = $this->listsarchivespub($request->input('archives'));
 			$array_segment = explode(";",$option[0]->options);
 			$assigne = $this->assignationPub($request->input('page'),$request->input('section'), array_merge([1 => $option[0]->urlimage1], $array_segment) );
 			if( $assigne )
-				return back()->with('success','La publicite a été sauvegardé et assigné à la section');
+				return back()->with('success','La publicite a été sauvegardée et assignée à la section');
 		}
 
 		//update dans le fichier xml
 		$update_xml = $this->assignationPub($request->input('page'),$request->input('section'), array_merge([1 => $imageXml], $array_update) );
 		if( $update_xml )
-			return back()->with('success','La publicite a été sauvegardé et assigné à la section');
+			return back()->with('success','La publicite a été sauvegardée et assignée à la section');
 	}
 
 	/**
@@ -235,10 +235,10 @@ class PublicitesController extends Controller
 		if( !empty($request->input('appliquer')) ){
 			$update = $this->assignationPub($request->input('page'),$request->input('section'),array_merge([1 => $nomImage], $array_options ));
 			if( $update)
-				return back()->with('success','La publicite a été sauvegardé et assigné à la section');
+				return back()->with('success','La publicite a été sauvegardée et assignée à la section');
 		}
 
-		return back()->with('success','La publicité a été sauvegardé avec succés');
+		return back()->with('success','La publicité a été sauvegardée avec succés');
 		
 	}
 

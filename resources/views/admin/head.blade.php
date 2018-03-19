@@ -125,7 +125,7 @@
                     </li>
                       <li class="accordion-group">
                           <div class="accordion-heading">
-                              <a href="{{url('admin/stat')}}" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistique</a>
+                              <a href="{{url('admin/home')}}" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistique</a>
                           </div>
                       </li>
                       <li class="accordion-group">

@@ -221,8 +221,27 @@
                                                     <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> 
                                                 </span> 
                                                 <span class="menu-icon"> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_01.jpg" class="btn-glyph edit fontello-icon-edit"></a> 
-                                                    <a href="assets/img/demo/gallery/gall_01/image_01.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> 
+                                                    <a href="assets/img/demo/gallery/gall_01/image_01.jpg" class="btn-glyph edit fontello-icon-edit"></a>  
+                                                    <a href="assets/img/demo/gallery/gall_01/image_01.jpg" class="btn-glyph delete fontello-icon-trash-4" data-toggle="modal" data-target="#myModal"></a>
+                                                    <!-- Modal -->
+                                                        <div id="myModal" class="modal fade" role="dialog">
+                                                          <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                              <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Confirmation de suppression</h4>
+                                                              </div>
+                                                              <div class="modal-body">
+                                                                <p>Voulez-vous vraiment supprimer définitivement cette publicité ? </br><b><code>Attention:</code> Si cette publicité est active, la suppression de celle-ci supprimera celle qui sont dans vos espaces.</b></p>
+                                                              </div>
+                                                              <div class="modal-footer">
+                                                                <a href="#" type="button" class="btn btn-danger" data-dismiss="modal">Supprimer</a>
+                                                                <button type="reset" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    <!-- end Modal responsive Trash --> 
                                                 </span>
                                             </div>
                                         </li>
