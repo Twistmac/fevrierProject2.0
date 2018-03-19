@@ -46,7 +46,7 @@ class PublicitesController extends Controller
 		$cles = array_keys(json_decode(json_encode($xml_page),true));
 
 		for ($i=0; $i < count($cles) ; $i++)
-		{ 
+		{
 			$resultat[$cles[$i]] = $xml_page->$cles[$i];
 		}
 		return json_decode(json_encode($resultat),true);
