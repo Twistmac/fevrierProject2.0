@@ -92,7 +92,7 @@
                 <div class="breadcrumbs-nav hidden-phone">
                     <ul id="breadcrumbs" class="breadcrumb">
                         <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
-                        <li class="active">Profil administrateur </li>
+                        <li class="active"> Profil administrateur </li>
                     </ul>
                 </div>
                 <!-- // breadcrumbs -->
@@ -125,7 +125,7 @@
                     </li>
                       <li class="accordion-group">
                           <div class="accordion-heading">
-                              <a href="{{url('admin/home')}}" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistique</a>
+                              <a href="{{url('admin/home')}}" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-chart"></i> Statistiques</a>
                           </div>
                       </li>
                       <li class="accordion-group">
@@ -133,24 +133,72 @@
                               <a href="#accMembres" data-parent="#mainSideMenu"  data-toggle="collapse" class="accordion-toggle">
                                 <i class="fontello-icon-users-1"></i>
                                 <i class="chevron fontello-icon-right-open-3"></i>
-                                Parties Prenantes
+                                 Parties Prenantes
                               </a>
                           </div>
                           <ul class="accordion-content nav nav-list collapse" id="accMembres">
                             <li>
-                                <a href="{{url('admin/users')}}"> <i class="fontello-icon-right-dir"></i>Tous</a>
+                                <a href="{{url('admin/users')}}"> <i class="fontello-icon-right-dir"></i> Tous</a>
                             </li>
                               <li>
-                                  <a href="{{url('admin/sellers')}}"> <i class="fontello-icon-right-dir"></i>Vendeurs</a>
+                                  <a href="{{url('admin/sellers')}}"> <i class="fontello-icon-right-dir"></i> Vendeurs</a>
                               </li>
                               <li>
-                                  <a href="#"> <i class="fontello-icon-right-dir"></i>AFA</a>
+                                  <a href="#"> <i class="fontello-icon-right-dir"></i> AFA</a>
                               </li>
                               <li>
-                                  <a href="#l"> <i class="fontello-icon-right-dir"></i>APL</a>
+                                  <a href="#l"> <i class="fontello-icon-right-dir"></i> APL</a>
                               </li>
                               <li>
-                                  <a href="gestionUtilisateurVendeurPromoteur.html"> <i class="fontello-icon-right-dir"></i>Visiteurs Membres</a>
+                                  <a href="gestionUtilisateurVendeurPromoteur.html"> <i class="fontello-icon-right-dir"></i> Visiteurs Membres</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="accordion-group">
+                          <div class="accordion-heading">
+                              <a href="#accRéglages" data-parent="#mainSideMenu"  data-toggle="collapse" class="accordion-toggle">
+                                <i class="fontello-icon-tools"></i>
+                                <i class="chevron fontello-icon-right-open-3"></i>
+                                 Configurations
+                              </a>
+                          </div>
+                          <ul class="accordion-content nav nav-list collapse" id="accRéglages">
+                            <li>
+                                <a href="{{url('admin/configInfoSite')}}"> <i class="fontello-icon-right-dir"></i> Information du site</a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fontello-icon-right-dir"></i> Emplacement des widgets </a>
+                            </li>
+                              <li>
+                                  <a href="{{ route('pages.all') }}"> <i class="fontello-icon-right-dir"></i> Page statique </a>
+                              </li>
+                              <li>
+                                  <a href="#"> <i class="fontello-icon-right-dir"></i> Slider </a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="accordion-group">
+                          <div class="accordion-heading">
+                              <a href="{{route('registre.publicite')}}" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-credit-card"></i> Publicités</a>
+                          </div>
+                      </li>
+                      <li class="accordion-group">
+                          <div class="accordion-heading">
+                              <a href="#accBlogs" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle">
+                                <i class="fontello-icon-users-1"></i>
+                                <i class="chevron fontello-icon-right-open-3"></i>
+                                 Blog
+                              </a>
+                          </div>
+                          <ul class="accordion-content nav nav-list collapse" id="accBlogs">
+                              <li>
+                                  <a href="{{route('blog.all')}}"> <i class="fontello-icon-right-dir"></i> Listes des blogs</a>
+                              </li>
+                              <li>
+                                  <a href="{{route('blog.new')}}"> <i class="fontello-icon-right-dir"></i> Ajouter un article</a>
+                              </li>
+                               <li>
+                                  <a href="{{route('blog.showregistre')}}"> <i class="fontello-icon-right-dir"></i> Registre des articles</a>
                               </li>
                           </ul>
                       </li>
@@ -164,11 +212,7 @@
                               <a href="gestionProduitVendus.html" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-basket-1"></i> Gestion produits vendus</a>
                           </div>
                       </li>
-                      <li class="accordion-group">
-                          <div class="accordion-heading">
-                              <a href="{{route('registre.publicite')}}" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-credit-card"></i> Gestion des publicités</a>
-                          </div>
-                      </li>
+
                       <li class="accordion-group">
                           <div class="accordion-heading">
                               <a href="gestionMessagePreenregistre.html" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-mail-1"></i> Gestion des messages préenregistrés</a>
@@ -179,41 +223,8 @@
                               <a href="gestionEmailPreenregistre.html" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-mail-alt"></i> Gestion des emails préenregistrés</a>
                           </div>
                       </li>
-                      <li class="accordion-group">
-                          <div class="accordion-heading">
-                              <a href="{{route('blog.new')}}" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-users-1"></i> Gestion du Blog</a>
-                          </div>
-                          <ul class="accordion-content nav nav-list" id="accMembres">
-                              <li>
-                                  <a href="{{route('blog.all')}}"> <i class="fontello-icon-right-dir"></i>Listes des blogs</a>
-                              </li>
-                              <li>
-                                  <a href="{{route('blog.new')}}"> <i class="fontello-icon-right-dir"></i>Ajouter un article</a>
-                              </li>
-                               <li>
-                                  <a href="{{route('blog.showregistre')}}"> <i class="fontello-icon-right-dir"></i>Registre des articles</a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li class="accordion-group">
-                          <div class="accordion-heading">
-                              <a href="#" data-parent="#mainSideMenu" class="accordion-toggle"><i class="fontello-icon-tools"></i> Réglages</a>
-                          </div>
-                          <ul class="accordion-content nav nav-list" id="accRéglages">
-                            <li>
-                                <a href="gestionSiteInformation.html"> <i class="fontello-icon-right-dir"></i>Information du site</a>
-                            </li>
-                            <li>
-                                <a href="dragAndDrop.html"> <i class="fontello-icon-right-dir"></i> Emplacement des widgets </a>
-                            </li>
-                              <li>
-                                  <a href="{{ route('pages.all') }}"> <i class="fontello-icon-right-dir"></i> Page statique </a>
-                              </li>
-                              <li>
-                                  <a href="gestionPageSlider.html"> <i class="fontello-icon-right-dir"></i> Slider </a>
-                              </li>
-                          </ul>
-                      </li>
+
+
                       <li class="accordion-group">
                           <div class="accordion-heading">
                               <a href="gestionFacture.html" data-parent="#mainSideMenu"  class="accordion-toggle"><i class="fontello-icon-credit-card"></i> Factures</a>

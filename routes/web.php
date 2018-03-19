@@ -111,7 +111,7 @@ Route::get('business/commercial',['as' => 'business.commercial', 'uses' => 'Prod
 // --------------------------------------------------------------------------------------------------------------------------------------------
 // login administrateur
 Route::get('/admin/', function(){ return view('admin.authentification');});
-//Admin login 
+//Admin login
 Auth::routes();
 
 Route::prefix('admin')->middleware('auth')->group(function () {
@@ -146,11 +146,13 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('registre-publicite', ['as' => 'registre.publicite', 'uses' => 'PublicitesController@listespagespublicites'] );
 // parametrage publicites par page
     Route::get('setting-publicite/{name}', ['as' => 'admin.pub.name' , 'uses' => 'PublicitesController@publiciteperPage'])->where('name','[a-z0-9\-]+')->middleware('verifypublicite');
-//modification publicite 
+//modification publicite
     Route::post('update-pub', ['as' => 'update.pub', 'uses' => 'PublicitesController@updatePublicite']);
 //Ajouter publicite
     Route::post('add-pub', ['as' => 'add.pub', 'uses' => 'PublicitesController@ajouterPub']);
-
+// configuration du site
+      // congiguration information du site
+      Route::get('configInfoSite', function(){ return view('admin.configInfoSite');});
 });
 
 //Route vers page Services
