@@ -167,13 +167,13 @@
                                 <a href="{{url('admin/configInfoSite')}}"> <i class="fontello-icon-right-dir"></i> Information du site</a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fontello-icon-right-dir"></i> Emplacement des widgets </a>
+                                <a href="{{url('admin/rs')}}"> <i class="fontello-icon-right-dir"></i> Réseaux sociaux </a>
                             </li>
                               <li>
-                                  <a href="{{ route('pages.all') }}"> <i class="fontello-icon-right-dir"></i> Page statique </a>
+                                  <a href="{{url('admin/paiement')}}"> <i class="fontello-icon-right-dir"></i> Paiements </a>
                               </li>
                               <li>
-                                  <a href="#"> <i class="fontello-icon-right-dir"></i> Slider </a>
+                                <a href="{{ route('pages.all') }}"> <i class="fontello-icon-right-dir"></i> Page statique </a>
                               </li>
                           </ul>
                       </li>
