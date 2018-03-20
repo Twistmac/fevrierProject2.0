@@ -373,6 +373,7 @@ class ComposerStaticInit9d9c044849007e2861ea177840d15a2d
         'App\\Http\\Controllers\\OptionproduitController' => __DIR__ . '/../..' . '/app/Http/Controllers/OptionproduitController.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
         'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
+        'App\\Http\\Controllers\\ParametresController' => __DIR__ . '/../..' . '/app/Http/Controllers/ParametresController.php',
         'App\\Http\\Controllers\\PersonnemoralController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonnemoralController.php',
         'App\\Http\\Controllers\\PersonnephysiqueController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonnephysiqueController.php',
         'App\\Http\\Controllers\\PossessionproduitController' => __DIR__ . '/../..' . '/app/Http/Controllers/PossessionproduitController.php',

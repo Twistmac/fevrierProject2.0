@@ -6,12 +6,12 @@
 
 @if(Session::has('error')) 
             <div class="alert alert-danger">
-                <strong>Erreur ! </strong> {!!Session::get('success')!!}
+                <strong>Erreur ! </strong> {!!Session::get('error')!!}
             </div>
 @endif
 
 @if(Session::has('remarque')) 
             <div class="alert alert-warning">
-                <strong>Attention ! </strong> {!!Session::get('success')!!}
+                <strong>Attention ! </strong> {!!Session::get('warning')!!}
             </div>
 @endif

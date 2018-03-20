@@ -63,6 +63,7 @@ return array(
     'App\\Http\\Controllers\\OptionproduitController' => $baseDir . '/app/Http/Controllers/OptionproduitController.php',
     'App\\Http\\Controllers\\PageController' => $baseDir . '/app/Http/Controllers/PageController.php',
     'App\\Http\\Controllers\\PagesController' => $baseDir . '/app/Http/Controllers/PagesController.php',
+    'App\\Http\\Controllers\\ParametresController' => $baseDir . '/app/Http/Controllers/ParametresController.php',
     'App\\Http\\Controllers\\PersonnemoralController' => $baseDir . '/app/Http/Controllers/PersonnemoralController.php',
     'App\\Http\\Controllers\\PersonnephysiqueController' => $baseDir . '/app/Http/Controllers/PersonnephysiqueController.php',
     'App\\Http\\Controllers\\PossessionproduitController' => $baseDir . '/app/Http/Controllers/PossessionproduitController.php',

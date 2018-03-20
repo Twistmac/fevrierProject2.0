@@ -100,6 +100,45 @@ if( ! function_exists('pub') )
 	}
 }
 
+/**
+* Helpers fichier de configuration personnalisée
+* @param Array 
+* @return Array 
+*/
+if( ! function_exists('param'))
+{
+	function param($key = null, $default = null)
+    {
+    	$instance = xml_loader_files('config');
+    	$config = json_decode(json_encode($instance),true);
+
+    	$parametres = array('app' => [
+            	'identifiant' => $config['identifiant'],
+            	'nom' => $config['nom'],
+            	'titre' => $config['titre'],
+            	'email' => $config['email'],
+            	'latitude' => $config['latitude'],
+            	'longitude' => $config['longitude']
+            ]);
+
+        if (is_null($key)) {
+            return $parametres;
+        }
+
+        if( !is_null($key) && !is_null($default))
+        {
+        	$parametres['app'][$key] = $default;
+	       	$instance->$key = $default;
+	       	$instance->saveXML(public_path().'/xml/config.xml');
+	        return $parametres;
+        }
+
+        if (!is_null($key) && is_null($default)) {
+            return $parametres['app'][$key];
+        }
+    }
+}
+
 //test session existe et include l'entete
 function affichageHeader(){
 	$membre = new Membre();
