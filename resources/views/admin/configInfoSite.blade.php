@@ -27,18 +27,18 @@
                                         </legend>
                                         <form action="" method="">
                                           <label for="identifiant">Identifiant</label>
-                                          <input id="identifiant" class="input-block-level" type="text" name="identifiant">
+                                          <input id="identifiant" class="input-block-level" type="text" name="identifiant" value="admin@investirenautralie.com">
                                           <label for="nomSite">Nom du site</label>
-                                          <input id="nomSite" class="input-block-level" type="text" name="nomSite">
+                                          <input id="nomSite" class="input-block-level" type="text" name="nomSite" value="Investir en Australie">
                                           <label for="titreSite">Titre du site</label>
-                                          <input id="titreSite" class="input-block-level" type="text" name="titreSite">
+                                          <input id="titreSite" class="input-block-level" type="text" name="titreSite" value="Investir en Australie">
                                           <label for="adresse">Adressse email</label>
-                                          <input id="adresse" class="input-block-level" type="text" name="adresse">
+                                          <input id="adresse" class="input-block-level" type="text" name="adresse" value="admin@investirenautralie.com">
                                           <label for="latitude">Latitude</label>
-                                          <input id="latitude" class="input-block-level" type="text" name="latitude">
+                                          <input id="latitude" class="input-block-level" type="text" name="latitude" value="-22.286319">
                                           <label for="longitude">Longitude</label>
-                                          <input id="longitude" class="input-block-level" type="text" name="longitude">
-                                          <input type="submit" class="btn btn-green" value="Sauvegarder"/>
+                                          <input id="longitude" class="input-block-level" type="text" name="longitude" value="166.451156">
+                                          <input type="submit" class="btn btn-primary" value="Sauvegarder"/>
                                         </form>
 
                                     </fieldset>

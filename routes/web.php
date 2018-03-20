@@ -153,6 +153,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 // configuration du site
       // congiguration information du site
       Route::get('configInfoSite', function(){ return view('admin.configInfoSite');});
+      // réseaux sociaux
+      Route::get('rs', function(){ return view('admin.rs');});
 });
 
 //Route vers page Services
