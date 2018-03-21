@@ -16,15 +16,15 @@
                                     <fieldset>
                                         <legend>Liens Réseaux sociaux</legend>
                                         <form action="" method="">
-                                            <label for="urlFacebook">Facebook <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
-                                            <input id="urlFacebook" class="input-block-level" type="text" name="urlFacebook">
+                                            <label for="urlFacebook"><i class="fontello-icon-facebook-2" aria-hidden="true"></i> Facebook <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
+                                            <input id="urlFacebook" class="input-block-level" type="text" name="facebook">
 
-                                            <label for="urlTwitter">Twitter <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
-                                            <input id="urlTwitter" class="input-block-level" type="text" name="urlTwitter">
+                                            <label for="urlTwitter"><i class="fontello-icon-twitter-2" aria-hidden="true"></i>Twitter <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
+                                            <input id="urlTwitter" class="input-block-level" type="text" name="twitter">
                                             <label for="urlGoogle">Google+ <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
-                                            <input id="urlGoogle" class="input-block-level" type="text" name="urlGoogle">
+                                            <input id="urlGoogle" class="input-block-level" type="text" name="google-plus">
                                             <label for="urlLinkedin">Linkedin<a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
-                                            <input id="urlLinkedin" class="input-block-level" type="text" name="urlLinkedin">
+                                            <input id="urlLinkedin" class="input-block-level" type="text" name="linkedin">
                                             <hr class="margin-xxx">
                                     </fieldset>
                                 </div>
@@ -40,7 +40,7 @@
                                               <label for="">Url du reseau social</label>
                                               <input id="urlReseauSocial" class="input-block-level" type="text" name="urlReseauSocial">
 
-                                              <a class="btn btn-warning" href="javascript:void(0);"> + Ajouter</a>
+                                              <a class="btn btn-primary" href="javascript:void(0);"> + Ajouter</a>
 
                                     </fieldset>
                                 </div>
