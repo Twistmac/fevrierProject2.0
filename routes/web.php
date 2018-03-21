@@ -153,7 +153,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
 // congiguration information du site
       Route::get('configInfoSite', ['as' => 'admin.config', 'uses' => 'ParametresController@showConfigSite']);
-//modification configuration du site 
+//modification configuration du site
       Route::post('modif-config',['as' => 'modif.config', 'uses' => 'ParametresController@updateConfig']);
 // réseaux sociaux
       Route::get('rs', function(){ return view('admin.rs');});
