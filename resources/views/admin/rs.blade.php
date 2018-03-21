@@ -19,7 +19,7 @@
                                             <label for="urlFacebook"><i class="fontello-icon-facebook-2" aria-hidden="true"></i> Facebook <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
                                             <input id="urlFacebook" class="input-block-level" type="text" name="facebook">
 
-                                            <label for="urlTwitter">Twitter <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
+                                            <label for="urlTwitter"><i class="fontello-icon-twitter-2" aria-hidden="true"></i>Twitter <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
                                             <input id="urlTwitter" class="input-block-level" type="text" name="twitter">
                                             <label for="urlGoogle">Google+ <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> </label>
                                             <input id="urlGoogle" class="input-block-level" type="text" name="google-plus">
