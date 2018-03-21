@@ -154,21 +154,6 @@
 
 <!-- Only This Demo Page -->
 
-<!-- MAP -->
-<script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var myCenter = new google.maps.LatLng(-22.286319,166.451156);
-  var mapOptions = {center: myCenter, zoom: 5};
-  var map = new google.maps.Map(mapCanvas,mapOptions);
-  var marker = new google.maps.Marker({
-    position: myCenter,
-    animation: google.maps.Animation.BOUNCE
-  });
-  marker.setMap(map);
-}
-</script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA48VeOmkB_L-TWKjgCknG92lDw21mOLvo&callback=myMap"></script>
 
 

@@ -150,13 +150,10 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('update-pub', ['as' => 'update.pub', 'uses' => 'PublicitesController@updatePublicite']);
 //Ajouter publicite
     Route::post('add-pub', ['as' => 'add.pub', 'uses' => 'PublicitesController@ajouterPub']);
-// configuration du site
-      // congiguration information du site
-      Route::get('configInfoSite', function(){ return view('admin.configInfoSite');});
-      // réseaux sociaux
-      Route::get('rs', function(){ return view('admin.rs');});
-      // paiement
-      Route::get('paiement', function(){ return view('admin.paiement');});
+// congiguration information du site
+      Route::get('configInfoSite', ['as' => 'admin.config', 'uses' => 'ParametresController@showConfigSite']);
+//modification configuration du site 
+      Route::post('modif-config',['as' => 'modif.config', 'uses' => 'ParametresController@updateConfig']);
 });
 
 //Route vers page Services
