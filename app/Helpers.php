@@ -101,7 +101,7 @@ if( ! function_exists('pub') )
 }
 
 /**
-* Helpers fichier de configuration personnalisée
+* Helpers fichier de configuration personnalisée config
 * @param Array 
 * @return Array 
 */
@@ -109,7 +109,8 @@ if( ! function_exists('param'))
 {
 	function param($key = null, $default = null)
     {
-    	$instance = xml_loader_files('config');
+    	$xml = xml_loader_files('config');
+    	$instance = $xml->config;
     	$config = json_decode(json_encode($instance),true);
 
     	$parametres = array('app' => [
@@ -129,7 +130,7 @@ if( ! function_exists('param'))
         {
         	$parametres['app'][$key] = $default;
 	       	$instance->$key = $default;
-	       	$instance->saveXML(public_path().'/xml/config.xml');
+	       	$xml->saveXML(public_path().'/xml/config.xml');
 	        return $parametres;
         }
 

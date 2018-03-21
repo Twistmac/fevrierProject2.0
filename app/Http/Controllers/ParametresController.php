@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 
 class ParametresController extends Controller
 {
@@ -24,10 +25,10 @@ class ParametresController extends Controller
     public function showConfigSite()
     {
     	$datas = [
-    		'identifiant' => param('identifiant'),
+    		'identifiant' => Auth::user()->email,
     		'nomSite' => param('nom'),
     		'titre' => param('titre'),
-    		'email' => param('email'),
+    		'email' => param('email'), 
     		'latitude' => param('latitude'),
     		'longitude' =>  param('longitude')
     		];
@@ -46,6 +47,7 @@ class ParametresController extends Controller
     	$inputs = $request->input();
     	unset($inputs['_token']);
     	$configs = param();
+    	
     	foreach ($inputs as $key => $value) {
     		foreach ($configs['app'] as $cle => $valeur) {
     			if( $key == $cle )

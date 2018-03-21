@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <parametres>
-	<identifiant>tsorakoto@gmail.com</identifiant>
-	<nom>Investir en Australie</nom>
-	<titre>Investir en Australie</titre>
-	<email>tsorakoto@gmail.com</email>
-	<latitude>-22.286319</latitude>
-	<longitude>166.451156</longitude>
+	<config>
+		<identifiant>admin@investirenaustralie.com</identifiant>
+		<nom>Investir en Australie</nom>
+		<titre>Investir en Australie</titre>
+		<email>admin@investirenaustralie.com</email>
+		<latitude>-33.885557</latitude>
+		<longitude>151.140673</longitude>
+	</config>
 </parametres>

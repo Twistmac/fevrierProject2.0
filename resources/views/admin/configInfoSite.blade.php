@@ -55,7 +55,7 @@
                                           <input id="latitude" class="input-block-level" type="text" name="latitude" value="{{$donnees->latitude}}">
                                           <label for="longitude">Longitude</label>
                                           <input id="longitude" class="input-block-level" type="text" name="longitude" value="{{$donnees->longitude}}">
-                                          <button type="submit" class="btn btn-green">Sauvegarder</button>
+                                          <button type="submit" class="btn btn-primary">Sauvegarder</button>
                                           <button type="reset" class="btn btn-default">Annuler</button>
                                         </form>
                                     </fieldset>
