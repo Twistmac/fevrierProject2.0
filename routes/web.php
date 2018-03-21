@@ -159,7 +159,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
       Route::get('rs', function(){ return view('admin.rs');});
 // paiement
       Route::get('paiement', function(){ return view('admin.paiement');});
-
 });
 
 //Route vers page Services
