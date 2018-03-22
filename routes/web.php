@@ -161,6 +161,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
       Route::get('paiement', function(){ return view('admin.paiement');});
 //update Reseaux sociaux
       Route::post('update-social',['as' => 'admin.social.media', 'uses' => 'ParametresController@updateSocialMedia']);
+//Rechercher FontAwesome
+      Route::get('fontawesome',['as' => 'search.fontawesome', 'uses' => 'ParametresController@searchFontawesome'])->where('q','[a-z0-9\-]+');
 });
 
 //Route vers page Services

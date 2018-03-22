@@ -111,4 +111,21 @@ class ParametresController extends Controller
     		return back()->with('error','Aucune modification n\'a été enregistrée !');
     }
 
+    /**
+    * fonction recherche FontAwesome
+    * @param string $d , string $q, string $m
+    * @return Redirection 
+    */
+    public function searchFontawesome(Request $request)
+    {
+        $query = $request->input('query');
+
+        if( !empty($query))
+            $link = "https://fontawesome.com/icons?d=gallery&q=".rawurlencode($query)."&m=free";
+        else
+            $link = "https://fontawesome.com/icons?d=gallery&m=free";
+        
+        return redirect()->away($link);
+    }
+
 }

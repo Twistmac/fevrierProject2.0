@@ -69,19 +69,14 @@
 
                                 <div class="span5">
                                     <fieldset>
-                                        <form method="" action="">
+                                        <form method="GET" action="{{route('search.fontawesome')}}">
                                         <legend>
                                           Information<small>du site</small>
                                         </legend>
                                               <label for="">Icône du Réseau Social ( FontAwesome )</label>
-                                              <div class="input-append block"><input class="input-block-level span6" type="text" name="accountEmail" placeholder="ex : fa fa-facebook ou fab fa-apple" required="required">
-                                                <a class="btn fontello-icon-link-1" type="button" target="_blank" href="https://fontawesome.com/icons?d=listing&m=free">Accéder à FontAwesome</a></div> 
-                                              <label for="">Nom du Réseau social</label>
-                                              <input id="nomReseauSocial" class="input-block-level" type="text" name="nomReseauSocial" placeholder="ex: facebook" required="required">
-                                              <label for="">Url du Réseau social</label>
-                                              <input id="urlReseauSocial" class="input-block-level" type="text" name="urlReseauSocial" placeholder=" ex: wwww.facebook.com" required="required">
-
-                                             <button type="submit" class="btn btn-blue">Enregistrer & Valider</button>
+                                              <div class="input-append block"><input class="input-block-level span6" type="text" name="query" placeholder="ex : facebook ou google plus">
+                                                <button class="btn fontello-icon-link-1" type="submit">Accéder à FontAwesome</button>
+                                            </div> 
                                          </form>
                                     </fieldset>
                                 </div>
