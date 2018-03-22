@@ -24,6 +24,7 @@
 {!! plugin_css('admin/css/style') !!}
 {!! plugin_css('admin/css/boo-coloring') !!}
 {!! plugin_css('admin/css/boo-utility') !!}
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -167,7 +168,7 @@
                                 <a href="{{url('admin/configInfoSite')}}"> <i class="fontello-icon-right-dir"></i> Information du site</a>
                             </li>
                             <li>
-                                <a href="{{url('admin/rs')}}"> <i class="fontello-icon-right-dir"></i> Réseaux sociaux </a>
+                                <a href="{{route('admin.sociaux')}}"> <i class="fontello-icon-right-dir"></i> Réseaux sociaux </a>
                             </li>
                               <li>
                                   <a href="{{url('admin/paiement')}}"> <i class="fontello-icon-right-dir"></i> Paiements </a>

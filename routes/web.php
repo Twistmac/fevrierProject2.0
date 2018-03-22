@@ -156,9 +156,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 //modification configuration du site 
       Route::post('modif-config',['as' => 'modif.config', 'uses' => 'ParametresController@updateConfig']);
 // réseaux sociaux
-      Route::get('rs', function(){ return view('admin.rs');});
+      Route::get('reseaux-sociaux', ['as' => 'admin.sociaux', 'uses' => 'ParametresController@showconfigMedia']);
 // paiement
       Route::get('paiement', function(){ return view('admin.paiement');});
+//update Reseaux sociaux
+      Route::post('update-social',['as' => 'admin.social.media', 'uses' => 'ParametresController@updateSocialMedia']);
 });
 
 //Route vers page Services

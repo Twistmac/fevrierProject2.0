@@ -102,7 +102,7 @@ if( ! function_exists('pub') )
 
 /**
 * Helpers fichier de configuration personnalisée config
-* @param Array 
+* @param string $key , string $default 
 * @return Array 
 */
 if( ! function_exists('param'))
@@ -138,6 +138,39 @@ if( ! function_exists('param'))
             return $parametres['app'][$key];
         }
     }
+}
+
+/**
+* Helpers fichier de configuation Social Media
+* @param string $key , string $default
+* @return Array
+*/
+if( ! function_exists('social'))
+{
+	function social($key=null, $default=null)
+	{
+		$xml = xml_loader_files('config');
+		$instance = $xml->socialmedia;
+    	$xml_media = json_decode(json_encode($instance),true);
+
+    	if( is_null($key))
+    		return $xml_media;
+
+    	if( !is_null($key) && is_null($default) )
+    	{
+    		$indice = explode('.',$key);
+    		return $xml_media[$indice[0]][$indice[1]];
+
+    	}
+    	if( !is_null($key) && !is_null($default) )
+    	{
+    		$indice = explode('.',$key);
+    		$instance->$indice[0]->$indice[1] = $default;
+    		
+    		$xml->saveXML(public_path().'/xml/config.xml');
+    		return $xml_media[$indice[0]][$indice[1]];
+    	}
+	}
 }
 
 //test session existe et include l'entete

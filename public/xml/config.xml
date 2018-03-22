@@ -8,4 +8,39 @@
 		<latitude>-33.885557</latitude>
 		<longitude>151.140673</longitude>
 	</config>
+
+	<socialmedia>
+		<facebook>
+			<value>www.facebook.com</value>
+			<font>fa fa-facebook</font>
+		</facebook>
+		<twitter>
+			<value>www.twitter.com</value>
+			<font>fa fa-twitter</font>
+		</twitter>
+		<googleplus>
+			<value>www.googleplus.com</value>
+			<font>fa fa-google-plus</font>
+		</googleplus>
+		<linkedin>
+			<value/>
+			<font>fa fa-linkedin</font>
+		</linkedin>
+		<tumblr>
+			<value/>
+			<font>fa fa-tumblr</font>
+		</tumblr>
+		<youtube>
+			<value/>
+			<font>fa fa-youtube</font>
+		</youtube>
+		<pinterest>
+			<value/>
+			<font>fa fa-pinterest</font>
+		</pinterest>
+		<vimeo>
+			<value/>
+			<font>fa fa-vimeo</font>
+		</vimeo>
+	</socialmedia>
 </parametres>

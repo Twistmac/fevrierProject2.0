@@ -63,4 +63,46 @@ class ParametresController extends Controller
     		return back()->with('error','Aucune modification n\'a été enregistrée ! ');
     }
 
+    /**
+    * fonction configuration des reseaux sociaux
+    * @param null
+    * @return Response
+    */
+    public function showconfigMedia()
+    {
+    	return view('admin.rs');
+    }
+
+
+    /**
+    * fonction modification configuration réseaux sociaux
+    * @param Request $request
+    * @return Response
+    */
+    public function updateSocialMedia(Request $request)
+    {
+    	$updates = $request->input();
+    	unset($updates['_token']);
+    	$compteur = false;
+
+    	foreach ($updates as $key => $value) {
+    		$cles = explode('-',$key);
+    		if( !isset($cles[1])){
+    			$compteur = true;
+    			$indice = $key . '.value';
+    			social($indice,$value);
+    		}
+    		elseif( isset($cles[1]) ){
+    			$compteur = true;
+    			$indice = $cles[1] . '.font';
+    			social($indice,$value);
+    		}
+    	}
+    	if( $compteur )
+    		return back()->with('success','Les modifications ont bien étée enregistrées !');
+    	else
+    		return back()->with('error','Aucune modification n\'a été enregistrée !');
+
+    }
+
 }
