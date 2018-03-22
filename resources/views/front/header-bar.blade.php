@@ -58,16 +58,16 @@
                         <div class="col-md-9">
                             <div class="clearfix">
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="{{social('googleplus.value')}}"><i class="{{social('googleplus.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="{{social('linkedin.value')}}"><i class="{{social('linkedin.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="{{social('twitter.value')}}"><i class="{{social('twitter.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="{{social('facebook.value')}}"><i class="{{social('facebook.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
                                     <i class="fa fa-globe"></i>

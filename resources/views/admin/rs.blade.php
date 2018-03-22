@@ -22,42 +22,42 @@
                                             <label for="urlFacebook"><i class="fontello-icon-facebook-2" aria-hidden="true"></i> Facebook <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a><a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
                                             <input id="urlFacebook" class="input-block-level span8" type="text" name="facebook" value="{{social('facebook.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-facebook-2"></i></span>
-                                            <input class="span3" type="text" name="font-facebook" value="fa fa-facebook" />
+                                            <input class="span3" type="text" name="font-facebook" value="{{social('facebook.font')}}" />
                                             
                                             <label for="urlTwitter"><i class="fontello-icon-twitter-2" aria-hidden="true"></i> Twitter <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> <a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
                                             <input id="urlTwitter" class="input-block-level span8" type="text" name="twitter" value="{{social('twitter.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-twitter-2"></i></span>
-                                            <input class="span3" type="text" name="font-twitter" value="fa fa-twitter" />
+                                            <input class="span3" type="text" name="font-twitter" value="{{social('twitter.font')}}" />
 
                                             <label for="urlGoogle"><i class="fontello-icon-googleplus-rect-1" aria-hidden="true"></i> Google+ <a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> <a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
-                                            <input id="urlGoogle" class="input-block-level span8" type="text" name="googleplus">&nbsp;&nbsp;
+                                            <input id="urlGoogle" class="input-block-level span8" type="text" name="googleplus" value="{{social('googleplus.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-googleplus-rect-1"></i></span>
-                                            <input class="span3" type="text" name="font-googleplus" value="fa fa-google-plus" />
+                                            <input class="span3" type="text" name="font-googleplus" value="{{social('googleplus.font')}}" />
 
                                             <label for="urlLinkedin"><i class="fontello-icon-linkedin-2" aria-hidden="true"></i> Linkedin<a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> <a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
-                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="linkedin">&nbsp;&nbsp;
+                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="linkedin" value="{{social('linkedin.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-linkedin-2"></i></span>
-                                            <input class="span3" type="text" name="font-linkedin" value="fa fa-linkedin" />
+                                            <input class="span3" type="text" name="font-linkedin" value="{{social('linkedin.font')}}" />
 
                                             <label for="urlTumlr"><i class=" fontello-icon-tumblr" aria-hidden="true"></i> Tumblr<a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> <a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
-                                            <input id="urlTumblr" class="input-block-level span8" type="text" name="tumblr">&nbsp;&nbsp;
+                                            <input id="urlTumblr" class="input-block-level span8" type="text" name="tumblr" value="{{social('tumblr.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-tumblr"></i></span>
-                                            <input class="span3" type="text" name="font-tumblr" value="fa fa-tumblr" />
+                                            <input class="span3" type="text" name="font-tumblr" value="{{social('tumblr.font')}}" />
 
                                             <label for="urlYoutube"><i class="fontello-icon-youtube" aria-hidden="true"></i> Youtube<a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> <a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
-                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="youtube">&nbsp;&nbsp;
+                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="youtube" value="{{social('youtube.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-youtube"></i></span>
-                                            <input class="span3" type="text" name="font-youtube" value="fa fa-youtube" />
+                                            <input class="span3" type="text" name="font-youtube" value="{{social('youtube.font')}}" />
 
                                             <label for="urlTumlr"><i class="fontello-icon-pinterest" aria-hidden="true"></i> Pinterest<a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> <a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
-                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="pinterest">&nbsp;&nbsp;
+                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="pinterest" value="{{social('pinterest.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-pinterest"></i></span>
-                                            <input class="span3" type="text" name="font-pinterest" value="fa fa-pinterest" />
+                                            <input class="span3" type="text" name="font-pinterest" value="{{social('pinterest.font')}}" />
 
                                             <label for="urlTumlr"><i class="fontello-icon-vimeo-1" aria-hidden="true"></i> Vimeo<a class="fontello-icon-trash-1" href="#" style="float:right;margin-bottom: 5px">Supprimer</a> <a class="fontello-icon-back-in-time" href="#" style="float:right;margin-bottom: 5px">Reset</a></label>
-                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="vimeo">&nbsp;&nbsp;
+                                            <input id="urlLinkedin" class="input-block-level span8" type="text" name="vimeo" value="{{social('vimeo.value')}}">&nbsp;&nbsp;
                                             <span class="add-on"><i class="fontello-icon-vimeo-1"></i></span>
-                                            <input class="span3" type="text" name="font-vimeo" value="fa fa-vimeo" />
+                                            <input class="span3" type="text" name="font-vimeo" value="{{social('vimeo.font')}}" />
 
                                             <hr class="margin-xxx">
 
@@ -69,19 +69,20 @@
 
                                 <div class="span5">
                                     <fieldset>
-
+                                        <form method="" action="">
                                         <legend>
                                           Information<small>du site</small>
                                         </legend>
-                                              <label for="">Icône du Réseau Social</label>
-                                              <input id="nomReseauSocial" class="input-block-level" type="text" name="nomReseauSocial">  
+                                              <label for="">Icône du Réseau Social ( FontAwesome )</label>
+                                              <div class="input-append block"><input class="input-block-level span6" type="text" name="accountEmail" placeholder="ex : fa fa-facebook ou fab fa-apple" required="required">
+                                                <a class="btn fontello-icon-link-1" type="button" target="_blank" href="https://fontawesome.com/icons?d=listing&m=free">Accéder à FontAwesome</a></div> 
                                               <label for="">Nom du Réseau social</label>
-                                              <input id="nomReseauSocial" class="input-block-level" type="text" name="nomReseauSocial">
+                                              <input id="nomReseauSocial" class="input-block-level" type="text" name="nomReseauSocial" placeholder="ex: facebook" required="required">
                                               <label for="">Url du Réseau social</label>
-                                              <input id="urlReseauSocial" class="input-block-level" type="text" name="urlReseauSocial">
+                                              <input id="urlReseauSocial" class="input-block-level" type="text" name="urlReseauSocial" placeholder=" ex: wwww.facebook.com" required="required">
 
-                                              <a class="btn btn-primary" href="javascript:void(0);"> + Ajouter</a>
-
+                                             <button type="submit" class="btn btn-blue">Enregistrer & Valider</button>
+                                         </form>
                                     </fieldset>
                                 </div>
                             </div>

@@ -35,7 +35,7 @@ class ConnexionController extends Controller
         $TypeNature = $membre->getNature($email);
 
         if($mdp == $pwd && session('urlVisite') ==''){
-            return redirect()->route('acceuil');
+            return redirect()->route('accueil');
         }
         if($mdp == $pwd && session('urlVisite') !=''){
             return redirect(session('urlVisite'));

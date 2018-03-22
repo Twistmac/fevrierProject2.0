@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Cache-control" content="public">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Investir en Australie</title>
+        <title>{{param('titre')}}</title>
         <!-- Styles -->
         <link href="../../../fonts.googleapis.com/css178b.css?family=Montserrat:400,700|Poppins:400,600" rel="stylesheet">
         <!-- favicon and touch icons -->
@@ -42,16 +42,16 @@
                         <div class="col-md-7">
                             <div class="clearfix">
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="{{social('googleplus.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="{{social('linkedin.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="{{social('twitter.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="{{social('facebook.font')}}"></i></a>
                                 </div>
                                 <div class="language-in-header">
                                     <i class="fa fa-globe"></i>

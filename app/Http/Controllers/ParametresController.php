@@ -90,7 +90,14 @@ class ParametresController extends Controller
     		if( !isset($cles[1])){
     			$compteur = true;
     			$indice = $key . '.value';
-    			social($indice,$value);
+                if( preg_match('@^(?:https://)@i',$value) == 1 )
+                    $new_value = $value;
+                if( $value == "#" || is_null($value))
+                    $new_value = "#";
+                elseif( preg_match('@^(?:https://)@i',$value) == 0 )
+                    $new_value = "https://" . $value;
+                
+            social($indice,$new_value);
     		}
     		elseif( isset($cles[1]) ){
     			$compteur = true;
@@ -102,7 +109,6 @@ class ParametresController extends Controller
     		return back()->with('success','Les modifications ont bien étée enregistrées !');
     	else
     		return back()->with('error','Aucune modification n\'a été enregistrée !');
-
     }
 
 }
