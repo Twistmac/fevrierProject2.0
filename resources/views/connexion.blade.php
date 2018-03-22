@@ -1,7 +1,7 @@
 @include('front.header-bar')
-        
+
 <div class="main-slider-wrapper clearfix content corps">
-    
+
         <div id="site-banner" class="text-center clearfix">
                 <div class="container">
                     <h1 class="title wow slideInLeft">Connexion</h1>
@@ -62,7 +62,7 @@
                          <input name="pwd"  type="password" placeholder="Votre mot de passe *" aria-required="true" required="required">
                     </p>
                     <p style="color:red"> {!! session('errorConnexion') !!}</p>
-                    <p>Vous avez un compte ?<a href="inscription-membre.php"> Inscrivez-vous </a></p>   
+                    <p>Vous avez un compte ?<a href="inscription-membre.php"> Inscrivez-vous </a></p>
                     <p class="form-submit">
                         <button type="submit" class="pull-right submit-btn btn btn-default btn-lg" data-hover="Connexion">Connexion</button>
                         <span id="ajax-loader"><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i><span class="sr-only">Loading...</span></span>
@@ -76,91 +76,91 @@
     <div id="map-canvas"></div>
 </div>
 
-        <footer id="footer"> 
-            <div class="site-footer"> 
-                <div class="container"> 
-                    <div class="row"> 
-                        <div class="col-md-4 col-sm-6"> 
-                            <section class="widget about-widget clearfix"> 
-                                <h4 class="title hide">About Us</h4> 
+        <footer id="footer">
+            <div class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <section class="widget about-widget clearfix">
+                                <h4 class="title hide">About Us</h4>
                                 <a class="footer-logo" href="#">
                                     <img src="assets/images/footer-logo.png" alt="Footer Logo">
-                                </a>                                 
-                                <ul class="social-icons clearfix"> 
+                                </a>
+                                <ul class="social-icons clearfix">
                                     <li>
                                         <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                         <a href="#"><i class="fa fa-facebook"></i></a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                         <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                         <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                    </li>                                     
-                                </ul>                                 
-                            </section>                             
-                        </div>                         
-                        <div class="col-md-4 col-sm-6"> 
-                            <section class="widget address-widget clearfix"> 
-                                <h4 class="title">acces rapide</h4> 
-                                <ul> 
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <section class="widget address-widget clearfix">
+                                <h4 class="title">acces rapide</h4>
+                                <ul>
                                     <li>
                                        <a href="#">Accueil</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                         <a href="#">Immobilier</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                          <a href="#">Business</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                          <a href="#">Nos services</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                          <a href="#">Blog</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                          <a href="#">Mon compte</a>
                                     </li>
-                                </ul>                                 
-                            </section>                               
-                        </div>                         
-                        <div class="col-md-4 col-sm-6"> 
-                            <section class="widget address-widget clearfix"> 
-                                <h4 class="title"></h4> 
-                                <ul> 
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <section class="widget address-widget clearfix">
+                                <h4 class="title"></h4>
+                                <ul>
                                     <li>
                                          <a href="#">Termes et conditions</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                         <a href="#">Politique de confidentialité</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                         <a href="#">Guide de l'investisseur</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
                                         <a href="#">Publicité</a>
-                                    </li>                                     
+                                    </li>
                                     <li>
-                                    </li>                                     
-                                </ul>                                 
-                            </section>                              
-                        </div>                         
-                    </div>                     
-                </div>                 
-            </div>             
-            <div class="site-footer-bottom"> 
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-bottom">
                 <div class="container text-center">
                     <div>
                         <p>INVESTIR EN AUSTRALIE est un e-marketplace.</p>
                         <p> © Copyright "Investir en Australie" 2018 - Tous droits réservés</p>
                     </div>
-                </div>                 
-            </div>             
-        </footer>         
-        <a href="#top" id="scroll-top"><i class="fa fa-angle-up"></i></a> 
+                </div>
+            </div>
+        </footer>
+        <a href="#top" id="scroll-top"><i class="fa fa-angle-up"></i></a>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="public/assets/js/jquery.min.js"></script>
         <script src="public/assets/js/jquery.migrate.js"></script>
