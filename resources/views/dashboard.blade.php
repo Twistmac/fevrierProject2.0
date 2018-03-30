@@ -43,11 +43,11 @@
 	  					<div class="content-box-large">
 			  				<div class="panel-heading">
 					            <div class="panel-title">Informations du Membre</div>
-
-					            <div class="panel-options">
+                      <hr>
+					            <!-- <div class="panel-options">
 					              <a href="#" data-rel="collapse"><i class="fa fa-refresh" aria-hidden="true"></i></a>
 					              <a href="#" data-rel="reload"><i class="fa fa-cog" aria-hidden="true"></i></a>
-					            </div>
+					            </div> -->
 					        </div>
 			  				<div class="panel-body">
 			  					<form class="form-horizontal" role="form">
@@ -109,10 +109,10 @@
                             <div class="content-box-header panel-heading">
                                 <div class="panel-title ">Notifications</div>
 
-                                <div class="panel-options">
+                                <!-- <div class="panel-options">
                                   <a href="#" data-rel="collapse"><i class="fa fa-refresh" aria-hidden="true"></i></a>
                                   <a href="#" data-rel="reload"><i class="fa fa-cog" aria-hidden="true"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="content-box-large box-with-header">
                                 <div class="alert alert-success">
@@ -126,10 +126,10 @@
                             <div class="content-box-header panel-heading">
                                 <div class="panel-title ">Notifications</div>
 
-                                <div class="panel-options">
+                                <!-- <div class="panel-options">
                                   <a href="#" data-rel="collapse"><i class="fa fa-refresh" aria-hidden="true"></i></a>
                                   <a href="#" data-rel="reload"><i class="fa fa-cog" aria-hidden="true"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="content-box-large box-with-header">
                                  <div class="alert alert-danger">

@@ -263,7 +263,7 @@ img.zoom-img {
   background: url("../images/banner.jpg") center no-repeat;
   padding: 150px 0;
   position: relative;
-  max-height: 400px;
+  max-height: 150px;
   margin-bottom: 70px;
 }
 #site-banner:after {
