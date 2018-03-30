@@ -173,6 +173,7 @@ if( ! function_exists('social'))
 	}
 }
 
+
 //test session existe et include l'entete
 function affichageHeader(){
 	$membre = new Membre();
