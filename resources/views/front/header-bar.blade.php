@@ -26,6 +26,10 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css" rel="stylesheet" />
         {!! helper_css('head') !!}
 
+        {!! plugin_css('/searchbar/assets/css/style') !!}
+
+        <!-- {!! plugin_css('/searchbar/assets/css/style') !!} -->
+
         <!-- sylesheet css search-bar -->
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{asset('searchbar/assets/css/fontello.css')}}">

@@ -1,6 +1,4 @@
 
-
-
 input {
     outline: 0;
     border: none;
@@ -219,6 +217,7 @@ input[type="search"]::-webkit-search-decoration {
     font-weight: 600;
 }
 .search-form {
+    top: -1000px;
     background-color: #fff;
     border-radius: 5px;
     padding: 20px 0;

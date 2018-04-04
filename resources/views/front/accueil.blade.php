@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
                             <!-- corps barre de recherche -->
-                            <div class="search-form wow pulse" data-wow-delay="0.8s" style="top: 100px;">
+                             <div class="search-form wow pulse" data-wow-delay="0.8s">
                                 <form method="post" action="{{route('front.search')}}" class="form-inline">
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
@@ -275,6 +275,7 @@
                     </div>
                 </div>
             </div>
+          </div>
 
         <!-- property area -->
             @foreach($contenus as $content)
