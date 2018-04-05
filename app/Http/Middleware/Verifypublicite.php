@@ -18,7 +18,7 @@ class Verifypublicite
     public function handle($request, Closure $next)
     {
         $datas = Publicite::where('nompage',$request->route('name'))->first(['nompage']);
-        
+
         if( !is_null($datas) )
             return $next($request);
         else
